@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto' sans-serif;
+}
+
+.bg-color{
+   background-color: #0071ef;
+}
+
+.color{
+    color: #0071ef;
+}
+
+.logo{
+    height: 40px;
+}
+
+.bg{
+    height: 40vh;
+    background-image: url("/Hospital-DEPI-/assets/images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.doctors img{
+    width: 270px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.footer-content-1{
+    width: 300px;
+}
+
+.footer-content-2{
+    width: 500px;
+}
+
+.footer-content-3{
+    width: 250px;
+}
+
+.input-group button{
+    font-size: 14px;
+}
+
+.input-group .input-group-text {
+    background-color: transparent;
+    border-right: 0;
+}
+
+.form-control {
+    border-left: 0;
+}
+
+footer{
+    background-image: url("/Hospital-DEPI-/assets/images/bg1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
