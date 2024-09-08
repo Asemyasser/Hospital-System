@@ -10,16 +10,73 @@
     <title>blog</title>
 </head>
 <body>
+  <nav class="navbar w-100 py-3 px-5">
+    <div class="d-flex justify-content-between align-items-center w-100">
+      <img class="logo" src="../assets/images/logo (1).png" alt="Logo" />
+      <div class="contact-info d-none d-lg-flex gap-4">
+        <div class="d-flex gap-3 align-items-center">
+          <img src="../assets/images/1.png" alt="" />
+          <div>
+            <p class="m-0">Number:</p>
+            <p class="m-0 fw-bold">+880123456789</p>
+          </div>
+        </div>
+        <div class="d-flex gap-3 align-items-center">
+          <img src="../assets/images/2.png" alt="" />
+          <div>
+            <p class="m-0">Email:</p>
+            <p class="m-0 fw-bold">Mukti@gmail.com</p>
+          </div>
+        </div>
+        <div class="d-flex gap-3 align-items-center">
+          <img src="../assets/images/3.png" alt="" />
+          <div>
+            <p class="m-0">Address:</p>
+            <p class="m-0 fw-bold">12 North West New York 100</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="navbar-toggler d-lg-none"
+        type="button"
+        id="sidebarToggle"
+        title="Toggle Sidebar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div id="sidebar" class="sidebar d-lg-none">
+    <ul class="list-unstyled">
+      <li><a href="#" class="link-light">Home</a></li>
+      <li><a href="./department.html" class="link-light">Departments</a></li>
+      <li><a href="#" class="link-light">Doctors</a></li>
+      <li><a href="#" class="link-light">Services</a></li>
+      <li><a href="#" class="link-light">Blog</a></li>
+      <li><a href="./about-us.html" class="link-light">About Us</a></li>
+      <li><a href="#" class="link-light">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <nav class="w-100 bg-color py-4 px-5 d-none d-lg-flex sticky-top">
+    <ul class="text-white list-unstyled d-flex gap-5 fw-bold m-0">
+      <li><a href="#" class="link-light">Home</a></li>
+      <li><a href="./department.html" class="link-light">Departments</a></li>
+      <li><a href="#" class="link-light">Doctors</a></li>
+      <li><a href="#" class="link-light">Services</a></li>
+      <li><a href="#" class="link-light">Blog</a></li>
+      <li><a href="./about-us.html" class="link-light">About Us</a></li>
+      <li><a href="#" class="link-light">Contact Us</a></li>
+    </ul>
+  </nav>
     <header>
-       <img class="title-img" src="/Hospital-DEPI-/assets/images/titleImg.jpg"  alt="title image" >
-        <div class="centered-blue">
-          <strong>From Our Blog</strong> 
-        </div>
-        <div class="centered">
-            <strong>Home -</strong> Blog
-        </div>
+      <section class="hero-section text-center py-5">
+        <h1>From Our Blog</h1>
+        <p><strong>Home</strong>-About</p>
+      </section>
     </header>
-    <div class="card" style="width: 18rem;">
+    <div class="card col-md-12 col-6"  style="width: 18rem;">
         <img src="/Hospital-DEPI-/assets/images/blog1.jpg"style="height: 15rem;" class="card-img-top" alt="...">
         <div class="card-body">
             <p class="card-blue-text">By Admin March 3, 2022</p>
@@ -118,4 +175,17 @@
   <p>Copyright &copy; 2021 <span class="color">Mukti</span> . All Rights Reserved. By <span class="fw-bold">LabArtisan</span></p>
 
 </footer>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const sidebar = document.getElementById("sidebar");
+  const sidebarToggle = document.getElementById("sidebarToggle");
+
+  sidebarToggle.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
+  });
+</script>
+</body>
 </html>
