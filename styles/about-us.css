@@ -83,7 +83,7 @@ input-group .input-group-text {
 }
 
 @media (max-width: 992px) {
-  .contact-info {
+  .contact-nav-info {
     display: none;
   }
 }

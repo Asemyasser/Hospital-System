@@ -21,7 +21,12 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .section-departments .departments-content .department-main .post-content ul li {
+  .section-departments
+    .departments-content
+    .department-main
+    .post-content
+    ul
+    li {
     width: 50%;
   }
 
@@ -32,12 +37,10 @@
 
   .section-appointment .section-left {
     padding: 100px 40px 100px 40px !important;
-
   }
 
   .section-appointment .section-right {
     padding: 100px 40px 100px 40px !important;
-
   }
 
   .section-sponsor {
@@ -75,7 +78,6 @@
 
   .section-appointment .section-right {
     padding: 100px 100px 100px 40px !important;
-
   }
 
   .section-news .left {

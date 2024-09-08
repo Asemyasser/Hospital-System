@@ -78,7 +78,6 @@ ul {
 
 /* ------------------- HEADER ------------------- */
 
-
 .sidebar {
   position: fixed;
   left: -250px;
@@ -108,6 +107,12 @@ ul {
 
 .bg-nav-color {
   background-color: #0071ef;
+}
+
+@media (max-width: 992px) {
+  .contact-nav-info {
+    display: none;
+  }
 }
 
 /* ------------------- SECTION HERO ------------------- */
@@ -557,4 +562,3 @@ ul {
   font-weight: 500;
   margin: 0 5px;
 }
-
