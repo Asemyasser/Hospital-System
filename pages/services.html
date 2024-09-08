@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/31213be269.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/Hospital-DEPI-/styles/services.css">
+</head>
+<body>
+    
+    <nav class="navbar w-100 py-3 px-5">
+        <div class="d-flex justify-content-between align-items-center w-100">
+          <img class="logo" src="../assets/images/logo (1).png" alt="Logo" />
+          <div class="contact-info d-none d-lg-flex gap-4">
+            <div class="d-flex gap-3 align-items-center">
+              <img src="../assets/images/1.png" alt="" />
+              <div>
+                <p class="m-0">Number:</p>
+                <p class="m-0 fw-bold">+880123456789</p>
+              </div>
+            </div>
+            <div class="d-flex gap-3 align-items-center">
+              <img src="../assets/images/2.png" alt="" />
+              <div>
+                <p class="m-0">Email:</p>
+                <p class="m-0 fw-bold">Mukti@gmail.com</p>
+              </div>
+            </div>
+            <div class="d-flex gap-3 align-items-center">
+              <img src="../assets/images/3.png" alt="" />
+              <div>
+                <p class="m-0">Address:</p>
+                <p class="m-0 fw-bold">12 North West New York 100</p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            id="sidebarToggle"
+            title="Toggle Sidebar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+  
+      <div id="sidebar" class="sidebar d-lg-none">
+        <ul class="list-unstyled">
+          <li><a href="#" class="link-light">Home</a></li>
+          <li><a href="./department.html" class="link-light">Departments</a></li>
+          <li><a href="#" class="link-light">Doctors</a></li>
+          <li><a href="#" class="link-light">Services</a></li>
+          <li><a href="#" class="link-light">Blog</a></li>
+          <li><a href="./about-us.html" class="link-light">About Us</a></li>
+          <li><a href="#" class="link-light">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <nav class="w-100 bg-color py-4 px-5 d-none d-lg-flex sticky-top">
+        <ul class="text-white list-unstyled d-flex gap-5 fw-bold m-0">
+          <li><a href="#" class="link-light">Home</a></li>
+          <li><a href="./department.html" class="link-light">Departments</a></li>
+          <li><a href="#" class="link-light">Doctors</a></li>
+          <li><a href="#" class="link-light">Services</a></li>
+          <li><a href="#" class="link-light">Blog</a></li>
+          <li><a href="./about-us.html" class="link-light">About Us</a></li>
+          <li><a href="#" class="link-light">Contact Us</a></li>
+        </ul>
+      </nav>
+
+    <section class="hero-section text-center py-5">
+        <h1>Our Best Services</h1>
+        <p><strong>Home</strong> - Services</p>
+      </section>
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center align-items-center gap-4 p-5 my-5 flex-wrap">
+                <div><img class="container-fluid carousel-img" src="/Hospital-DEPI-/assets/images/emergencyCare.jpg" alt=""></div>
+        
+                <div class="services-text">
+                    <h5 class="fw-bold">24/7 Emergency Care</h5>
+                    <div class="text-secondary-emphasis">Our hospital offers round-the-clock emergency services with a team of experienced doctors, nurses, and paramedics ready to provide immediate care. Equipped with state-of-the-art facilities, our emergency department handles everything from minor injuries to life-threatening conditions with efficiency and compassion.</div>
+                </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center align-items-center gap-4 p-5 my-5 flex-wrap">
+                <div><img class="container-fluid carousel-img" src="/Hospital-DEPI-/assets/images/cardiology.jpg" alt=""></div>
+        
+                <div class="services-text">
+                    <h5 class="fw-bold">Comprehensive Cardiology Services</h5>
+                    <div class="text-secondary-emphasis">Our cardiology department provides a full range of heart care services, from preventative screenings and diagnostic tests to advanced treatments and surgeries. Our team of specialists is dedicated to delivering personalized care, helping patients manage heart conditions and lead healthier lives.</div>
+                </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center align-items-center gap-4 p-5 my-5 flex-wrap">
+                <div><img class="container-fluid carousel-img" src="/Hospital-DEPI-/assets/images/01.jpg" alt=""></div>
+        
+                <div class="services-text">
+                    <h5 class="fw-bold">Advanced Oncology Care</h5>
+                    <div class="text-secondary-emphasis">Our oncology center provides comprehensive cancer care, combining advanced technology with a compassionate approach. From diagnosis to treatment and recovery, we offer a multidisciplinary team of specialists to support patients and their families every step of the way.</div>
+                </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center align-items-center gap-4 p-5 my-5 flex-wrap">
+                <div><img class="container-fluid carousel-img" src="/Hospital-DEPI-/assets/images/surgery.jpg" alt=""></div>
+        
+                <div class="services-text">
+                    <h5 class="fw-bold">Outpatient Surgery</h5>
+                    <div class="text-secondary-emphasis">Our outpatient surgery center offers a convenient and efficient option for a wide range of surgical procedures that do not require an overnight stay. With state-of-the-art facilities and experienced surgical teams, we ensure a safe and comfortable experience, allowing patients to return home the same day.</div>
+                </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center align-items-center gap-4 p-5 my-5 flex-wrap">
+                <div><img class="container-fluid carousel-img" src="/Hospital-DEPI-/assets/images/physicalTherapy.jpg" alt=""></div>
+        
+                <div class="services-text">
+                    <h5 class="fw-bold">Rehabilitation and Physical Therapy</h5>
+                    <div class="text-secondary-emphasis">Our rehabilitation services are designed to help patients regain strength, mobility, and independence after an injury, surgery, or illness. Our team of physical therapists, occupational therapists, and speech therapists work together to create personalized treatment plans tailored to each patient's needs and goals.</div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    <footer class="w-100 d-flex flex-column justify-content-center align-items-center pt-5">
+
+        <div class="w-75 d-flex justify-content-center align-items-center gap-4 flex-wrap">
+
+            <div class="footer-content-1">
+
+                <h4 class="fw-bold pb-2">Contact Info</h4>
+
+                <p>Rapidiously seize wireless strategic theme areas and corporate testing procedures. Uniquely</p>
+                <p><i class="fa-solid fa-house-chimney fa-xs color pe-2"></i>Suite 02 New Elephant Road USA</p>
+                <p><i class="fa-solid fa-phone fa-xs color pe-2"></i>+880 142 258 123, 02-96936</p>
+                <p class="fw-semibold"><i class="fa-solid fa-envelope fa-xs color pe-2"></i>info@mukti.com</p>
+                <p class="fw-semibold"><i class="fa-solid fa-globe fa-xs color pe-2"></i>info@mukti.com</p>
+
+            </div>
+    
+            <div class="footer-content-2 d-flex flex-column justify-content-center align-items-center">
+                <div><img src="/Hospital-DEPI-/assets/images/logo (1).png" alt="" class="logo"></div>
+
+                <p class="text-center pt-3">Proactive predominate empowered portals viaine robust infrastructurs Convenen simp scalable ntatves rather thanineri manetic action items Proactively predominate empowered portals robust</p>
+
+                <h4 class="pt-1 pb-3 fw-bold">Subscribe Our Newsletter</h4>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa-solid fa-paper-plane fa-xs color"></i></span>
+                    <input type="text" class="form-control" placeholder="Enter Your Email" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    
+                    <button class="btn btn-primary fw-bold px-4 py-3" type="button" id="button-addon2">Subscribe Now</button>
+                  </div>
+
+            </div>
+
+            <div class="footer-content-3">
+
+                <h4 class="fw-bold pb-3">Opening Hours</h4>
+
+                <div class="d-flex justify-content-between">
+
+                    <div>
+                        <p>Saturday</p>
+                        <p>Sunday</p>
+                        <p>Monday</p>
+                        <p>Tuesday</p>
+                        <p>Wednesday</p>
+                        <p>Thursday</p>
+                    </div>
+
+                    <div class="text-end">
+                        <p>8:00 am - 10:00 pm</p>
+                        <p>6:00 am - 8:00 pm</p>
+                        <p>6:00 am - 2:00 pm</p>
+                        <p>7:00 am - 9:00 pm</p>
+                        <p>10:00 am - 12:00 pm</p>
+                        <p>2:00 am - 6:00 pm</p>
+                    </div>
+
+                </div>
+
+            </div>
+            <hr class="w-100 text-light-emphasis mt-5">
+        </div>
+
+        
+
+        <p>Copyright &copy; 2021 <span class="color">Mukti</span> . All Rights Reserved. By <span class="fw-bold">LabArtisan</span></p>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const sidebar = document.getElementById("sidebar");
+      const sidebarToggle = document.getElementById("sidebarToggle");
+
+      sidebarToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+      });
+    </script>
+</body>
+</html>
