@@ -77,48 +77,37 @@ ul {
 }
 
 /* ------------------- HEADER ------------------- */
-.header-top {
-  padding: 21px 0;
+
+
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #0071ef;
+  transition: left 0.3s ease;
+  padding-top: 60px;
+  z-index: 1000;
 }
-
-.header-top .row {
-  flex-wrap: nowrap;
-
+.sidebar.active {
+  left: 0;
 }
-
-.header-top .row>* {
-  width: fit-content;
+.sidebar ul {
+  padding: 0;
 }
-
-.header-contact-info .item .item-inner {
-  margin: 0 15px;
-  display: flex;
+.sidebar ul li {
+  padding: 10px;
 }
-
-.header-contact-info .item .item-inner .item-thumb {
-  margin-right: 15px;
-}
-
-.header-contact-info .item .item-inner .item-content span {
-  color: #696969;
-}
-
-.header-contact-info .item .item-inner .item-content p {
-  color: #000000;
-  margin-bottom: 0;
-  font-weight: 700;
-}
-
-.nav-link {
-  padding: 23px 10px;
-  margin: 0 10px;
-  outline: none;
+.sidebar ul li a {
   color: #fff;
-  font-weight: 700
+  text-decoration: none;
+}
+.navbar-toggler {
+  border: none;
 }
 
-.navbar.mobile {
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+.bg-nav-color {
+  background-color: #0071ef;
 }
 
 /* ------------------- SECTION HERO ------------------- */
@@ -126,7 +115,7 @@ ul {
   background-image: url(../assets/images/1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 170px 0
+  padding: 170px 0;
 }
 
 .section-hero .hero-box .hero-content {
@@ -153,7 +142,6 @@ ul {
 .feature-item .text-box a:hover {
   color: #0071ef !important;
 }
-
 
 /* ------------------- SECTION DEPARTMENTS ------------------- */
 
@@ -203,8 +191,6 @@ ul {
   margin: 0;
 }
 
-
-
 /* ------------------- SECTION DOCTORS ------------------- */
 .doctor-item {
   transition: 0.3s all cubic-bezier(0.46, 0.03, 0.52, 0.96);
@@ -230,20 +216,36 @@ ul {
   transform: scale(1.1);
 }
 
-.section-doctors .col-xl-3:nth-child(4n+1) .doctor-item .doctor-content .doctor-name {
+.section-doctors
+  .col-xl-3:nth-child(4n + 1)
+  .doctor-item
+  .doctor-content
+  .doctor-name {
   background-color: #37c9dd;
 }
 
-.section-doctors .col-xl-3:nth-child(4n+2) .doctor-item .doctor-content .doctor-name {
+.section-doctors
+  .col-xl-3:nth-child(4n + 2)
+  .doctor-item
+  .doctor-content
+  .doctor-name {
   background-color: #3fa5eb;
 }
 
-.section-doctors .col-xl-3:nth-child(4n+3) .doctor-item .doctor-content .doctor-name {
+.section-doctors
+  .col-xl-3:nth-child(4n + 3)
+  .doctor-item
+  .doctor-content
+  .doctor-name {
   background-color: #0383cd;
 }
 
-.section-doctors .col-xl-3:nth-child(4n+4) .doctor-item .doctor-content .doctor-name {
-  background-color: #3156A3;
+.section-doctors
+  .col-xl-3:nth-child(4n + 4)
+  .doctor-item
+  .doctor-content
+  .doctor-name {
+  background-color: #3156a3;
 }
 
 .doctor-item .doctor-content .doctor-name p {
@@ -318,7 +320,10 @@ ul {
   color: #fff;
 }
 
-.section-appointment .section-right form input[type=date]::-webkit-calendar-picker-indicator {
+.section-appointment
+  .section-right
+  form
+  input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   border-radius: 4px;
   margin-right: 2px;
@@ -334,7 +339,6 @@ ul {
   outline: none;
   cursor: pointer;
   margin-bottom: 30px;
-
 }
 
 .section-appointment .section-right form select option {
@@ -403,7 +407,7 @@ ul {
   color: #0071ef;
 }
 
-.section-blog .post-item .post-content h4>a {
+.section-blog .post-item .post-content h4 > a {
   margin-bottom: 2px;
   color: #000000;
   -webkit-transition: all 0.3s ease;
@@ -411,7 +415,7 @@ ul {
   transition: all 0.3s ease;
 }
 
-.section-blog .post-item:hover h4>a {
+.section-blog .post-item:hover h4 > a {
   color: #0071ef;
 }
 
@@ -461,15 +465,12 @@ ul {
   color: #fff;
 }
 
-
-
 .section-news .right .news-input {
   display: flex;
   padding: 8px;
   border-radius: 3px;
   background-color: #fff;
   align-items: center;
-
 }
 
 .section-news .right .news-input label {
@@ -479,7 +480,7 @@ ul {
   margin-bottom: 0px;
 }
 
-.section-news .right .news-input input[type=text] {
+.section-news .right .news-input input[type="text"] {
   outline: none;
   color: #696969;
   margin-bottom: 0;
@@ -490,7 +491,7 @@ ul {
   width: 100%;
 }
 
-.section-news .right .news-input button[type=submit] {
+.section-news .right .news-input button[type="submit"] {
   padding: 15px 7px;
   color: #fff;
   font-size: 0.875rem;
@@ -537,12 +538,10 @@ ul {
 .footer .footer-top .doctor-info ul li:hover {
   margin-left: 10px;
   color: #0071ef !important;
-
 }
 
 .footer .footer-top .doctor-info ul li:hover a {
   color: #0071ef !important;
-
 }
 
 .footer .footer-top .time-info .dep-item {
@@ -558,3 +557,4 @@ ul {
   font-weight: 500;
   margin: 0 5px;
 }
+
