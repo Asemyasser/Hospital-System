@@ -11,50 +11,66 @@
 </head>
 <body>
     
-    <nav class="w-100 d-flex justify-content-around align-items-center py-3 px-5">
-        <img class="logo" src="/Hospital-DEPI-/assets/images/logo (1).png" alt="">
-
-        <div class="d-flex gap-4 flex-wrap">
-
+    <nav class="navbar w-100 py-3 px-5">
+        <div class="d-flex justify-content-between align-items-center w-100">
+          <img class="logo" src="../assets/images/logo (1).png" alt="Logo" />
+          <div class="contact-info d-none d-lg-flex gap-4">
             <div class="d-flex gap-3 align-items-center">
-                <div><img src="/Hospital-DEPI-/assets/images/1.png" alt=""></div>
-                <div>
-                    <p class="m-0">Number:</p>
-                    <p class="m-0 fw-bold">+880123456789</p>
-                </div>
+              <img src="../assets/images/1.png" alt="" />
+              <div>
+                <p class="m-0">Number:</p>
+                <p class="m-0 fw-bold">+880123456789</p>
+              </div>
             </div>
-
             <div class="d-flex gap-3 align-items-center">
-                <div><img src="/Hospital-DEPI-/assets/images/2.png" alt=""></div>
-                <div>
-                    <p class="m-0">Email:</p>
-                    <p class="m-0 fw-bold">Mukti@gmail.com</p>
-                </div>
+              <img src="../assets/images/2.png" alt="" />
+              <div>
+                <p class="m-0">Email:</p>
+                <p class="m-0 fw-bold">Mukti@gmail.com</p>
+              </div>
             </div>
-
             <div class="d-flex gap-3 align-items-center">
-                <div><img src="/Hospital-DEPI-/assets/images/3.png" alt=""></div>
-                <div>
-                    <p class="m-0">Address:</p>
-                    <p class="m-0 fw-bold">12 North West New York 100</p>
-                </div>
+              <img src="../assets/images/3.png" alt="" />
+              <div>
+                <p class="m-0">Address:</p>
+                <p class="m-0 fw-bold">12 North West New York 100</p>
+              </div>
             </div>
-
+          </div>
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            id="sidebarToggle"
+            title="Toggle Sidebar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
-
-    </nav>
-
-    <nav class="w-100 bg-color py-4 px-5 d-flex sticky-top">
-        <ul class="text-white list-unstyled d-flex gap-5 fw-bold m-0 ms-5 ps-5">
-            <li class="ms-5"><a href="" class="link-light link-underline-opacity-0">Home</a></li>
-            <li><a href="" class="link-light link-underline-opacity-0">Departments</a></li>
-            <li><a href="" class="link-light link-underline-opacity-0">Doctors</a></li>
-            <li><a href="" class="link-light link-underline-opacity-0">Services</a></li>
-            <li><a href="" class="link-light link-underline-opacity-0">Blog</a></li>
-            <li><a href="" class="link-light link-underline-opacity-0">About Us</a></li>
-            <li><a href="" class="link-light link-underline-opacity-0">Contact Us</a></li>
+      </nav>
+  
+      <div id="sidebar" class="sidebar d-lg-none">
+        <ul class="list-unstyled">
+          <li><a href="#" class="link-light">Home</a></li>
+          <li><a href="./department.html" class="link-light">Departments</a></li>
+          <li><a href="#" class="link-light">Doctors</a></li>
+          <li><a href="#" class="link-light">Services</a></li>
+          <li><a href="#" class="link-light">Blog</a></li>
+          <li><a href="./about-us.html" class="link-light">About Us</a></li>
+          <li><a href="#" class="link-light">Contact Us</a></li>
         </ul>
-    </nav>
+      </div>
+  
+      <nav class="w-100 bg-color py-4 px-5 d-none d-lg-flex sticky-top">
+        <ul class="text-white list-unstyled d-flex gap-5 fw-bold m-0">
+          <li><a href="#" class="link-light">Home</a></li>
+          <li><a href="./department.html" class="link-light">Departments</a></li>
+          <li><a href="#" class="link-light">Doctors</a></li>
+          <li><a href="#" class="link-light">Services</a></li>
+          <li><a href="#" class="link-light">Blog</a></li>
+          <li><a href="./about-us.html" class="link-light">About Us</a></li>
+          <li><a href="#" class="link-light">Contact Us</a></li>
+        </ul>
+      </nav>
 
     <div class="bg w-100 d-flex flex-column justify-content-center align-items-center">
         <h2 class="color fw-bold">Our Best Services</h2>
