@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+}
+
+footer {
+    background-color: white;
+    padding: 40px 0;
+    border-top: 1px solid #e6e6e6;
+    color: #333;
+    width: 100%;
+}
+
+.footer-container {
+    background-image: url(assets/bg1.png);
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: left;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 10px 20px;
+    min-width: 220px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #000;
+}
+
+#contact-info p,
+#opening-hours ul p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+#contact-info h5{
+    font-size: 14px;
+    font-weight: 550;
+    color: black;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+#contact-info p i{
+    color: #007bff;
+    font-size: smaller;
+    padding-right: 5px;
+}
+#contact-info h5 i{
+    color: #007bff;
+    font-size: smaller;
+    padding-right: 5px;
+}
+
+#our-doctors ul li,
+#our-services ul li{
+    font-size: 14px;
+    color: black;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+#opening-hours ul p span{
+    padding-left: 40px;
+    align-items: left;
+} 
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li:before {
+    content: "» ";
+    color: grey;
+    font-weight: bold;
+}
+
+.footer-section h5 {
+    font-size: 14px;
+    color: #333;
+    font-weight: 400;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    color: white;
+    margin-top: 20px;
+    border-top: 1px solid #e6e6e6;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #666;
+}
+
+.span1 {
+    color: #007bff;
+    font-weight: 550;
+}
+
+.span2 {
+    color: #000;
+    font-weight: 550;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
