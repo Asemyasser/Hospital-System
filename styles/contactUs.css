@@ -6,9 +6,9 @@
     
 }
 
-.bg-color{
-   background-color: #0071ef;
-}
+.bg-color {
+    background-color: #0071ef;
+  }
 
 .color{
     color: #0071ef;
@@ -20,10 +20,35 @@
 
 .bg{
     height: 40vh;
-    background-image: url("../assets/background.jpg");
+    background-image: url("../assets/images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.hero-section {
+    background-image: url("../assets/images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
+    color: #0071ef;
+    min-height: 40vh;
+    background-repeat: no-repeat;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .hero-section p {
+    color: #000;
+  }
+  
+  .hero-section .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
 
 .contact-header {
     background-image: url(../assets/WhatsApp\ Image\ 2024-09-06\ at\ 7.18.03\ PM.jpeg);
@@ -170,7 +195,7 @@
 }
 
 footer{
-    background-image: url("assets/bg1.png");
+    background-image: url("../assets/images/bg1.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-color:#ECF1F9;
@@ -192,5 +217,38 @@ h1, h2 {
 
 
 
-
-
+input-group .input-group-text {
+    background-color: transparent;
+    border-right: 0;
+  }
+  .form-control {
+    border-left: 0;
+  }
+  
+  .sidebar {
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #0071ef;
+    transition: left 0.3s ease;
+    padding-top: 60px;
+    z-index: 1000;
+  }
+  .sidebar.active {
+    left: 0;
+  }
+  .sidebar ul {
+    padding: 0;
+  }
+  .sidebar ul li {
+    padding: 10px;
+  }
+  .sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .navbar-toggler {
+    border: none;
+  }
+  

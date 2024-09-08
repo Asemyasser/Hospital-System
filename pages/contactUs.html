@@ -9,60 +9,78 @@
     <script src="https://kit.fontawesome.com/31213be269.js" crossorigin="anonymous"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/contactUs.css">
 
 </head>
 <body>
     
-    <nav class="w-100 d-flex justify-content-around align-items-center py-3 px-5">
-        <img class="logo" src="../assets/logo (1).png" alt="">
-
-        <div class="d-flex gap-4 flex-wrap">
-
-            <div class="d-flex gap-3 align-items-center">
-                <div><img src="../assets/1.png" alt=""></div>
-                <div>
-                    <p class="m-0">Number:</p>
-                    <p class="m-0 fw-bold">+880123456789</p>
-                </div>
-            </div>
-
-            <div class="d-flex gap-3 align-items-center">
-                <div><img src="../assets/2.png" alt=""></div>
-                <div>
-                    <p class="m-0">Email:</p>
-                    <p class="m-0 fw-bold">Mukti@gmail.com</p>
-                </div>
-            </div>
-
-            <div class="d-flex gap-3 align-items-center">
-                <div><img src="../assets/3.png" alt=""></div>
-                <div>
-                    <p class="m-0">Address:</p>
-                    <p class="m-0 fw-bold">12 North West New York 100</p>
-                </div>
-            </div>
-
+  <nav class="navbar w-100 py-3 px-5">
+    <div class="d-flex justify-content-between align-items-center w-100">
+      <img class="logo" src="../assets/images/logo (1).png" alt="Logo" />
+      <div class="contact-info d-none d-lg-flex gap-4">
+        <div class="d-flex gap-3 align-items-center">
+          <img src="../assets/images/1.png" alt="" />
+          <div>
+            <p class="m-0">Number:</p>
+            <p class="m-0 fw-bold">+880123456789</p>
+          </div>
         </div>
+        <div class="d-flex gap-3 align-items-center">
+          <img src="../assets/images/2.png" alt="" />
+          <div>
+            <p class="m-0">Email:</p>
+            <p class="m-0 fw-bold">Mukti@gmail.com</p>
+          </div>
+        </div>
+        <div class="d-flex gap-3 align-items-center">
+          <img src="../assets/images/3.png" alt="" />
+          <div>
+            <p class="m-0">Address:</p>
+            <p class="m-0 fw-bold">12 North West New York 100</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="navbar-toggler d-lg-none"
+        type="button"
+        id="sidebarToggle"
+        title="Toggle Sidebar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
 
-    </nav>
+  <div id="sidebar" class="sidebar d-lg-none">
+    <ul class="list-unstyled">
+      <li><a href="#" class="link-light">Home</a></li>
+      <li><a href="./department.html" class="link-light">Departments</a></li>
+      <li><a href="#" class="link-light">Doctors</a></li>
+      <li><a href="#" class="link-light">Services</a></li>
+      <li><a href="#" class="link-light">Blog</a></li>
+      <li><a href="./about-us.html" class="link-light">About Us</a></li>
+      <li><a href="#" class="link-light">Contact Us</a></li>
+    </ul>
+  </div>
 
-    <nav class="w-100 bg-color py-4 px-5 d-flex sticky-top">
-        <ul class="text-white list-unstyled d-flex gap-5 fw-bold m-0 ms-5 ps-5">
-            <li class="ms-5"><a href="" class="link-light link-underline-opacity-0">Home</a></li>
-            <li><a href="" class="link-light link-underline-opacity-0">Departments</a></li>
-            <li><a href="" class="link-light link-underline-opacity-0">Doctors</a></li>
-            <li><a href="" class="link-light link-underline-opacity-0">Services</a></li>
-            <li><a href="" class="link-light link-underline-opacity-0">Blog</a></li>
-            <li><a href="" class="link-light link-underline-opacity-0">About Us</a></li>
-            <li><a href="" class="link-light link-underline-opacity-0">Contact Us</a></li>
-        </ul>
-    </nav>
+  <nav class="w-100 bg-color py-4 px-5 d-none d-lg-flex sticky-top">
+    <ul class="text-white list-unstyled d-flex gap-5 fw-bold m-0">
+      <li><a href="#" class="link-light">Home</a></li>
+      <li><a href="./department.html" class="link-light">Departments</a></li>
+      <li><a href="#" class="link-light">Doctors</a></li>
+      <li><a href="#" class="link-light">Services</a></li>
+      <li><a href="#" class="link-light">Blog</a></li>
+      <li><a href="./about-us.html" class="link-light">About Us</a></li>
+      <li><a href="#" class="link-light">Contact Us</a></li>
+    </ul>
+  </nav>
 
-    <section class="contact-header">
-        <h1>Contact Information</h1>
-        <p>Home<span> - Contact Us</span></p>
+    <section class="hero-section text-center py-5">
+      <h1>Contact Information</h1>
+      <p><strong>Home-</strong>Contact Us</p>
     </section>
+
+    
 
     <section class="contact-container container my-5">
         <div class="row">
@@ -145,7 +163,7 @@
             </div>
     
             <div class="footer-content-2 d-flex flex-column justify-content-center align-items-center">
-                <div><img src="../assets/logo (1).png" alt="" class="logo"></div>
+                <div><img src="../assets/images/logo (1).png" alt="" class="logo"></div>
 
                 <p class="text-center pt-3">Proactive predominate empowered portals viaine robust infrastructurs Convenen simp scalable ntatves rather thanineri manetic action items Proactively predominate empowered portals robust</p>
 
@@ -193,5 +211,17 @@
 
     </footer>
     <script type="module" src="../scripts/script.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const sidebar = document.getElementById("sidebar");
+      const sidebarToggle = document.getElementById("sidebarToggle");
+
+      sidebarToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+      });
+    </script>
 </body>
 </html>
