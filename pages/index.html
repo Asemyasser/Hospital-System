@@ -9,18 +9,18 @@
     <script src="https://kit.fontawesome.com/31213be269.js" crossorigin="anonymous"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/style.css">
 
 </head>
 <body>
     
     <nav class="w-100 d-flex justify-content-around align-items-center py-3 px-5">
-        <img class="logo" src="assets/logo (1).png" alt="">
+        <img class="logo" src="../assets/logo (1).png" alt="">
 
         <div class="d-flex gap-4 flex-wrap">
 
             <div class="d-flex gap-3 align-items-center">
-                <div><img src="assets/1.png" alt=""></div>
+                <div><img src="../assets/1.png" alt=""></div>
                 <div>
                     <p class="m-0">Number:</p>
                     <p class="m-0 fw-bold">+880123456789</p>
@@ -28,7 +28,7 @@
             </div>
 
             <div class="d-flex gap-3 align-items-center">
-                <div><img src="assets/2.png" alt=""></div>
+                <div><img src="../assets/2.png" alt=""></div>
                 <div>
                     <p class="m-0">Email:</p>
                     <p class="m-0 fw-bold">Mukti@gmail.com</p>
@@ -36,7 +36,7 @@
             </div>
 
             <div class="d-flex gap-3 align-items-center">
-                <div><img src="assets/3.png" alt=""></div>
+                <div><img src="../assets/3.png" alt=""></div>
                 <div>
                     <p class="m-0">Address:</p>
                     <p class="m-0 fw-bold">12 North West New York 100</p>
@@ -64,49 +64,68 @@
         <p>Home<span> - Contact Us</span></p>
     </section>
 
-    <section class="contact-container">
-        <div class="contact-info">
-            <h2>Contact Information</h2>
-            
-            <div class="contact-item">
-                <p><strong>Office Address:</strong><br>
-                Suite 02, Level 12, Sahera Tropical Center 218<br>
-                New Elephant Road, Dhaka - 1205</p>
+    <section class="contact-container container my-5">
+        <div class="row">
+            <div class="contact-info col-12 col-md-6">
+                <h2>Contact Information</h2>
+    
+                <div class="contact-item">
+                    <p><strong>Office Address:</strong><br>
+                        Suite 02, Level 12, Sahera Tropical Center 218<br>
+                        New Elephant Road, Dhaka - 1205
+                    </p>
+                </div>
+    
+                <div class="contact-item">
+                    <p><strong>Phone Number:</strong><br>
+                        +8801678170593, 01919-264687<br>
+                        02-9611936
+                    </p>
+                </div>
+    
+                <div class="contact-item">
+                    <p><strong>Email Address:</strong><br>
+                        support@LabArtisan
+                    </p>
+                </div>
+    
+                <div class="contact-item">
+                    <p><strong>Website Address:</strong><br>
+                        http://LabArtisan
+                    </p>
+                </div>
             </div>
-            
-            <div class="contact-item">
-                <p><strong>Phone Number:</strong><br>
-                +8801678170593, 01919-264687<br>
-                02-9611936</p>
+    
+            <div class="contact-form col-12 col-md-6">
+                <h2>We Love To Hear From You</h2>
+                <form id="contactForm">
+                    <div class="mb-3">
+                        <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="tel" id="phone" class="form-control" placeholder="Phone Number" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" id="subject" class="form-control" placeholder="Subject" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea id="message" class="form-control" placeholder="Write a message..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Send Message »</button>
+                </form>
             </div>
-            
-            <div class="contact-item">
-                <p><strong>Email Address:</strong><br>
-                support@LabArtisan</p>
-            </div>
-            
-            <div class="contact-item">
-                <p><strong>Website Address:</strong><br>
-                http://LabArtisan</p>
-            </div>
-        </div>
-   
-        
-        <div class="contact-form">
-            <h2>We Love To Hear From You</h2>
-            <form id="contactForm">
-                <input type="email" id="email" placeholder="Your Email" required>
-                <input type="tel" id="phone" placeholder="Phone Number" required>
-                <input type="text" id="subject" placeholder="Subject" required>
-                <textarea id="message" placeholder="Write a message..." required></textarea>
-                <button type="submit">Send Message »</button>
-            </form>
         </div>
     </section>
-
-    <div class="my-map">
-        <div id="map"></div>
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div id="map" class="my-map"></div>
+            </div>
+        </div>
     </div>
+    
+    
     
 
     <footer class="w-100 d-flex flex-column justify-content-center align-items-center pt-5">
@@ -126,7 +145,7 @@
             </div>
     
             <div class="footer-content-2 d-flex flex-column justify-content-center align-items-center">
-                <div><img src="assets/logo (1).png" alt="" class="logo"></div>
+                <div><img src="../assets/logo (1).png" alt="" class="logo"></div>
 
                 <p class="text-center pt-3">Proactive predominate empowered portals viaine robust infrastructurs Convenen simp scalable ntatves rather thanineri manetic action items Proactively predominate empowered portals robust</p>
 
@@ -173,6 +192,6 @@
         <p class="copyright">Copyright &copy; 2021 <span class="color">Mukti</span> . All Rights Reserved. By <span class="fw-bold">LabArtisan</span></p>
 
     </footer>
-    <script type="module" src="./script.js"></script>
+    <script type="module" src="../scripts/script.js"></script>
 </body>
 </html>
