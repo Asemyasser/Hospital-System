@@ -87,6 +87,12 @@ input-group .input-group-text {
     width: 480px;
 }
 
+.carousel-img{
+    width: 500px;
+    height: 320px;
+    object-fit: cover;
+}
+
 .footer-content-1{
     width: 300px;
 }
