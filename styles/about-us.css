@@ -1,0 +1,66 @@
+body {
+  font-family: "Arial", sans-serif;
+  color: #333;
+}
+
+.bg-color {
+  background-color: #0071ef;
+}
+
+.hero-section {
+  background-image: url("../assets/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #0071ef;
+  padding: 50px 0;
+}
+
+.hero-section .img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+.services .service-box {
+  border: none;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.services .service-box:hover {
+  transform: translateY(-10px);
+}
+
+.footer-content-1 {
+  width: 300px;
+}
+
+.footer-content-2 {
+  width: 500px;
+}
+
+.footer-content-3 {
+  width: 250px;
+}
+
+.input-group button {
+  font-size: 14px;
+}
+
+.input-group .input-group-text {
+  background-color: transparent;
+  border-right: 0;
+}
+
+.form-control {
+  border-left: 0;
+}
+
+footer {
+  background-image: url("../assets/images/bg1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
