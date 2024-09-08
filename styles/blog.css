@@ -26,10 +26,11 @@
 }
 
 .card {
-
-    margin-bottom: 50px;
-    margin-top: 70px;
+width: 40% !important;
+    margin-bottom:0px !important;
+    margin-top: 70px !important;
     border-radius: 0;
+    padding-bottom: 10px !important;
 }
 
 .button {
@@ -41,9 +42,8 @@
     background-color: rgba(0, 0, 0, 0) !important;
     border: 1px solid !important;
     border-radius: 0% !important;
-    width: 500px !important;
-    margin-left: -16.5px;
-    margin-bottom: -17px;
+    width:100% !important;
+    margin-bottom: -10px;
     border-color: rgba(0, 0, 0, 0.175) !important;
 
 }
@@ -78,7 +78,7 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
 }
-input-group .input-group-text {
+.input-group .input-group-text {
     background-color: transparent;
     border-right: 0;
   }
