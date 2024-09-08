@@ -10,7 +10,18 @@ body {
   background-position: center;
   padding: 60px 0;
   color: #0071ef;
+  min-height: 40vh;
+  background-repeat: no-repeat;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+.hero-section p {
+  color: #000;
+}
+
 .departments .department-box {
   margin: 20px 0;
   transition: transform 0.3s ease;
