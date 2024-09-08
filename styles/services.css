@@ -58,3 +58,9 @@ footer{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    background-color: #0071ef;
+    border-radius: 50%;
+}
