@@ -58,7 +58,7 @@
 }
 
 footer{
-    background-image: url("/Hospital-DEPI-/assets/images/bg1.png");
+    background-image: url("../assets/images/bg1.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -98,7 +98,7 @@ footer{
   }
   
   @media (max-width: 992px) {
-    .contact-info {
+    .contact-nav-info {
       display: none;
     }
   }
