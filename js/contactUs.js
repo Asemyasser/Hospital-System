@@ -18,39 +18,41 @@ map.on("load", function () {
 });
 
 // Form Validation
-document
-  .getElementById("contactForm")
-  .addEventListener("submit", function (event) {
-    var email = document.getElementById("email");
-    var phone = document.getElementById("phone");
-    var subject = document.getElementById("subject");
-    var message = document.getElementById("message");
 
-    var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+const form = document.getElementById("contactForm");
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
+const subject = document.getElementById("subject");
+const message = document.getElementById("message");
 
-    var phonePattern = /^[0-9]{11}$/;
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-    if (!email.value.match(emailPattern)) {
-      alert("Please enter a valid email address.");
-      event.preventDefault();
-      return;
-    }
+  var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
-    if (!phone.value.match(phonePattern)) {
-      alert("Please enter a valid 10-digit phone number.");
-      event.preventDefault();
-      return;
-    }
+  var phonePattern = /^[0-9]{11}$/;
 
-    if (subject.value.trim() === "") {
-      alert("Please enter a subject.");
-      event.preventDefault();
-      return;
-    }
+  if (!email.value.match(emailPattern)) {
+    alert("Please enter a valid email address.");
+    event.preventDefault();
+    return;
+  }
 
-    if (message.value.trim() === "") {
-      alert("Please enter a message.");
-      event.preventDefault();
-      return;
-    }
-  });
+  if (!phone.value.match(phonePattern)) {
+    alert("Please enter a valid 10-digit phone number.");
+    event.preventDefault();
+    return;
+  }
+
+  if (subject.value.trim() === "") {
+    alert("Please enter a subject.");
+    event.preventDefault();
+    return;
+  }
+
+  if (message.value.trim() === "") {
+    alert("Please enter a message.");
+    event.preventDefault();
+    return;
+  }
+});
