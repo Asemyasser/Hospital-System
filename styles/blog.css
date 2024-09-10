@@ -82,11 +82,12 @@ footer {
   background-color: transparent;
   border-right: 0;
 }
+
 .form-control {
   border-left: 0;
 }
 
-.sidebar {
+/* .sidebar {
   position: fixed;
   left: -250px;
   width: 250px;
@@ -117,11 +118,12 @@ footer {
   .contact-nav-info {
     display: none;
   }
-}
+} */
 
 .bg-color {
   background-color: #0071ef;
 }
+
 .hero-section {
   background-image: url("../assets/images/background.jpg");
   background-size: cover;
@@ -136,6 +138,7 @@ footer {
   align-items: center;
   flex-direction: column;
 }
+
 .hero-section p {
   color: #000;
 }

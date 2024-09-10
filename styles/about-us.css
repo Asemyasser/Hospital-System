@@ -1,5 +1,5 @@
 body {
-  font-family: "Arial", sans-serif;
+  /* font-family: "Arial", sans-serif; */
   color: #333;
 }
 
@@ -21,6 +21,7 @@ body {
   align-items: center;
   flex-direction: column;
 }
+
 .hero-section p {
   color: #000;
 }
@@ -51,11 +52,12 @@ input-group .input-group-text {
   background-color: transparent;
   border-right: 0;
 }
+
 .form-control {
   border-left: 0;
 }
 
-.sidebar {
+/* .sidebar {
   position: fixed;
   left: -250px;
   width: 250px;
@@ -65,19 +67,24 @@ input-group .input-group-text {
   padding-top: 60px;
   z-index: 1000;
 }
+
 .sidebar.active {
   left: 0;
 }
+
 .sidebar ul {
   padding: 0;
 }
+
 .sidebar ul li {
   padding: 10px;
 }
+
 .sidebar ul li a {
   color: #fff;
   text-decoration: none;
 }
+
 .navbar-toggler {
   border: none;
 }
@@ -86,7 +93,7 @@ input-group .input-group-text {
   .contact-nav-info {
     display: none;
   }
-}
+} */
 
 .footer-content-1 {
   width: 300px;

@@ -1,38 +1,17 @@
-/* ------------------------------- GENERAL ------------------------------- */
-/* color-primary: #0071ef; */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  overflow-x: hidden;
-}
-
 body {
-  font-family: "Roboto", sans-serif;
   color: #696969;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-ul {
-  list-style: none;
 }
 
 .px-15 {
   padding: 0 15px;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+.padding-tb {
+  padding: 80px 0;
 }
 
-img {
-  height: auto;
-  max-width: 100%;
+.bg-color {
+  background-color: #f5f9ff;
 }
 
 h1,
@@ -59,61 +38,13 @@ a h6 {
   font-weight: 700;
 }
 
-.padding-tb {
-  padding: 80px 0;
-}
-
-.bg-color {
-  background-color: #f5f9ff;
-}
-
-ul {
-  padding: 0;
-}
-
-.sticky-top {
-  z-index: 1030;
-  /* Ensures the navbar stays on top of other content */
-}
-
 /* ------------------- HEADER ------------------- */
 
-.sidebar {
-  position: fixed;
-  left: -250px;
-  width: 250px;
-  height: 100%;
-  background-color: #0071ef;
-  transition: left 0.3s ease;
-  padding-top: 60px;
-  z-index: 1000;
-}
-.sidebar.active {
-  left: 0;
-}
-.sidebar ul {
-  padding: 0;
-}
-.sidebar ul li {
-  padding: 10px;
-}
-.sidebar ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-.navbar-toggler {
-  border: none;
-}
 
 .bg-nav-color {
   background-color: #0071ef;
 }
 
-@media (max-width: 992px) {
-  .contact-nav-info {
-    display: none;
-  }
-}
 
 /* ------------------- SECTION HERO ------------------- */
 .section-hero {
@@ -221,35 +152,19 @@ ul {
   transform: scale(1.1);
 }
 
-.section-doctors
-  .col-xl-3:nth-child(4n + 1)
-  .doctor-item
-  .doctor-content
-  .doctor-name {
+.section-doctors .col-xl-3:nth-child(4n + 1) .doctor-item .doctor-content .doctor-name {
   background-color: #37c9dd;
 }
 
-.section-doctors
-  .col-xl-3:nth-child(4n + 2)
-  .doctor-item
-  .doctor-content
-  .doctor-name {
+.section-doctors .col-xl-3:nth-child(4n + 2) .doctor-item .doctor-content .doctor-name {
   background-color: #3fa5eb;
 }
 
-.section-doctors
-  .col-xl-3:nth-child(4n + 3)
-  .doctor-item
-  .doctor-content
-  .doctor-name {
+.section-doctors .col-xl-3:nth-child(4n + 3) .doctor-item .doctor-content .doctor-name {
   background-color: #0383cd;
 }
 
-.section-doctors
-  .col-xl-3:nth-child(4n + 4)
-  .doctor-item
-  .doctor-content
-  .doctor-name {
+.section-doctors .col-xl-3:nth-child(4n + 4) .doctor-item .doctor-content .doctor-name {
   background-color: #3156a3;
 }
 
@@ -325,10 +240,7 @@ ul {
   color: #fff;
 }
 
-.section-appointment
-  .section-right
-  form
-  input[type="date"]::-webkit-calendar-picker-indicator {
+.section-appointment .section-right form input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   border-radius: 4px;
   margin-right: 2px;
@@ -412,7 +324,7 @@ ul {
   color: #0071ef;
 }
 
-.section-blog .post-item .post-content h4 > a {
+.section-blog .post-item .post-content h4>a {
   margin-bottom: 2px;
   color: #000000;
   -webkit-transition: all 0.3s ease;
@@ -420,7 +332,7 @@ ul {
   transition: all 0.3s ease;
 }
 
-.section-blog .post-item:hover h4 > a {
+.section-blog .post-item:hover h4>a {
   color: #0071ef;
 }
 
