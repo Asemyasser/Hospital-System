@@ -25,17 +25,17 @@
     width: 50%;
   }
 
-  .appointment .right,
-  .appointment .left {
-    height: 700px !important;
+  .appointment .appointment-right,
+  .appointment .appointment-left {
+    height: 700px;
   }
 
-  .appointment .left {
-    padding: 100px 40px 100px 40px !important;
+  .appointment .appointment-left {
+    padding: 100px 40px 100px 40px;
   }
 
-  .appointment .right {
-    padding: 100px 40px 100px 40px !important;
+  .appointment .appointment-right {
+    padding: 100px 40px 100px 40px;
   }
 
   .sponsor {
@@ -46,7 +46,7 @@
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .departments .departments-content .department-imgs li {
-    width: calc(100% / 5 - 9px) !important;
+    width: calc(100% / 5 - 9px);
   }
 
   .appointment {
@@ -62,29 +62,29 @@
     padding: 120px 0;
   }
 
-  .appointment .right,
-  .appointment .left {
+  .appointment .appointment-right,
+  .appointment .appointment-left {
     height: 700px !important;
   }
 
-  .appointment .left {
-    padding: 100px 40px 100px 100px !important;
+  .appointment .appointment-left {
+    padding: 100px 40px 100px 100px;
   }
 
-  .appointment .right {
-    padding: 100px 100px 100px 40px !important;
+  .appointment .appointment-right {
+    padding: 100px 100px 100px 40px;
   }
 
-  .news .left {
+  .news .news-header {
     width: 40%;
-    margin-bottom: 0 !important;
+    margin-bottom: 0;
   }
 
-  .news .left .news-title h2 {
-    margin-bottom: 0 !important;
+  .news .news-header .news-title h2 {
+    margin-bottom: 0;
   }
 
-  .news .right {
+  .news .news-input {
     width: 60%;
   }
 }
@@ -92,6 +92,6 @@
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .departments .departments-content .department-imgs li {
-    width: calc(100% / 9 - 9px) !important;
+    width: calc(100% / 9 - 9px);
   }
 }

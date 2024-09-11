@@ -3,20 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <!-- ------------- Google link for Roboto font  ------------->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
       rel="stylesheet"
     />
+    <!-- ------------- Font Awesome styleseet  ------------->
     <link rel="stylesheet" href="../styles/all.min.css" />
+    <!-- ------------- Bootstrap styleseet  ------------->
     <link rel="stylesheet" href="../styles/bootstrap.min.css" />
-    <link rel="stylesheet" href="../styles/queries.css" />
-    <link rel="stylesheet" href="../styles/general.css" />
+    <!-- ------------- Main styleseet for Home page ------------->
     <link rel="stylesheet" href="../styles/home.css" />
-
-    <script src="../js/all.min.js" defer></script>
-    <script src="../js/bootstrap.bundle.min.js" defer></script>
-    <script src="../js/script.js" defer></script>
-    <title>Home</title>
+    <!-- ------------- General styleseet for all pages------------->
+    <link rel="stylesheet" href="../styles/general.css" />
+    <!-- ------------- Media queries styleseet  ------------->
+    <link rel="stylesheet" href="../styles/queries.css" />
   </head>
   <body>
     <!-- ---------------------- Header Section ---------------------- -->
@@ -24,7 +27,7 @@
       <div
         class="container d-flex justify-content-between align-items-center w-100"
       >
-        <img class="logo" src="../assets/images/logo (1).png" alt="Logo" />
+        <img class="logo" src="../assets/images/logo.png" alt="Logo" />
         <div class="contact-nav-info d-none d-lg-flex gap-4">
           <div class="d-flex gap-3 align-items-center">
             <img src="../assets/images/1.png" alt="" />
@@ -92,16 +95,18 @@
     <!-- ---------------------- Hero Section ---------------------- -->
     <section class="hero">
       <div class="container">
-        <div class="hero-box">
-          <div class="hero-content text-center text-md-start">
-            <h2 class="">Best Medical Clinic</h2>
-            <h1>
-              <b class="text-primary">Bringing Health</b> To Life For The Whole
-              Family...
-            </h1>
-            <a href="" class="btn btn-primary rounded-0 mt-3 px-3 py-2"
-              >Get Appoinments <i class="fa-solid fa-angles-right fa-xs"></i
-            ></a>
+        <div class="row">
+          <div class="col-12">
+            <div class="hero-content text-center text-md-start">
+              <h2 class="">Best Medical Clinic</h2>
+              <h1>
+                <b class="text-primary">Bringing Health</b> To Life For The
+                Whole Family...
+              </h1>
+              <a href="" class="btn btn-primary rounded-0 mt-3 px-3 py-2"
+                >Get Appoinments <i class="fa-solid fa-angles-right fa-xs"></i
+              ></a>
+            </div>
           </div>
         </div>
       </div>
@@ -110,97 +115,101 @@
     <!-- ---------------------- Feature Section ---------------------- -->
     <section class="feature padding-tb bg-color">
       <div class="container">
-        <div class="feature-header text-center mb-5">
-          <h2 class="fw-light">We Offer Specialized</h2>
-          <h2 class="fw-bolder">Orthopedics To Meet Your Needs</h2>
-        </div>
-        <div class="feature-content">
-          <div class="row justify-content-center g-4">
-            <div class="col-xl-3 col-lg-4 col-md-6 col-12">
-              <div class="feature-item bg-white">
-                <div class="img-box mb-4">
-                  <img
-                    src="../assets/images/feature-item1.png"
-                    alt="feature-img"
-                  />
-                </div>
-                <div class="text-box">
-                  <h4>Medical Treatment</h4>
-                  <p>
-                    Lorem ipsum dolor sit amete consectetur adipisicing elite.
-                    vlote optio animi?
-                  </p>
-                  <a href="#" class="text-dark">
-                    <span class="fw-bolder"
-                      >Read More
-                      <i class="fa-solid fa-angles-right fa-xs"></i> </span
-                  ></a>
-                </div>
-              </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="feature-header text-center mb-5">
+              <h2 class="fw-light">We Offer Specialized</h2>
+              <h2 class="fw-bolder">Orthopedics To Meet Your Needs</h2>
             </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-12">
-              <div class="feature-item bg-white">
-                <div class="img-box mb-4">
-                  <img
-                    src="../assets/images/feature-item2.png"
-                    alt="feature-img"
-                  />
+            <div class="feature-content">
+              <div class="row justify-content-center g-4">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                  <div class="feature-item bg-white">
+                    <div class="img-box mb-4">
+                      <img
+                        src="../assets/images/feature-item1.png"
+                        alt="feature-img"
+                      />
+                    </div>
+                    <div class="text-box">
+                      <h4>Medical Treatment</h4>
+                      <p>
+                        Lorem ipsum dolor sit amete consectetur adipisicing
+                        elite. vlote optio animi?
+                      </p>
+                      <a href="#" class="text-dark">
+                        <span class="fw-bolder"
+                          >Read More
+                          <i class="fa-solid fa-angles-right fa-xs"></i> </span
+                      ></a>
+                    </div>
+                  </div>
                 </div>
-                <div class="text-box">
-                  <h4>Emergency Help</h4>
-                  <p>
-                    Lorem ipsum dolor sit amete consectetur adipisicing elite.
-                    vlote optio animi?
-                  </p>
-                  <a href="#" class="text-dark">
-                    <span class="fw-bolder"
-                      >Read More
-                      <i class="fa-solid fa-angles-right fa-xs"></i> </span
-                  ></a>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                  <div class="feature-item bg-white">
+                    <div class="img-box mb-4">
+                      <img
+                        src="../assets/images/feature-item2.png"
+                        alt="feature-img"
+                      />
+                    </div>
+                    <div class="text-box">
+                      <h4>Emergency Help</h4>
+                      <p>
+                        Lorem ipsum dolor sit amete consectetur adipisicing
+                        elite. vlote optio animi?
+                      </p>
+                      <a href="#" class="text-dark">
+                        <span class="fw-bolder"
+                          >Read More
+                          <i class="fa-solid fa-angles-right fa-xs"></i> </span
+                      ></a>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-12">
-              <div class="feature-item bg-white">
-                <div class="img-box mb-4">
-                  <img
-                    src="../assets/images/feature-item3.png"
-                    alt="feature-img"
-                  />
+                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                  <div class="feature-item bg-white">
+                    <div class="img-box mb-4">
+                      <img
+                        src="../assets/images/feature-item3.png"
+                        alt="feature-img"
+                      />
+                    </div>
+                    <div class="text-box">
+                      <h4>Medical Professionals</h4>
+                      <p>
+                        Lorem ipsum dolor sit amete consectetur adipisicing
+                        elite. vlote optio animi?
+                      </p>
+                      <a href="#" class="text-dark">
+                        <span class="fw-bolder"
+                          >Read More
+                          <i class="fa-solid fa-angles-right fa-xs"></i> </span
+                      ></a>
+                    </div>
+                  </div>
                 </div>
-                <div class="text-box">
-                  <h4>Medical Professionals</h4>
-                  <p>
-                    Lorem ipsum dolor sit amete consectetur adipisicing elite.
-                    vlote optio animi?
-                  </p>
-                  <a href="#" class="text-dark">
-                    <span class="fw-bolder"
-                      >Read More
-                      <i class="fa-solid fa-angles-right fa-xs"></i> </span
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-12">
-              <div class="feature-item bg-white">
-                <div class="img-box mb-4">
-                  <img
-                    src="../assets/images/feature-item4.png"
-                    alt="feature-img"
-                  />
-                </div>
-                <div class="text-box">
-                  <h4>Qualified Doctors</h4>
-                  <p>
-                    Lorem ipsum dolor sit amete consectetur adipisicing elite.
-                    vlote optio animi?
-                  </p>
-                  <a href="#" class="text-dark">
-                    <span class="fw-bolder"
-                      >Read More
-                      <i class="fa-solid fa-angles-right fa-xs"></i> </span
-                  ></a>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                  <div class="feature-item bg-white">
+                    <div class="img-box mb-4">
+                      <img
+                        src="../assets/images/feature-item4.png"
+                        alt="feature-img"
+                      />
+                    </div>
+                    <div class="text-box">
+                      <h4>Qualified Doctors</h4>
+                      <p>
+                        Lorem ipsum dolor sit amete consectetur adipisicing
+                        elite. vlote optio animi?
+                      </p>
+                      <a href="#" class="text-dark">
+                        <span class="fw-bolder"
+                          >Read More
+                          <i class="fa-solid fa-angles-right fa-xs"></i> </span
+                      ></a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -212,117 +221,148 @@
     <!-- ---------------------- Departments Section ---------------------- -->
     <section class="departments padding-tb pb-0">
       <div class="container">
-        <div class="feature-header text-center mb-5">
-          <h2 class="fw-light">We Are The</h2>
-          <h2 class="fw-bolder">Best Our Departments Centers</h2>
-        </div>
-        <div class="departments-content">
-          <div class="row">
-            <div class="col-12">
-              <ul
-                class="department-imgs mb-2 d-flex justify-content-center flex-wrap"
-              >
-                <li>
-                  <a class="" href="">
-                    <img src="../assets/images/01.png" alt="department" />
-                  </a>
-                </li>
-                <li>
-                  <a class="" href="">
-                    <img src="../assets/images/07.png" alt="department" />
-                  </a>
-                </li>
-                <li>
-                  <a class="" href="">
-                    <img src="../assets/images/03.png" alt="department" />
-                  </a>
-                </li>
-                <li>
-                  <a class="" href="">
-                    <img src="../assets/images/04.png" alt="department" />
-                  </a>
-                </li>
-                <li>
-                  <a class="" href="">
-                    <img src="../assets/images/05.png" alt="department" />
-                  </a>
-                </li>
-                <li>
-                  <a class="" href="">
-                    <img src="../assets/images/06.png" alt="department" />
-                  </a>
-                </li>
-                <li>
-                  <a class="" href="">
-                    <img src="../assets/images/07.png" alt="department" />
-                  </a>
-                </li>
-                <li>
-                  <a class="" href="">
-                    <img src="../assets/images/08.png" alt="department" />
-                  </a>
-                </li>
-                <li>
-                  <a class="" href="">
-                    <img src="../assets/images/09.png" alt="department" />
-                  </a>
-                </li>
-              </ul>
-              <div class="department-main">
-                <div class="row flex-row-reverse align-items-center">
-                  <div class="col-12 col-lg-6">
-                    <div class="post-thumb h-100 w-100">
-                      <img
-                        src="../assets/images/department.jpg"
-                        class="w-100"
-                        alt="department"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-12 col-lg-6">
-                    <div class="post-content">
-                      <h3>Speciality Rhinology 1</h3>
-                      <p class="mb-2">
-                        Procedur arrain manu producs rather convenet cuvate
-                        mantna this man Manucur produc rather conven cuvatie
-                        mantan this conven cuvate bad Credibly envisioneer
-                        ubiquitous niche markets transparent relations
-                        Dramatically enable worldwide action items whereas
-                        magnetic source motin was procedur arramin
-                      </p>
-                      <ul class="d-flex flex-wrap p-0">
-                        <li class="w-50 py-1">
-                          <i class="fa-solid fa-check text-primary me-2"></i
-                          >Qualified Doctors
-                        </li>
-                        <li class="w-50 py-1">
-                          <i class="fa-solid fa-check text-primary me-2"></i
-                          >Feel like Home Services
-                        </li>
-                        <li class="w-50 py-1">
-                          <i class="fa-solid fa-check text-primary me-2"></i
-                          >24x7 Emergency Services
-                        </li>
-                        <li class="w-50 py-1">
-                          <i class="fa-solid fa-check text-primary me-2"></i
-                          >Outdoor Checkup
-                        </li>
-                        <li class="w-50 py-1">
-                          <i class="fa-solid fa-check text-primary me-2"></i
-                          >General Medical
-                        </li>
-                        <li class="w-50 py-1">
-                          <i class="fa-solid fa-check text-primary me-2"></i
-                          >Easy and Affordable Billing
-                        </li>
-                      </ul>
-                      <a
-                        href=""
-                        class="btn btn-primary rounded-0 mt-3 px-3 py-2"
-                      >
-                        Appoinment Now
-                        <i class="fa-solid fa-angles-right fa-xs"></i>
+        <div class="row">
+          <div class="col-12">
+            <div class="feature-header text-center mb-5">
+              <h2 class="fw-light">We Are The</h2>
+              <h2 class="fw-bolder">Best Our Departments Centers</h2>
+            </div>
+            <div class="departments-content">
+              <div class="row">
+                <div class="col-12">
+                  <ul
+                    class="department-imgs mb-2 d-flex justify-content-center flex-wrap"
+                  >
+                    <li>
+                      <a class="" href="">
+                        <img
+                          src="../assets/images/department1.png"
+                          alt="department"
+                        />
                       </a>
+                    </li>
+                    <li>
+                      <a class="" href="">
+                        <img
+                          src="../assets/images/department7.png"
+                          alt="department"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a class="" href="">
+                        <img
+                          src="../assets/images/department3.png"
+                          alt="department"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a class="" href="">
+                        <img
+                          src="../assets/images/department4.png"
+                          alt="department"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a class="" href="">
+                        <img
+                          src="../assets/images/department5.png"
+                          alt="department"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a class="" href="">
+                        <img
+                          src="../assets/images/department6.png"
+                          alt="department"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a class="" href="">
+                        <img
+                          src="../assets/images/department7.png"
+                          alt="department"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a class="" href="">
+                        <img
+                          src="../assets/images/department8.png"
+                          alt="department"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a class="" href="">
+                        <img
+                          src="../assets/images/department9.png"
+                          alt="department"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="department-main">
+                    <div class="row flex-row-reverse align-items-center">
+                      <div class="col-12 col-lg-6">
+                        <div class="post-img h-100 w-100">
+                          <img
+                            src="../assets/images/department.jpg"
+                            class="w-100"
+                            alt="department"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-12 col-lg-6">
+                        <div class="post-content">
+                          <h3>Speciality Rhinology 1</h3>
+                          <p class="mb-2">
+                            Procedur arrain manu producs rather convenet cuvate
+                            mantna this man Manucur produc rather conven cuvatie
+                            mantan this conven cuvate bad Credibly envisioneer
+                            ubiquitous niche markets transparent relations
+                            Dramatically enable worldwide action items whereas
+                            magnetic source motin was procedur arramin
+                          </p>
+                          <ul class="d-flex flex-wrap p-0">
+                            <li class="w-50 py-1">
+                              <i class="fa-solid fa-check text-primary me-2"></i
+                              >Qualified Doctors
+                            </li>
+                            <li class="w-50 py-1">
+                              <i class="fa-solid fa-check text-primary me-2"></i
+                              >Feel like Home Services
+                            </li>
+                            <li class="w-50 py-1">
+                              <i class="fa-solid fa-check text-primary me-2"></i
+                              >24x7 Emergency Services
+                            </li>
+                            <li class="w-50 py-1">
+                              <i class="fa-solid fa-check text-primary me-2"></i
+                              >Outdoor Checkup
+                            </li>
+                            <li class="w-50 py-1">
+                              <i class="fa-solid fa-check text-primary me-2"></i
+                              >General Medical
+                            </li>
+                            <li class="w-50 py-1">
+                              <i class="fa-solid fa-check text-primary me-2"></i
+                              >Easy and Affordable Billing
+                            </li>
+                          </ul>
+                          <a
+                            href=""
+                            class="btn btn-primary rounded-0 mt-3 px-3 py-2"
+                          >
+                            Appoinment Now
+                            <i class="fa-solid fa-angles-right fa-xs"></i>
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -334,78 +374,70 @@
     </section>
 
     <!-- ---------------------- Counter Section ---------------------- -->
-    <section class="counter-section">
+    <section class="counter">
       <div class="container">
         <div class="row">
           <div class="col-lg-3 col-sm-6 col-12">
-            <div class="counter-item">
-              <div
-                class="counter-item-inner d-flex justify-content-center flex-wrap align-items-center"
-              >
-                <div class="counter-thumb me-3">
-                  <img src="../assets/images/counter1.png" alt="counter" />
-                </div>
-                <div class="counter-content">
-                  <h3 class="number">
-                    <span class="counter">152</span>
-                    <i class="fa-solid fa-plus fa-xs"></i>
-                  </h3>
-                  <p class="post-content text-white">Patients Every Day</p>
-                </div>
+            <div
+              class="counter-item d-flex justify-content-center flex-wrap align-items-center"
+            >
+              <div class="counter-img me-3">
+                <img src="../assets/images/counter1.png" alt="counter" />
+              </div>
+              <div class="counter-content">
+                <h3 class="number">
+                  <span class="counter-number">152</span>
+                  <i class="fa-solid fa-plus fa-xs"></i>
+                </h3>
+                <p class="post-content text-white">Patients Every Day</p>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-sm-6 col-12">
-            <div class="counter-item">
-              <div
-                class="counter-item-inner d-flex justify-content-center flex-wrap align-items-center"
-              >
-                <div class="counter-thumb me-3">
-                  <img src="../assets/images/counter2.png" alt="counter" />
-                </div>
-                <div class="counter-content">
-                  <h3 class="number">
-                    <span class="counter">122</span>
-                    <i class="fa-solid fa-plus fa-xs"></i>
-                  </h3>
-                  <p class="post-content text-white">Qualified Doctors</p>
-                </div>
+            <div
+              class="counter-item d-flex justify-content-center flex-wrap align-items-center"
+            >
+              <div class="counter-img me-3">
+                <img src="../assets/images/counter2.png" alt="counter" />
+              </div>
+              <div class="counter-content">
+                <h3 class="number">
+                  <span class="counter-number">122</span>
+                  <i class="fa-solid fa-plus fa-xs"></i>
+                </h3>
+                <p class="post-content text-white">Qualified Doctors</p>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-sm-6 col-12">
-            <div class="counter-item">
-              <div
-                class="counter-item-inner d-flex justify-content-center flex-wrap align-items-center"
-              >
-                <div class="counter-thumb me-3">
-                  <img src="../assets/images/counter3.png" alt="counter" />
-                </div>
-                <div class="counter-content">
-                  <h3 class="number">
-                    <span class="counter">3</span>
-                    <i class="fa-solid fa-plus fa-xs"></i>
-                  </h3>
-                  <p class="post-content text-white">Years Experience</p>
-                </div>
+            <div
+              class="counter-item d-flex justify-content-center flex-wrap align-items-center"
+            >
+              <div class="counter-img me-3">
+                <img src="../assets/images/counter3.png" alt="counter" />
+              </div>
+              <div class="counter-content">
+                <h3 class="number">
+                  <span class="counter-number">3</span>
+                  <i class="fa-solid fa-plus fa-xs"></i>
+                </h3>
+                <p class="post-content text-white">Years Experience</p>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-sm-6 col-12">
-            <div class="counter-item">
-              <div
-                class="counter-item-inner d-flex justify-content-center flex-wrap align-items-center"
-              >
-                <div class="counter-thumb me-3">
-                  <img src="../assets/images/counter4.png" alt="counter" />
-                </div>
-                <div class="counter-content">
-                  <h3 class="number">
-                    <span class="counter">105</span>
-                    <i class="fa-solid fa-plus fa-xs"></i>
-                  </h3>
-                  <p class="post-content text-white">Diagnosis Verity</p>
-                </div>
+            <div
+              class="counter-item d-flex justify-content-center flex-wrap align-items-center"
+            >
+              <div class="counter-img me-3">
+                <img src="../assets/images/counter4.png" alt="counter" />
+              </div>
+              <div class="counter-content">
+                <h3 class="number">
+                  <span class="counter-number">105</span>
+                  <i class="fa-solid fa-plus fa-xs"></i>
+                </h3>
+                <p class="post-content text-white">Diagnosis Verity</p>
               </div>
             </div>
           </div>
@@ -416,226 +448,210 @@
     <!-- ---------------------- Doctors Section ---------------------- -->
     <section class="doctors padding-tb">
       <div class="container">
-        <div class="service-header text-center mb-5">
-          <h2 class="fw-light">Meet Our</h2>
-          <h2 class="fw-bolder">Mukti Professional Doctors</h2>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-xl-3 col-lg-4 col-md-6 col-12">
-            <div class="doctor-item">
-              <div class="doctor-img overflow-hidden">
-                <img
-                  src="../assets/images/doctor1.jpg"
-                  alt="doctor"
-                  class="w-100"
-                />
-              </div>
-              <div class="doctor-content">
-                <div class="doctor-name p-3 text-white">
-                  <h4 class="text-white">Dr. Jason Kovalsky</h4>
-                  <p class="digi">Cardiologist</p>
+        <div class="row">
+          <div class="col-12">
+            <div class="doctors-header text-center mb-5">
+              <h2 class="fw-light">Meet Our</h2>
+              <h2 class="fw-bolder">Mukti Professional Doctors</h2>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                <div class="doctor-item">
+                  <div class="doctor-img overflow-hidden">
+                    <img
+                      src="../assets/images/doctor1.jpg"
+                      alt="doctor"
+                      class="w-100"
+                    />
+                  </div>
+                  <div class="doctor-content">
+                    <div class="doctor-name p-3 text-white">
+                      <h4 class="text-white">Dr. Jason Kovalsky</h4>
+                      <p class="digi">Cardiologist</p>
+                    </div>
+                    <ul class="doctor-contact p-3 position-relative">
+                      <li>
+                        <span class="text-dark">Phone :</span> 658 222 127 964
+                      </li>
+                      <li>
+                        <span class="text-dark">Email :</span> admin@gmail.com
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <ul class="doctor-contact p-3 position-relative">
-                  <li>
-                    <span class="text-dark">Phone :</span> 658 222 127 964
-                  </li>
-                  <li>
-                    <span class="text-dark">Email :</span> admin@gmail.com
-                  </li>
-                </ul>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                <div class="doctor-item">
+                  <div class="doctor-img overflow-hidden">
+                    <img
+                      src="../assets/images/doctor2.jpg"
+                      alt="doctor"
+                      class="w-100"
+                    />
+                  </div>
+                  <div class="doctor-content">
+                    <div class="doctor-name p-3 text-white">
+                      <h4 class="text-white">Dr. Jason Kovalsky</h4>
+                      <p class="digi">Cardiologist</p>
+                    </div>
+                    <ul class="doctor-contact p-3 position-relative">
+                      <li>
+                        <span class="text-dark">Phone :</span> 658 222 127 964
+                      </li>
+                      <li>
+                        <span class="text-dark">Email :</span> admin@gmail.com
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                <div class="doctor-item">
+                  <div class="doctor-img overflow-hidden">
+                    <img
+                      src="../assets/images/doctor3.jpg"
+                      alt="doctor"
+                      class="w-100"
+                    />
+                  </div>
+                  <div class="doctor-content">
+                    <div class="doctor-name p-3 text-white">
+                      <h4 class="text-white">Dr. Jason Kovalsky</h4>
+                      <p class="digi">Cardiologist</p>
+                    </div>
+                    <ul class="doctor-contact p-3 position-relative">
+                      <li>
+                        <span class="text-dark">Phone :</span> 658 222 127 964
+                      </li>
+                      <li>
+                        <span class="text-dark">Email :</span> admin@gmail.com
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                <div class="doctor-item">
+                  <div class="doctor-img overflow-hidden">
+                    <img
+                      src="../assets/images/doctor4.jpg"
+                      alt="doctor"
+                      class="w-100"
+                    />
+                  </div>
+                  <div class="doctor-content">
+                    <div class="doctor-name p-3 text-white">
+                      <h4 class="text-white">Dr. Jason Kovalsky</h4>
+                      <p class="digi">Cardiologist</p>
+                    </div>
+                    <ul class="doctor-contact p-3 position-relative">
+                      <li>
+                        <span class="text-dark">Phone :</span> 658 222 127 964
+                      </li>
+                      <li>
+                        <span class="text-dark">Email :</span> admin@gmail.com
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-12">
-            <div class="doctor-item">
-              <div class="doctor-img overflow-hidden">
-                <img
-                  src="../assets/images/doctor2.jpg"
-                  alt="doctor"
-                  class="w-100"
-                />
-              </div>
-              <div class="doctor-content">
-                <div class="doctor-name p-3 text-white">
-                  <h4 class="text-white">Dr. Jason Kovalsky</h4>
-                  <p class="digi">Cardiologist</p>
-                </div>
-                <ul class="doctor-contact p-3 position-relative">
-                  <li>
-                    <span class="text-dark">Phone :</span> 658 222 127 964
-                  </li>
-                  <li>
-                    <span class="text-dark">Email :</span> admin@gmail.com
-                  </li>
-                </ul>
-              </div>
+            <div class="doctors-btn text-center">
+              <a href="" class="btn btn-primary rounded-0 mt-3 px-4 py-2">
+                View All Doctors <i class="fa-solid fa-angles-right fa-xs"></i>
+              </a>
             </div>
           </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-12">
-            <div class="doctor-item">
-              <div class="doctor-img overflow-hidden">
-                <img
-                  src="../assets/images/doctor3.jpg"
-                  alt="doctor"
-                  class="w-100"
-                />
-              </div>
-              <div class="doctor-content">
-                <div class="doctor-name p-3 text-white">
-                  <h4 class="text-white">Dr. Jason Kovalsky</h4>
-                  <p class="digi">Cardiologist</p>
-                </div>
-                <ul class="doctor-contact p-3 position-relative">
-                  <li>
-                    <span class="text-dark">Phone :</span> 658 222 127 964
-                  </li>
-                  <li>
-                    <span class="text-dark">Email :</span> admin@gmail.com
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-12">
-            <div class="doctor-item">
-              <div class="doctor-img overflow-hidden">
-                <img
-                  src="../assets/images/doctor4.jpg"
-                  alt="doctor"
-                  class="w-100"
-                />
-              </div>
-              <div class="doctor-content">
-                <div class="doctor-name p-3 text-white">
-                  <h4 class="text-white">Dr. Jason Kovalsky</h4>
-                  <p class="digi">Cardiologist</p>
-                </div>
-                <ul class="doctor-contact p-3 position-relative">
-                  <li>
-                    <span class="text-dark">Phone :</span> 658 222 127 964
-                  </li>
-                  <li>
-                    <span class="text-dark">Email :</span> admin@gmail.com
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="doctors-btn text-center">
-          <a href="" class="btn btn-primary rounded-0 mt-3 px-4 py-2">
-            View All Doctors <i class="fa-solid fa-angles-right fa-xs"></i>
-          </a>
         </div>
       </div>
     </section>
 
     <!-- ---------------------- Appointment Section ---------------------- -->
     <section class="appointment">
-      <div class="row">
-        <div class="col-md-6 col-12 p-0">
-          <div class="left">
-            <div class="time-info">
-              <div class="al-title mb-4">
-                <h2 class=""><span>24 Hours </span></h2>
-                <h2>Opening Our Services</h2>
-              </div>
-              <div class="dep-item">
-                <div
-                  class="dep-item-inner d-flex justify-content-between flex-wrap"
-                >
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 col-12 p-0">
+            <div class="appointment-left">
+              <div class="time-info">
+                <div class="al-title mb-4">
+                  <h2 class=""><span>24 Hours </span></h2>
+                  <h2>Opening Our Services</h2>
+                </div>
+                <div class="dep-item d-flex justify-content-between flex-wrap">
                   <div class="day-name">Satarday</div>
                   <div class="day-time">8:00 am-10:00 pm</div>
                 </div>
-              </div>
-              <div class="dep-item">
-                <div
-                  class="dep-item-inner d-flex justify-content-between flex-wrap"
-                >
+                <div class="dep-item d-flex justify-content-between flex-wrap">
                   <div class="day-name">Sunday</div>
                   <div class="day-time">6:00 am-8:00 pm</div>
                 </div>
-              </div>
-              <div class="dep-item">
-                <div
-                  class="dep-item-inner d-flex justify-content-between flex-wrap"
-                >
+                <div class="dep-item d-flex justify-content-between flex-wrap">
                   <div class="day-name">Monday</div>
                   <div class="day-time">6:00 am-2:00 pm</div>
                 </div>
-              </div>
-              <div class="dep-item">
-                <div
-                  class="dep-item-inner d-flex justify-content-between flex-wrap"
-                >
+                <div class="dep-item d-flex justify-content-between flex-wrap">
                   <div class="day-name">Tuesday</div>
                   <div class="day-time">7:00 am-9:00 pm</div>
                 </div>
-              </div>
-              <div class="dep-item">
-                <div
-                  class="dep-item-inner d-flex justify-content-between flex-wrap"
-                >
+                <div class="dep-item d-flex justify-content-between flex-wrap">
                   <div class="day-name">Widnessday</div>
                   <div class="day-time">10:00 am-12:00 pm</div>
                 </div>
-              </div>
-              <div class="dep-item">
-                <div
-                  class="dep-item-inner d-flex justify-content-between flex-wrap"
-                >
+                <div class="dep-item d-flex justify-content-between flex-wrap">
                   <div class="day-name">Thirsday</div>
                   <div class="day-time">2:00 am-6:00 pm</div>
                 </div>
-              </div>
-              <div class="dep-item">
-                <div
-                  class="dep-item-inner d-flex justify-content-between flex-wrap"
-                >
+                <div class="dep-item d-flex justify-content-between flex-wrap">
                   <div class="day-name">Friday</div>
                   <div class="day-time">Closed</div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-6 col-12 p-0">
-          <div class="right">
-            <div class="ar-title mb-4">
-              <h2><span>Make An</span></h2>
-              <h2>Appointment Now</h2>
+          <div class="col-md-6 col-12 p-0">
+            <div class="appointment-right">
+              <div class="ar-title mb-4">
+                <h2><span>Make An</span></h2>
+                <h2>Appointment Now</h2>
+              </div>
+              <form action="/">
+                <input
+                  type="text"
+                  id="fname"
+                  name="firstName"
+                  placeholder="Your Name"
+                />
+                <select
+                  id="country"
+                  name="country"
+                  class="w-100"
+                  title="country"
+                >
+                  <option value="1">Select Departments</option>
+                  <option value="2">Dental</option>
+                  <option value="3">U.C</option>
+                </select>
+                <input
+                  type="text"
+                  id="lname"
+                  name="lastname"
+                  placeholder="Phone Number"
+                />
+                <input
+                  placeholder="Email Address"
+                  type="date"
+                  id="start"
+                  name="trip-start"
+                  value="2021-02-21"
+                />
+                <button class="lab-btn bg-white" type="submit">
+                  <span
+                    >Appointment Now
+                    <i class="fa-solid fa-angles-right fa-xs"></i
+                  ></span>
+                </button>
+              </form>
             </div>
-            <form action="/">
-              <input
-                type="text"
-                id="fname"
-                name="firstName"
-                placeholder="Your Name"
-              />
-              <select id="country" name="country" class="w-100" title="country">
-                <option value="1">Select Departments</option>
-                <option value="2">Dental</option>
-                <option value="3">U.C</option>
-              </select>
-              <input
-                type="text"
-                id="lname"
-                name="lastname"
-                placeholder="Phone Number"
-              />
-              <input
-                placeholder="Email Address"
-                type="date"
-                id="start"
-                name="trip-start"
-                value="2021-02-21"
-              />
-              <button class="lab-btn bg-white" type="submit">
-                <span
-                  >Appointment Now <i class="fa-solid fa-angles-right fa-xs"></i
-                ></span>
-              </button>
-            </form>
           </div>
         </div>
       </div>
@@ -644,107 +660,111 @@
     <!-- ---------------------- Blog Section ---------------------- -->
     <section class="blog padding-tb bg-color">
       <div class="container">
-        <div class="service-header text-center mb-5">
-          <h2 class="fw-light">News Feed</h2>
-          <h2 class="fw-bolder">Be The First To New Stories</h2>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-12 col-xl-4 col-md-6">
-            <div class="post-item mb-xl-0">
-              <div class="post-img overflow-hidden">
-                <img
-                  src="../assets/images/post1.jpg"
-                  alt="post"
-                  class="w-100"
-                />
-              </div>
-              <div class="post-content">
-                <span class="meta"
-                  >By <a href="#">Admin</a> March 24, 2021</span
-                >
-                <h4>
-                  <a href="#"
-                    >Globa Empoer Extenve Chanels Extensve Creat Method</a
-                  >
-                </h4>
-                <p>
-                  Complete actuaze centi centrcing colora and sharin without
-                  anstaled anding bases aweme medicalplus Template.
-                </p>
-              </div>
-              <div class="blog-footer">
-                <a href="#" class="viewall"
-                  >Read More <i class="fa-solid fa-angles-right fa-xs"></i
-                ></a>
-                <a href="#" class="blog-comment"
-                  ><i class="fa-solid fa-message me-2"></i> 30</a
-                >
-              </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="blog-header text-center mb-5">
+              <h2 class="fw-light">News Feed</h2>
+              <h2 class="fw-bolder">Be The First To New Stories</h2>
             </div>
-          </div>
-          <div class="col-12 col-xl-4 col-md-6">
-            <div class="post-item mb-xl-0">
-              <div class="post-img overflow-hidden">
-                <img
-                  src="../assets/images/post2.jpg"
-                  alt="post"
-                  class="w-100"
-                />
+            <div class="row justify-content-center">
+              <div class="col-12 col-xl-4 col-md-6">
+                <div class="post-item mb-xl-0">
+                  <div class="post-img overflow-hidden">
+                    <img
+                      src="../assets/images/post1.jpg"
+                      alt="post"
+                      class="w-100"
+                    />
+                  </div>
+                  <div class="post-content">
+                    <span class="meta"
+                      >By <a href="#">Admin</a> March 24, 2021</span
+                    >
+                    <h4>
+                      <a href="#"
+                        >Globa Empoer Extenve Chanels Extensve Creat Method</a
+                      >
+                    </h4>
+                    <p>
+                      Complete actuaze centi centrcing colora and sharin without
+                      anstaled anding bases aweme medicalplus Template.
+                    </p>
+                  </div>
+                  <div class="blog-footer">
+                    <a href="#" class="viewall"
+                      >Read More <i class="fa-solid fa-angles-right fa-xs"></i
+                    ></a>
+                    <a href="#" class="blog-comment"
+                      ><i class="fa-solid fa-message me-2"></i> 30</a
+                    >
+                  </div>
+                </div>
               </div>
-              <div class="post-content">
-                <span class="meta"
-                  >By <a href="#">Admin</a> March 24, 2021</span
-                >
-                <h4>
-                  <a href="#"
-                    >Globa Empoer Extenve Chanels Extensve Creat Method</a
-                  >
-                </h4>
-                <p>
-                  Complete actuaze centi centrcing colora and sharin without
-                  anstaled anding bases aweme medicalplus Template.
-                </p>
+              <div class="col-12 col-xl-4 col-md-6">
+                <div class="post-item mb-xl-0">
+                  <div class="post-img overflow-hidden">
+                    <img
+                      src="../assets/images/post2.jpg"
+                      alt="post"
+                      class="w-100"
+                    />
+                  </div>
+                  <div class="post-content">
+                    <span class="meta"
+                      >By <a href="#">Admin</a> March 24, 2021</span
+                    >
+                    <h4>
+                      <a href="#"
+                        >Globa Empoer Extenve Chanels Extensve Creat Method</a
+                      >
+                    </h4>
+                    <p>
+                      Complete actuaze centi centrcing colora and sharin without
+                      anstaled anding bases aweme medicalplus Template.
+                    </p>
+                  </div>
+                  <div class="blog-footer">
+                    <a href="#" class="viewall"
+                      >Read More <i class="fa-solid fa-angles-right fa-xs"></i
+                    ></a>
+                    <a href="#" class="blog-comment"
+                      ><i class="fa-solid fa-message me-2"></i> 30</a
+                    >
+                  </div>
+                </div>
               </div>
-              <div class="blog-footer">
-                <a href="#" class="viewall"
-                  >Read More <i class="fa-solid fa-angles-right fa-xs"></i
-                ></a>
-                <a href="#" class="blog-comment"
-                  ><i class="fa-solid fa-message me-2"></i> 30</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-xl-4 col-md-6">
-            <div class="post-item mb-xl-0">
-              <div class="post-img overflow-hidden">
-                <img
-                  src="../assets/images/post3.jpg"
-                  alt="post"
-                  class="w-100"
-                />
-              </div>
-              <div class="post-content">
-                <span class="meta"
-                  >By <a href="#">Admin</a> March 24, 2021</span
-                >
-                <h4>
-                  <a href="#"
-                    >Globa Empoer Extenve Chanels Extensve Creat Method</a
-                  >
-                </h4>
-                <p>
-                  Complete actuaze centi centrcing colora and sharin without
-                  anstaled anding bases aweme medicalplus Template.
-                </p>
-              </div>
-              <div class="blog-footer">
-                <a href="#" class="viewall"
-                  >Read More <i class="fa-solid fa-angles-right fa-xs"></i
-                ></a>
-                <a href="#" class="blog-comment"
-                  ><i class="fa-solid fa-message me-2"></i> 30</a
-                >
+              <div class="col-12 col-xl-4 col-md-6">
+                <div class="post-item mb-xl-0">
+                  <div class="post-img overflow-hidden">
+                    <img
+                      src="../assets/images/post3.jpg"
+                      alt="post"
+                      class="w-100"
+                    />
+                  </div>
+                  <div class="post-content">
+                    <span class="meta"
+                      >By <a href="#">Admin</a> March 24, 2021</span
+                    >
+                    <h4>
+                      <a href="#"
+                        >Globa Empoer Extenve Chanels Extensve Creat Method</a
+                      >
+                    </h4>
+                    <p>
+                      Complete actuaze centi centrcing colora and sharin without
+                      anstaled anding bases aweme medicalplus Template.
+                    </p>
+                  </div>
+                  <div class="blog-footer">
+                    <a href="#" class="viewall"
+                      >Read More <i class="fa-solid fa-angles-right fa-xs"></i
+                    ></a>
+                    <a href="#" class="blog-comment"
+                      ><i class="fa-solid fa-message me-2"></i> 30</a
+                    >
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -816,28 +836,32 @@
 
     <!-- ---------------------- News Section ---------------------- -->
     <section class="news">
-      <div
-        class="container d-flex justify-content-xl-between align-items-center justify-content-center flex-wrap"
-      >
-        <div class="left">
-          <div class="news-title text-center text-md-left">
-            <h2>Join Our Newsletter</h2>
-          </div>
-        </div>
-        <div class="right">
-          <div class="news-input">
-            <label for="text"
-              ><i class="fa-solid fa-paper-plane fa-xs"></i
-            ></label>
-            <input
-              type="text"
-              name="text"
-              id="text"
-              placeholder="Enter Your Email"
-            />
-            <button class="" type="submit" value="Submit-Now" name="submit">
-              Subscribe Now
-            </button>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="news-content d-flex justify-content-xl-between align-items-center justify-content-center flex-wrap"
+            >
+              <div class="news-header">
+                <div class="news-title text-center text-md-left">
+                  <h2>Join Our Newsletter</h2>
+                </div>
+              </div>
+              <div class="news-input">
+                <label for="text"
+                  ><i class="fa-solid fa-paper-plane fa-xs"></i
+                ></label>
+                <input
+                  type="text"
+                  name="text"
+                  id="text"
+                  placeholder="Enter Your Email"
+                />
+                <button class="" type="submit" value="Submit-Now" name="submit">
+                  Subscribe Now
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -845,156 +869,179 @@
     <!-- ---------------------- Footer ---------------------- -->
     <footer class="footer">
       <div class="container">
-        <div class="wrapper">
-          <div class="footer-top py-lg-5 border-bottom">
-            <div class="row g-3">
-              <div class="col-12 col-sm-6 col-xl-3">
-                <div class="contact-info">
-                  <h3>Contact Info</h3>
-                  <p>
-                    Rapidiously seize wireless strategic theme areas and
-                    corporate testing procedures. Uniquely
-                  </p>
-                  <ul class="lab-ul p-0">
-                    <li>
-                      <i class="fa-solid fa-house me-2 text-primary"></i> Suite
-                      02 New Elephant Road usa
-                    </li>
-                    <li>
-                      <i class="fa-solid fa-phone me-2 text-primary"></i> +880
-                      142 258 123, 02-96936
-                    </li>
-                    <li>
-                      <i class="fa-solid fa-envelope me-2 text-primary"></i>
-                      <a href="#" class="text-dark"> info@mukti.com</a>
-                    </li>
-                    <li>
-                      <i class="fa-solid fa-globe me-2 text-primary"></i>
-                      <a href="#" class="text-dark"> info@mukti.com</a>
-                    </li>
-                  </ul>
+        <div class="row">
+          <div class="col-12">
+            <div class="footer-top py-lg-5 border-bottom">
+              <div class="row g-3">
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="contact-info">
+                    <h3>Contact Info</h3>
+                    <p>
+                      Rapidiously seize wireless strategic theme areas and
+                      corporate testing procedures. Uniquely
+                    </p>
+                    <ul class="lab-ul p-0">
+                      <li>
+                        <i class="fa-solid fa-house me-2 text-primary"></i>
+                        Suite 02 New Elephant Road usa
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-phone me-2 text-primary"></i> +880
+                        142 258 123, 02-96936
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-envelope me-2 text-primary"></i>
+                        <a href="#" class="text-dark"> info@mukti.com</a>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-globe me-2 text-primary"></i>
+                        <a href="#" class="text-dark"> info@mukti.com</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <div class="col-12 col-sm-6 col-xl-3">
-                <div class="doctor-info mb-5 mb-sm-0">
-                  <h3>Our Doctors</h3>
-                  <ul class="lab-ul">
-                    <li>
-                      <i class="fa-solid fa-angles-right fa-xs me-2"></i
-                      ><a href="#" class="text-dark"> Dr. Nick Sims</a>
-                    </li>
-                    <li>
-                      <i class="fa-solid fa-angles-right fa-xs me-2"></i
-                      ><a href="#" class="text-dark"> Dr. Michael Linden</a>
-                    </li>
-                    <li>
-                      <i class="fa-solid fa-angles-right fa-xs me-2"></i
-                      ><a href="#" class="text-dark"> Dr. Max Turner</a>
-                    </li>
-                    <li>
-                      <i class="fa-solid fa-angles-right fa-xs me-2"></i
-                      ><a href="#" class="text-dark"> Dr. Amy Adams</a>
-                    </li>
-                    <li>
-                      <i class="fa-solid fa-angles-right fa-xs me-2"></i
-                      ><a href="#" class="text-dark"> Dr. Julia Jameson</a>
-                    </li>
-                    <li>
-                      <i class="fa-solid fa-angles-right fa-xs me-2"></i
-                      ><a href="#" class="text-dark"> Dr. Michael Linden</a>
-                    </li>
-                  </ul>
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="doctor-info mb-5 mb-sm-0">
+                    <h3>Our Doctors</h3>
+                    <ul class="lab-ul">
+                      <li>
+                        <i class="fa-solid fa-angles-right fa-xs me-2"></i
+                        ><a href="#" class="text-dark"> Dr. Nick Sims</a>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-angles-right fa-xs me-2"></i
+                        ><a href="#" class="text-dark"> Dr. Michael Linden</a>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-angles-right fa-xs me-2"></i
+                        ><a href="#" class="text-dark"> Dr. Max Turner</a>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-angles-right fa-xs me-2"></i
+                        ><a href="#" class="text-dark"> Dr. Amy Adams</a>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-angles-right fa-xs me-2"></i
+                        ><a href="#" class="text-dark"> Dr. Julia Jameson</a>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-angles-right fa-xs me-2"></i
+                        ><a href="#" class="text-dark"> Dr. Michael Linden</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <div class="col-12 col-sm-6 col-xl-3">
-                <div class="doctor-info mb-5 mb-sm-0 ms-0">
-                  <h3>Our Services</h3>
-                  <ul class="lab-ul">
-                    <li>
-                      <i class="fa-solid fa-angles-right fa-xs me-2"></i
-                      ><a href="#" class="text-dark"> Outpatient Surgery</a>
-                    </li>
-                    <li>
-                      <i class="fa-solid fa-angles-right fa-xs me-2"></i
-                      ><a href="#" class="text-dark"> Cardiac Clinic</a>
-                    </li>
-                    <li>
-                      <i class="fa-solid fa-angles-right fa-xs me-2"></i
-                      ><a href="#" class="text-dark"> Ophthalmology Clinic</a>
-                    </li>
-                    <li>
-                      <i class="fa-solid fa-angles-right fa-xs me-2"></i
-                      ><a href="#" class="text-dark"> Gynaecological Clinic</a>
-                    </li>
-                    <li>
-                      <i class="fa-solid fa-angles-right fa-xs me-2"></i
-                      ><a href="#" class="text-dark">
-                        Outpatient Rehabilitation</a
-                      >
-                    </li>
-                    <li>
-                      <i class="fa-solid fa-angles-right fa-xs me-2"></i
-                      ><a href="#" class="text-dark"> Ophthalmology Clinic</a>
-                    </li>
-                  </ul>
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="services-info mb-5 mb-sm-0 ms-0">
+                    <h3>Our Services</h3>
+                    <ul class="lab-ul">
+                      <li>
+                        <i class="fa-solid fa-angles-right fa-xs me-2"></i
+                        ><a href="#" class="text-dark"> Outpatient Surgery</a>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-angles-right fa-xs me-2"></i
+                        ><a href="#" class="text-dark"> Cardiac Clinic</a>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-angles-right fa-xs me-2"></i
+                        ><a href="#" class="text-dark"> Ophthalmology Clinic</a>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-angles-right fa-xs me-2"></i
+                        ><a href="#" class="text-dark">
+                          Gynaecological Clinic</a
+                        >
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-angles-right fa-xs me-2"></i
+                        ><a href="#" class="text-dark">
+                          Outpatient Rehabilitation</a
+                        >
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-angles-right fa-xs me-2"></i
+                        ><a href="#" class="text-dark"> Ophthalmology Clinic</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
 
-              <div class="col-12 col-sm-6 col-xl-3">
-                <div class="time-info">
-                  <h3>opening hours</h3>
-                  <div class="dep-item">
-                    <div class="dep-item-inner d-flex justify-content-between">
-                      <div class="day-name">Satarday</div>
-                      <div class="day-time">8:00 am-10:00 pm</div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                  <div class="time-info">
+                    <h3>opening hours</h3>
+                    <div class="dep-item">
+                      <div
+                        class="dep-item-inner d-flex justify-content-between"
+                      >
+                        <div class="day-name">Satarday</div>
+                        <div class="day-time">8:00 am-10:00 pm</div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="dep-item">
-                    <div class="dep-item-inner d-flex justify-content-between">
-                      <div class="day-name">Sunday</div>
-                      <div class="day-time">6:00 am-8:00 pm</div>
+                    <div class="dep-item">
+                      <div
+                        class="dep-item-inner d-flex justify-content-between"
+                      >
+                        <div class="day-name">Sunday</div>
+                        <div class="day-time">6:00 am-8:00 pm</div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="dep-item">
-                    <div class="dep-item-inner d-flex justify-content-between">
-                      <div class="day-name">Monday</div>
-                      <div class="day-time">6:00 am-2:00 pm</div>
+                    <div class="dep-item">
+                      <div
+                        class="dep-item-inner d-flex justify-content-between"
+                      >
+                        <div class="day-name">Monday</div>
+                        <div class="day-time">6:00 am-2:00 pm</div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="dep-item">
-                    <div class="dep-item-inner d-flex justify-content-between">
-                      <div class="day-name">Tuesday</div>
-                      <div class="day-time">7:00 am-9:00 pm</div>
+                    <div class="dep-item">
+                      <div
+                        class="dep-item-inner d-flex justify-content-between"
+                      >
+                        <div class="day-name">Tuesday</div>
+                        <div class="day-time">7:00 am-9:00 pm</div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="dep-item">
-                    <div class="dep-item-inner d-flex justify-content-between">
-                      <div class="day-name">Widnessday</div>
-                      <div class="day-time">10:00 am-12:00 pm</div>
+                    <div class="dep-item">
+                      <div
+                        class="dep-item-inner d-flex justify-content-between"
+                      >
+                        <div class="day-name">Widnessday</div>
+                        <div class="day-time">10:00 am-12:00 pm</div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="dep-item">
-                    <div class="dep-item-inner d-flex justify-content-between">
-                      <div class="day-name">Thirsday</div>
-                      <div class="day-time">2:00 am-6:00 pm</div>
+                    <div class="dep-item">
+                      <div
+                        class="dep-item-inner d-flex justify-content-between"
+                      >
+                        <div class="day-name">Thirsday</div>
+                        <div class="day-time">2:00 am-6:00 pm</div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="footer-bottom">
-            <div class="copyright text-center">
-              <span class="text-capitalize"
-                >Copyright © 2021
-                <a class="text-primary" href="home.html">Mukti</a>. Designed by
-                <a href="" class="text-dark">LabArtisan</a></span
-              >
+            <div class="footer-bottom">
+              <div class="copyright text-center">
+                <p class="text-capitalize">
+                  Copyright © 2021
+                  <a class="text-primary fw-bold" href="home.html">Mukti</a>.
+                  Designed by
+                  <a href="" class="text-dark fw-bold">LabArtisan</a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- --------------- Font Awesome script file --------------- -->
+    <script src="../js/all.min.js"></script>
+    <!-- --------------- Bootstrap script file --------------- -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- -- General script file for all pages -- -->
+    <script src="../js/script.js"></script>
   </body>
 </html>
