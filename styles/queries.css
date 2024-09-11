@@ -15,7 +15,7 @@
   }
 
   .departments .departments-content .department-imgs li {
-    width: calc(100% / 4 - 9px) !important;
+    width: calc(100% / 4 - 9px);
   }
 }
 
@@ -49,9 +49,8 @@
     width: calc(100% / 5 - 9px);
   }
 
-  .appointment {
-    padding: 110px 0;
-  }
+
+
 
   .footer .footer-top .doctor-info,
   .footer .footer-top .time-info {
@@ -64,7 +63,7 @@
 
   .appointment .appointment-right,
   .appointment .appointment-left {
-    height: 700px !important;
+    height: 700px;
   }
 
   .appointment .appointment-left {

@@ -185,10 +185,7 @@ a h6 {
   border-color: transparent transparent #fff transparent;
 }
 
-/* ------------------- SECTION DOCTORS ------------------- */
-.appointment {
-  padding: 80px 0;
-}
+/* ------------------- SECTION APPOINTMENT ------------------- */
 
 .appointment .appointment-left {
   background: url(../assets/images/appointment-left.jpg);
@@ -286,6 +283,8 @@ a h6 {
 }
 
 /* ------------------- SECTION BLOG ------------------- */
+
+
 .blog .post-item {
   margin-bottom: 40px;
   -webkit-transition: all 0.3s ease;
