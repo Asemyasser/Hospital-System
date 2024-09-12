@@ -188,7 +188,6 @@ a h6 {
 /* ------------------- SECTION APPOINTMENT ------------------- */
 
 .appointment .appointment-left {
-  background: url(../assets/images/appointment-left.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 650px;
@@ -208,7 +207,6 @@ a h6 {
 }
 
 .appointment .appointment-right {
-  background: url(../assets/images/appointment-right.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 100px 65px 100px 65px;
@@ -418,7 +416,6 @@ a h6 {
 
 /* ------------------- FOOTER ------------------- */
 .footer .footer-top {
-  background: url(../assets/images/bg1.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
