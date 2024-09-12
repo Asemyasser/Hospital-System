@@ -16,11 +16,3 @@
 </section>
 
 7- Rename images with related ones
-
-8- Link background iamges with inline styling like this
-
- <section
-      class="hero"
-      style="background-image: url(./assets/images/home-bg.jpg)"
-    >
-  </section>
