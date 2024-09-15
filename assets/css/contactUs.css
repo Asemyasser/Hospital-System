@@ -1,4 +1,4 @@
-/* * {
+/* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -13,19 +13,14 @@
   color: #0071ef;
 }
 
-/* .logo {
-  height: 40px;
-} */
-
 .bg {
   height: 40vh;
-  background-image: url("../assets/images/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .hero-section {
-  background-image: url("../assets/images/background.jpg");
+  background-image: url("../images/background.jpg");
   background-size: cover;
   background-position: center;
   padding: 60px 0;
@@ -49,7 +44,6 @@
 }
 
 .contact-header {
-  background-image: url(../assets/WhatsApp\ Image\ 2024-09-06\ at\ 7.18.03\ PM.jpeg);
   text-align: center;
   padding: 100px 0;
 }
@@ -192,7 +186,7 @@
 }
 
 footer {
-  background-image: url("../assets/images/bg1.png");
+  background-image: url("../images/footer-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #ecf1f9;

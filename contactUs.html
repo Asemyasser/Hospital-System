@@ -5,49 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
 
+    <!-- ------------- Google link for Roboto font  ------------->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles/all.min.css" />
-    <link rel="stylesheet" href="../styles/bootstrap.min.css" />
-    <link rel="stylesheet" href="../styles/general.css" />
-    <link rel="stylesheet" href="../styles/contactUs.css" />
+    <!-- ------------- Font Awesome styleseet  ------------->
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <!-- ------------- Bootstrap styleseet  ------------->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <!-- ------------- Main styleseet for ContactUs page ------------->
+    <link rel="stylesheet" href="./assets/css/contactUs.css" />
+    <!-- ------------- General styleseet for all pages------------->
+    <link rel="stylesheet" href="./assets/css/general.css" />
+    <!-- ------------- Media queries styleseet  ------------->
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
 
+    <!-- ------------- Map API link  ------------->
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
     <link
       href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
       rel="stylesheet"
     />
-
-    <script src="../js/all.min.js" defer></script>
-    <script src="../js/bootstrap.bundle.min.js" defer></script>
-    <script src="../js/script.js" defer></script>
-    <script src="../js/contactUs.js" defer></script>
   </head>
   <body>
+     <!-- ---------------------- Header Section ---------------------- -->
     <nav class="navbar bg-white mobile w-100 py-3 px-5">
       <div
         class="container d-flex justify-content-between align-items-center w-100"
       >
-        <img class="logo" src="../assets/images/logo (1).png" alt="Logo" />
+        <img class="logo" src="assets/images/logo.png" alt="Logo"/>
         <div class="contact-nav-info d-none d-lg-flex gap-4">
           <div class="d-flex gap-3 align-items-center">
-            <img src="../assets/images/1.png" alt="" />
+            <img src="assets/images/nav-icon1.png" alt="" />
             <div>
               <p class="m-0">Number:</p>
               <p class="m-0 fw-bold">+880123456789</p>
             </div>
           </div>
           <div class="d-flex gap-3 align-items-center">
-            <img src="../assets/images/2.png" alt="" />
+            <img src="assets/images/nav-icon2.png" alt="" />
             <div>
               <p class="m-0">Email:</p>
               <p class="m-0 fw-bold">Mukti@gmail.com</p>
             </div>
           </div>
           <div class="d-flex gap-3 align-items-center">
-            <img src="../assets/images/3.png" alt="" />
+            <img src="assets/images/nav-icon3.png" alt="" />
             <div>
               <p class="m-0">Address:</p>
               <p class="m-0 fw-bold">12 North West New York 100</p>
@@ -93,11 +97,13 @@
       </div>
     </nav>
 
+    <!-- ---------------------- Hero Section ---------------------- -->
     <section class="hero-section text-center py-5">
       <h1>Contact Information</h1>
       <p><strong>Home-</strong>Contact Us</p>
     </section>
 
+    <!-- ---------------------- Contact Info Section ---------------------- -->
     <section class="contact-container container my-5">
       <div class="row">
         <div class="contact-info col-12 col-md-6">
@@ -134,6 +140,7 @@
           </div>
         </div>
 
+        <!-- ---------------------- Contact Form Section ---------------------- -->
         <div class="contact-form col-12 col-md-6">
           <h2>We Love To Hear From You</h2>
           <form id="contactForm">
@@ -177,6 +184,7 @@
       </div>
     </section>
 
+    <!-- ---------------------- Map Section ---------------------- -->
     <div class="container-fluid">
       <div class="row justify-content-center">
         <div class="col-12">
@@ -185,6 +193,7 @@
       </div>
     </div>
 
+    <!-- ---------------------- Footer Section ---------------------- -->
     <footer
       class="w-100 d-flex flex-column justify-content-center align-items-center pt-5"
     >
@@ -216,7 +225,7 @@
           class="footer-content-2 d-flex flex-column justify-content-center align-items-center mb-4 text-center"
         >
           <div>
-            <img src="../assets/images/logo (1).png" alt="Logo" class="logo" />
+            <img src="assets/images/logo.png" alt="Logo" class="logo" />
           </div>
           <p class="text-center pt-3">
             Proactive predominate empowered portals robust infrastructure.
@@ -275,5 +284,13 @@
         <span class="fw-bold">LabArtisan</span>
       </p>
     </footer>
+        <!-- --------------- Font Awesome script file --------------- -->
+        <script src="./assets/js/all.min.js"></script>
+        <!-- --------------- Bootstrap script file --------------- -->
+        <script src="./assets/js/bootstrap.bundle.min.js"></script>
+        <!-- -- General script file for all pages -- -->
+        <script src="./assets/js/script.js"></script>
+        <!-- -- script file for contactUs page -- -->
+        <script src="./assets/js/contactUs.js" defer></script>
   </body>
 </html>
