@@ -4,43 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Doctors</title>
+
+    <!-- ------------- Google link for Roboto font  ------------->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
       rel="stylesheet"
     />
+    <!-- ------------- Font Awesome styleseet  ------------->
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <!-- ------------- Bootstrap styleseet  ------------->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <!-- ------------- Main styleseet for Doctors page ------------->
+    <link rel="stylesheet" href="./assets/css/doctors.css" />
+    <!-- ------------- General styleseet for all pages------------->
+    <link rel="stylesheet" href="./assets/css/general.css" />
+    <!-- ------------- Media queries styleseet  ------------->
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
 
-    <link rel="stylesheet" href="../styles/all.min.css" />
-    <link rel="stylesheet" href="../styles/bootstrap.min.css" />
-    <link rel="stylesheet" href="../styles/general.css" />
-    <link rel="stylesheet" href="../styles/doctors.css" />
-
-    <script src="../js/all.min.js" defer></script>
-    <script src="../js/bootstrap.bundle.min.js" defer></script>
-    <script src="../js/script.js" defer></script>
   </head>
+
   <body>
+
+    <!-- ----------NAV---------- -->
+
     <nav class="navbar bg-white mobile w-100 py-3 px-5">
       <div
         class="container d-flex justify-content-between align-items-center w-100"
       >
-        <img class="logo" src="../assets/images/logo (1).png" alt="Logo" />
+        <img class="logo" src="assets/images/logo.png" alt="Logo" />
         <div class="contact-nav-info d-none d-lg-flex gap-4">
           <div class="d-flex gap-3 align-items-center">
-            <img src="../assets/images/1.png" alt="" />
+            <img src="assets/images/nav-icon1.png" alt="nav-icon-1" />
             <div>
               <p class="m-0">Number:</p>
               <p class="m-0 fw-bold">+880123456789</p>
             </div>
           </div>
           <div class="d-flex gap-3 align-items-center">
-            <img src="../assets/images/2.png" alt="" />
+            <img src="assets/images/nav-icon2.png" alt="nav-icon-2" />
             <div>
               <p class="m-0">Email:</p>
               <p class="m-0 fw-bold">Mukti@gmail.com</p>
             </div>
           </div>
           <div class="d-flex gap-3 align-items-center">
-            <img src="../assets/images/3.png" alt="" />
+            <img src="assets/images/nav-icon3.png" alt="nav-icon-3" />
             <div>
               <p class="m-0">Address:</p>
               <p class="m-0 fw-bold">12 North West New York 100</p>
@@ -74,9 +82,7 @@
       <div class="container">
         <ul class="text-white list-unstyled d-flex gap-5 fw-bold m-0">
           <li><a href="./home.html" class="link-light">Home</a></li>
-          <li>
-            <a href="./department.html" class="link-light">Departments</a>
-          </li>
+          <li><a href="./department.html" class="link-light">Departments</a></li>
           <li><a href="./doctors.html" class="link-light">Doctors</a></li>
           <li><a href="./services.html" class="link-light">Services</a></li>
           <li><a href="./blog.html" class="link-light">Blog</a></li>
@@ -86,186 +92,141 @@
       </div>
     </nav>
 
-    <section class="hero-section text-center py-5">
-      <h1>Our Professional Team</h1>
+    <!-- ----------HERO---------- -->
+
+    <section class="hero text-center py-5">
+      <h2>Our Professional Team</h2>
       <p><strong>Home</strong> - Doctors</p>
     </section>
 
+    <!-- ----------DOCTORS---------- -->
+
     <div>
-      <h1 class="d-flex flex-column align-items-center fw-lighter mt-5 pt-5">
+      <h2 class="d-flex flex-column align-items-center fw-lighter mt-5 pt-5">
         Meet Our <span class="fw-bold">Mukti Professional Doctors</span>
-      </h1>
+      </h2>
 
       <div class="container py-5">
         <div class="row gy-4">
+
           <div class="col-md-6 col-lg-3">
             <div class="card h-100">
-              <img
-                src="../assets/images/01 (1).jpg"
-                class="card-img-top"
-                alt="..."
-              />
+              <img src="assets/images/doctor-1.jpg" class="card-img-top" alt="doctor-1"/>
               <div class="card-body text-center">
                 <h5 class="card-title fw-bold">Dr. Jason Kovalsky</h5>
                 <p class="text-secondary fw-semibold">Cardiologist</p>
               </div>
             </div>
           </div>
+
           <div class="col-md-6 col-lg-3">
             <div class="card h-100">
-              <img
-                src="../assets/images/02 (1).jpg"
-                class="card-img-top"
-                alt="..."
-              />
+              <img src="assets/images/doctor-2.jpg" class="card-img-top" alt="doctor-2"/>
               <div class="card-body text-center">
                 <h5 class="card-title fw-bold">Patricia Mcneel</h5>
                 <p class="text-secondary fw-semibold">Pediatrist</p>
               </div>
             </div>
           </div>
+
           <div class="col-md-6 col-lg-3">
             <div class="card h-100">
-              <img
-                src="../assets/images/03 (1).jpg"
-                class="card-img-top"
-                alt="..."
-              />
+              <img src="assets/images/doctor-8.jpg" class="card-img-top" alt="doctor-3"/>
               <div class="card-body text-center">
                 <h5 class="card-title fw-bold">William Khanna</h5>
                 <p class="text-secondary fw-semibold">Throat Specialist</p>
               </div>
             </div>
           </div>
+
           <div class="col-md-6 col-lg-3">
             <div class="card h-100">
-              <img
-                src="../assets/images/04 (1).jpg"
-                class="card-img-top"
-                alt="..."
-              />
+              <img src="assets/images/doctor-3.jpg" class="card-img-top" alt="doctor-4"/>
               <div class="card-body text-center">
                 <h5 class="card-title fw-bold">Eric Patterson</h5>
                 <p class="text-secondary fw-semibold">Therapy</p>
               </div>
             </div>
           </div>
+
           <div class="col-md-6 col-lg-3">
             <div class="card h-100">
-              <img
-                src="../assets/images/02 (1).jpg"
-                class="card-img-top"
-                alt="..."
-              />
+              <img src="assets/images/doctor-6.jpg" class="card-img-top" alt="doctor-5"/>
               <div class="card-body text-center">
                 <h5 class="card-title fw-bold">Mark Trevor</h5>
                 <p class="text-secondary fw-semibold">Therapy</p>
               </div>
             </div>
           </div>
+
           <div class="col-md-6 col-lg-3">
             <div class="card h-100">
-              <img
-                src="../assets/images/01 (1).jpg"
-                class="card-img-top"
-                alt="..."
-              />
+              <img src="assets/images/doctor-4.jpg" class="card-img-top" alt="doctor-6"/>
               <div class="card-body text-center">
                 <h5 class="card-title fw-bold">Nolim Smith</h5>
                 <p class="text-secondary fw-semibold">Volunteer</p>
               </div>
             </div>
           </div>
+          
           <div class="col-md-6 col-lg-3">
             <div class="card h-100">
-              <img
-                src="../assets/images/04 (1).jpg"
-                class="card-img-top"
-                alt="..."
-              />
+              <img src="assets/images/doctor-5.jpg" class="card-img-top" alt="doctor-7"/>
               <div class="card-body text-center">
                 <h5 class="card-title fw-bold">Jason Kovalsky</h5>
                 <p class="text-secondary fw-semibold">Rehabiliation</p>
               </div>
             </div>
           </div>
+
           <div class="col-md-6 col-lg-3">
             <div class="card h-100">
-              <img
-                src="../assets/images/03 (1).jpg"
-                class="card-img-top"
-                alt="..."
-              />
+              <img src="assets/images/doctor-7.jpg" class="card-img-top" alt="doctor-8"/>
               <div class="card-body text-center">
                 <h5 class="card-title fw-bold">Sarah Milles</h5>
                 <p class="text-secondary fw-semibold">Volunteer</p>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
-    <footer
-      class="w-100 d-flex flex-column justify-content-center align-items-center pt-5"
-    >
-      <div
-        class="w-75 d-flex justify-content-center align-items-center gap-4 flex-wrap"
-      >
-        <div class="footer-content-1 mb-4">
+
+    <!-- ----------FOOTER---------- -->
+
+    <footer class="w-100 d-flex flex-column justify-content-center align-items-center pt-5">
+      <div class="w-75 row">
+        <div class="footer-content-1 col-xl-3 col-lg-12 text-center text-xl-start">
           <h4 class="fw-bold pb-2">Contact Info</h4>
-          <p>
-            Rapidiously seize wireless strategic theme areas and corporate
-            testing procedures. Uniquely
-          </p>
-          <p>
-            <i class="fa-solid fa-house-chimney fa-xs color pe-2"></i>Suite 02
-            New Elephant Road USA
-          </p>
-          <p>
-            <i class="fa-solid fa-phone fa-xs color pe-2"></i>+880 142 258 123,
-            02-96936
-          </p>
-          <p class="fw-semibold">
-            <i class="fa-solid fa-envelope fa-xs color pe-2"></i>info@mukti.com
-          </p>
-          <p class="fw-semibold">
-            <i class="fa-solid fa-globe fa-xs color pe-2"></i>info@mukti.com
-          </p>
+
+          <p>Rapidiously seize wireless strategic theme areas and corporate testing procedures. Uniquely</p>
+          <p><i class="fa-solid fa-house-chimney fa-xs color pe-2"></i>Suite 02 New Elephant Road USA</p>
+          <p><i class="fa-solid fa-phone fa-xs color pe-2"></i>+880 142 258 123, 02-96936</p>
+          <p class="fw-semibold"><i class="fa-solid fa-envelope fa-xs color pe-2"></i>info@mukti.com</p>
+          <p class="fw-semibold"><i class="fa-solid fa-globe fa-xs color pe-2"></i>info@mukti.com</p>
         </div>
-        <div
-          class="footer-content-2 d-flex flex-column justify-content-center align-items-center mb-4 text-center"
-        >
+
+        <div class="footer-content-2 col-xl-6 col-lg-12 d-flex flex-column justify-content-center align-items-center">
           <div>
-            <img src="../assets/images/logo (1).png" alt="Logo" class="logo" />
+            <img src="assets/images/logo.png" alt="Logo" class="logo" />
           </div>
-          <p class="text-center pt-3">
-            Proactive predominate empowered portals robust infrastructure.
-            Conveniently simplify scalable initiatives rather than magnetic
-            action items.
-          </p>
+
+          <p class="text-center pt-3">Proactive predominate empowered portals viaine robust infrastructurs Convenen simp scalable ntatves rather thanineri manetic action items Proactively predominate empowered portals robust</p>
+
           <h4 class="pt-1 pb-3 fw-bold">Subscribe Our Newsletter</h4>
+
           <div class="input-group mb-3">
-            <span class="input-group-text"
-              ><i class="fa-solid fa-paper-plane fa-xs color"></i
-            ></span>
-            <input
-              type="text"
-              class="form-control border-opacity-10"
-              placeholder="Enter Your Email"
-              aria-label="Recipient's username"
-              aria-describedby="button-addon2"
-            />
-            <button
-              class="btn btn-primary fw-bold px-4 py-3"
-              type="button"
-              id="button-addon2"
-            >
-              Subscribe Now
-            </button>
+            <span class="input-group-text"><i class="fa-solid fa-paper-plane fa-xs color"></i></span>
+            <input type="text" class="form-control border-opacity-10" placeholder="Enter Your Email" aria-label="Recipient's username" aria-describedby="button-addon2"/>
+
+            <button class="btn btn-primary fw-bold px-4 py-3" type="button" id="button-addon2">Subscribe Now</button>
           </div>
         </div>
-        <div class="footer-content-3 mb-4">
-          <h4 class="fw-bold pb-3">Opening Hours</h4>
+
+        <div class="footer-content-3 col-xl-3 col-lg-12">
+          <h4 class="fw-bold pb-3 text-center text-xl-start">Opening Hours</h4>
+
           <div class="d-flex justify-content-between">
             <div>
               <p>Saturday</p>
@@ -275,6 +236,7 @@
               <p>Wednesday</p>
               <p>Thursday</p>
             </div>
+
             <div class="text-end">
               <p>8:00 am - 10:00 pm</p>
               <p>6:00 am - 8:00 pm</p>
@@ -285,15 +247,18 @@
             </div>
           </div>
         </div>
-
         <hr class="w-100 text-light-emphasis mt-5" />
       </div>
 
-      <p>
-        Copyright &copy; 2021 <span class="color">Mukti</span> . All Rights
-        Reserved. By
-        <span class="fw-bold">LabArtisan</span>
-      </p>
+      <p>Copyright &copy; 2021 <span class="color">Mukti</span> . All Rights Reserved. By <span class="fw-bold">LabArtisan</span></p>
     </footer>
+
+    <!-- --------------- Font Awesome script file --------------- -->
+    <script src="./assets/js/all.min.js"></script>
+    <!-- --------------- Bootstrap script file --------------- -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <!-- -- General script file for all pages -- -->
+    <script src="./assets/js/script.js"></script>
   </body>
+
 </html>
