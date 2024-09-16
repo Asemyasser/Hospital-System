@@ -22,60 +22,56 @@
     <title>blog details</title>
   </head>
   <body>
-    <nav class="navbar bg-white mobile w-100 py-3 px-5">
-      <div
-        class="container d-flex justify-content-between align-items-center w-100"
-      >
-        <img class="logo" src="../assets/images/logo (1).png" alt="Logo" />
-        <div class="contact-nav-info d-none d-lg-flex gap-4">
-          <div class="d-flex gap-3 align-items-center">
-            <img src="../assets/images/1.png" alt="" />
-            <div>
-              <p class="m-0">Number:</p>
-              <p class="m-0 fw-bold">+880123456789</p>
-            </div>
-          </div>
-          <div class="d-flex gap-3 align-items-center">
-            <img src="../assets/images/2.png" alt="" />
-            <div>
-              <p class="m-0">Email:</p>
-              <p class="m-0 fw-bold">Mukti@gmail.com</p>
-            </div>
-          </div>
-          <div class="d-flex gap-3 align-items-center">
-            <img src="../assets/images/3.png" alt="" />
-            <div>
-              <p class="m-0">Address:</p>
-              <p class="m-0 fw-bold">12 North West New York 100</p>
-            </div>
-          </div>
-        </div>
-        <button
-          class="navbar-toggler d-lg-none"
-          type="button"
-          id="sidebarToggle"
-          title="Toggle Sidebar"
+    <header>
+      <nav class="navbar bg-white w-100 py-3 px-5">
+        <div
+          class="container d-flex justify-content-between align-items-center w-100"
         >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-    </nav>
+          <!-- Logo -->
+          <a href="./home.html">
+            <img class="logo" src="./assets/images/logo.png" alt="Logo" />
+          </a>
 
-    <div id="sidebar" class="sidebar d-lg-none">
-      <ul class="list-unstyled">
-        <li><a href="./home.html" class="link-light">Home</a></li>
-        <li><a href="./department.html" class="link-light">Departments</a></li>
-        <li><a href="./doctors.html" class="link-light">Doctors</a></li>
-        <li><a href="./services.html" class="link-light">Services</a></li>
-        <li><a href="./blog.html" class="link-light">Blog</a></li>
-        <li><a href="./about-us.html" class="link-light">About Us</a></li>
-        <li><a href="./contactUs.html" class="link-light">Contact Us</a></li>
-      </ul>
-    </div>
+          <!-- Contact Info for large screens -->
+          <div class="contact-nav-info d-none d-lg-flex gap-4">
+            <div class="d-flex gap-3 align-items-center">
+              <img src="./assets/images/nav-icon1.png" alt="Phone Icon" />
+              <div>
+                <p class="m-0">Number:</p>
+                <p class="m-0 fw-bold">+880123456789</p>
+              </div>
+            </div>
+            <div class="d-flex gap-3 align-items-center">
+              <img src="./assets/images/nav-icon2.png" alt="Email Icon" />
+              <div>
+                <p class="m-0">Email:</p>
+                <p class="m-0 fw-bold">Mukti@gmail.com</p>
+              </div>
+            </div>
+            <div class="d-flex gap-3 align-items-center">
+              <img src="./assets/images/nav-icon3.png" alt="Address Icon" />
+              <div>
+                <p class="m-0">Address:</p>
+                <p class="m-0 fw-bold">12 North West New York 100</p>
+              </div>
+            </div>
+          </div>
 
-    <nav class="w-100 bg-color py-4 px-5 d-none d-lg-flex sticky-top">
-      <div class="container">
-        <ul class="text-white list-unstyled d-flex gap-5 fw-bold m-0">
+          <!-- Mobile Toggle Button -->
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            id="sidebarToggle"
+            title="Toggle Sidebar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Sidebar for Mobile View -->
+      <div id="sidebar" class="sidebar d-lg-none">
+        <ul class="list-unstyled">
           <li><a href="./home.html" class="link-light">Home</a></li>
           <li>
             <a href="./department.html" class="link-light">Departments</a>
@@ -87,20 +83,37 @@
           <li><a href="./contactUs.html" class="link-light">Contact Us</a></li>
         </ul>
       </div>
-    </nav>
 
-    <header>
+      <!-- Main Navigation Bar for large screens -->
+      <nav class="w-100 bg-color py-4 px-5 d-none d-lg-flex sticky-top">
+        <div class="container">
+          <ul class="text-white list-unstyled d-flex gap-5 fw-bold m-0">
+            <li><a href="./home.html" class="link-light">Home</a></li>
+            <li>
+              <a href="./department.html" class="link-light">Departments</a>
+            </li>
+            <li><a href="./doctors.html" class="link-light">Doctors</a></li>
+            <li><a href="./services.html" class="link-light">Services</a></li>
+            <li><a href="./blog.html" class="link-light">Blog</a></li>
+            <li><a href="./about-us.html" class="link-light">About Us</a></li>
+            <li>
+              <a href="./contactUs.html" class="link-light">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
       <section class="hero text-center py-5">
         <h2>Blog Single Page</h2>
         <p><strong>Home-Blog</strong>-Blog Single</p>
       </section>
-    </header>
 
     <div class="container">
       <div class="col-12 d-flex justify-content-center">
         <div class="card">
           <img
-            src="../assets/images/blog2.jpg"
+            src="./assets/images/blog2.jpg"
             class="card-img-top"
             alt="blog details"
           />
