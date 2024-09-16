@@ -25,6 +25,12 @@
   margin-bottom: 50px;
   margin-top: 70px;
 }
+.card-body{
+  font-size: 20px;
+}
+.card iframe{
+    height: 15rem;
+}
 
 .card-blue-text {
   color: #0071ef;
