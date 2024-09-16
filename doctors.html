@@ -20,69 +20,63 @@
     <link rel="stylesheet" href="./assets/css/general.css" />
     <!-- ------------- Media queries styleseet  ------------->
     <link rel="stylesheet" href="./assets/css/responsive.css" />
-
   </head>
 
   <body>
-
-    <!-- ----------NAV---------- -->
-
-    <nav class="navbar bg-white mobile w-100 py-3 px-5">
-      <div
-        class="container d-flex justify-content-between align-items-center w-100"
-      >
-        <img class="logo" src="assets/images/logo.png" alt="Logo" />
-        <div class="contact-nav-info d-none d-lg-flex gap-4">
-          <div class="d-flex gap-3 align-items-center">
-            <img src="assets/images/nav-icon1.png" alt="nav-icon-1" />
-            <div>
-              <p class="m-0">Number:</p>
-              <p class="m-0 fw-bold">+880123456789</p>
-            </div>
-          </div>
-          <div class="d-flex gap-3 align-items-center">
-            <img src="assets/images/nav-icon2.png" alt="nav-icon-2" />
-            <div>
-              <p class="m-0">Email:</p>
-              <p class="m-0 fw-bold">Mukti@gmail.com</p>
-            </div>
-          </div>
-          <div class="d-flex gap-3 align-items-center">
-            <img src="assets/images/nav-icon3.png" alt="nav-icon-3" />
-            <div>
-              <p class="m-0">Address:</p>
-              <p class="m-0 fw-bold">12 North West New York 100</p>
-            </div>
-          </div>
-        </div>
-        <button
-          class="navbar-toggler d-lg-none"
-          type="button"
-          id="sidebarToggle"
-          title="Toggle Sidebar"
+    <header>
+      <nav class="navbar bg-white w-100 py-3 px-5">
+        <div
+          class="container d-flex justify-content-between align-items-center w-100"
         >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-    </nav>
+          <!-- Logo -->
+          <a href="./home.html">
+            <img class="logo" src="./assets/images/logo.png" alt="Logo" />
+          </a>
 
-    <div id="sidebar" class="sidebar d-lg-none">
-      <ul class="list-unstyled">
-        <li><a href="./home.html" class="link-light">Home</a></li>
-        <li><a href="./department.html" class="link-light">Departments</a></li>
-        <li><a href="./doctors.html" class="link-light">Doctors</a></li>
-        <li><a href="./services.html" class="link-light">Services</a></li>
-        <li><a href="./blog.html" class="link-light">Blog</a></li>
-        <li><a href="./about-us.html" class="link-light">About Us</a></li>
-        <li><a href="./contactUs.html" class="link-light">Contact Us</a></li>
-      </ul>
-    </div>
+          <!-- Contact Info for large screens -->
+          <div class="contact-nav-info d-none d-lg-flex gap-4">
+            <div class="d-flex gap-3 align-items-center">
+              <img src="./assets/images/nav-icon1.png" alt="Phone Icon" />
+              <div>
+                <p class="m-0">Number:</p>
+                <p class="m-0 fw-bold">+880123456789</p>
+              </div>
+            </div>
+            <div class="d-flex gap-3 align-items-center">
+              <img src="./assets/images/nav-icon2.png" alt="Email Icon" />
+              <div>
+                <p class="m-0">Email:</p>
+                <p class="m-0 fw-bold">Mukti@gmail.com</p>
+              </div>
+            </div>
+            <div class="d-flex gap-3 align-items-center">
+              <img src="./assets/images/nav-icon3.png" alt="Address Icon" />
+              <div>
+                <p class="m-0">Address:</p>
+                <p class="m-0 fw-bold">12 North West New York 100</p>
+              </div>
+            </div>
+          </div>
 
-    <nav class="w-100 bg-color py-4 px-5 d-none d-lg-flex sticky-top">
-      <div class="container">
-        <ul class="text-white list-unstyled d-flex gap-5 fw-bold m-0">
+          <!-- Mobile Toggle Button -->
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            id="sidebarToggle"
+            title="Toggle Sidebar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Sidebar for Mobile View -->
+      <div id="sidebar" class="sidebar d-lg-none">
+        <ul class="list-unstyled">
           <li><a href="./home.html" class="link-light">Home</a></li>
-          <li><a href="./department.html" class="link-light">Departments</a></li>
+          <li>
+            <a href="./department.html" class="link-light">Departments</a>
+          </li>
           <li><a href="./doctors.html" class="link-light">Doctors</a></li>
           <li><a href="./services.html" class="link-light">Services</a></li>
           <li><a href="./blog.html" class="link-light">Blog</a></li>
@@ -90,7 +84,26 @@
           <li><a href="./contactUs.html" class="link-light">Contact Us</a></li>
         </ul>
       </div>
-    </nav>
+
+      <!-- Main Navigation Bar for large screens -->
+      <nav class="w-100 bg-color py-4 px-5 d-none d-lg-flex sticky-top">
+        <div class="container">
+          <ul class="text-white list-unstyled d-flex gap-5 fw-bold m-0">
+            <li><a href="./home.html" class="link-light">Home</a></li>
+            <li>
+              <a href="./department.html" class="link-light">Departments</a>
+            </li>
+            <li><a href="./doctors.html" class="link-light">Doctors</a></li>
+            <li><a href="./services.html" class="link-light">Services</a></li>
+            <li><a href="./blog.html" class="link-light">Blog</a></li>
+            <li><a href="./about-us.html" class="link-light">About Us</a></li>
+            <li>
+              <a href="./contactUs.html" class="link-light">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
     <!-- ----------HERO---------- -->
 
@@ -108,10 +121,13 @@
 
       <div class="container py-5">
         <div class="row gy-4">
-
           <div class="col-md-6 col-lg-3">
             <div class="card h-100">
-              <img src="assets/images/doctor-1.jpg" class="card-img-top" alt="doctor-1"/>
+              <img
+                src="assets/images/doctor-1.jpg"
+                class="card-img-top"
+                alt="doctor-1"
+              />
               <div class="card-body text-center">
                 <h5 class="card-title fw-bold">Dr. Jason Kovalsky</h5>
                 <p class="text-secondary fw-semibold">Cardiologist</p>
@@ -121,7 +137,11 @@
 
           <div class="col-md-6 col-lg-3">
             <div class="card h-100">
-              <img src="assets/images/doctor-2.jpg" class="card-img-top" alt="doctor-2"/>
+              <img
+                src="assets/images/doctor-2.jpg"
+                class="card-img-top"
+                alt="doctor-2"
+              />
               <div class="card-body text-center">
                 <h5 class="card-title fw-bold">Patricia Mcneel</h5>
                 <p class="text-secondary fw-semibold">Pediatrist</p>
@@ -131,7 +151,11 @@
 
           <div class="col-md-6 col-lg-3">
             <div class="card h-100">
-              <img src="assets/images/doctor-8.jpg" class="card-img-top" alt="doctor-3"/>
+              <img
+                src="assets/images/doctor-8.jpg"
+                class="card-img-top"
+                alt="doctor-3"
+              />
               <div class="card-body text-center">
                 <h5 class="card-title fw-bold">William Khanna</h5>
                 <p class="text-secondary fw-semibold">Throat Specialist</p>
@@ -141,7 +165,11 @@
 
           <div class="col-md-6 col-lg-3">
             <div class="card h-100">
-              <img src="assets/images/doctor-3.jpg" class="card-img-top" alt="doctor-4"/>
+              <img
+                src="assets/images/doctor-3.jpg"
+                class="card-img-top"
+                alt="doctor-4"
+              />
               <div class="card-body text-center">
                 <h5 class="card-title fw-bold">Eric Patterson</h5>
                 <p class="text-secondary fw-semibold">Therapy</p>
@@ -151,7 +179,11 @@
 
           <div class="col-md-6 col-lg-3">
             <div class="card h-100">
-              <img src="assets/images/doctor-6.jpg" class="card-img-top" alt="doctor-5"/>
+              <img
+                src="assets/images/doctor-6.jpg"
+                class="card-img-top"
+                alt="doctor-5"
+              />
               <div class="card-body text-center">
                 <h5 class="card-title fw-bold">Mark Trevor</h5>
                 <p class="text-secondary fw-semibold">Therapy</p>
@@ -161,17 +193,25 @@
 
           <div class="col-md-6 col-lg-3">
             <div class="card h-100">
-              <img src="assets/images/doctor-4.jpg" class="card-img-top" alt="doctor-6"/>
+              <img
+                src="assets/images/doctor-4.jpg"
+                class="card-img-top"
+                alt="doctor-6"
+              />
               <div class="card-body text-center">
                 <h5 class="card-title fw-bold">Nolim Smith</h5>
                 <p class="text-secondary fw-semibold">Volunteer</p>
               </div>
             </div>
           </div>
-          
+
           <div class="col-md-6 col-lg-3">
             <div class="card h-100">
-              <img src="assets/images/doctor-5.jpg" class="card-img-top" alt="doctor-7"/>
+              <img
+                src="assets/images/doctor-5.jpg"
+                class="card-img-top"
+                alt="doctor-7"
+              />
               <div class="card-body text-center">
                 <h5 class="card-title fw-bold">Jason Kovalsky</h5>
                 <p class="text-secondary fw-semibold">Rehabiliation</p>
@@ -181,46 +221,86 @@
 
           <div class="col-md-6 col-lg-3">
             <div class="card h-100">
-              <img src="assets/images/doctor-7.jpg" class="card-img-top" alt="doctor-8"/>
+              <img
+                src="assets/images/doctor-7.jpg"
+                class="card-img-top"
+                alt="doctor-8"
+              />
               <div class="card-body text-center">
                 <h5 class="card-title fw-bold">Sarah Milles</h5>
                 <p class="text-secondary fw-semibold">Volunteer</p>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
 
     <!-- ----------FOOTER---------- -->
 
-    <footer class="w-100 d-flex flex-column justify-content-center align-items-center pt-5">
+    <footer
+      class="w-100 d-flex flex-column justify-content-center align-items-center pt-5"
+    >
       <div class="w-75 row">
-        <div class="footer-content-1 col-xl-3 col-lg-12 text-center text-xl-start">
+        <div
+          class="footer-content-1 col-xl-3 col-lg-12 text-center text-xl-start"
+        >
           <h4 class="fw-bold pb-2">Contact Info</h4>
 
-          <p>Rapidiously seize wireless strategic theme areas and corporate testing procedures. Uniquely</p>
-          <p><i class="fa-solid fa-house-chimney fa-xs color pe-2"></i>Suite 02 New Elephant Road USA</p>
-          <p><i class="fa-solid fa-phone fa-xs color pe-2"></i>+880 142 258 123, 02-96936</p>
-          <p class="fw-semibold"><i class="fa-solid fa-envelope fa-xs color pe-2"></i>info@mukti.com</p>
-          <p class="fw-semibold"><i class="fa-solid fa-globe fa-xs color pe-2"></i>info@mukti.com</p>
+          <p>
+            Rapidiously seize wireless strategic theme areas and corporate
+            testing procedures. Uniquely
+          </p>
+          <p>
+            <i class="fa-solid fa-house-chimney fa-xs color pe-2"></i>Suite 02
+            New Elephant Road USA
+          </p>
+          <p>
+            <i class="fa-solid fa-phone fa-xs color pe-2"></i>+880 142 258 123,
+            02-96936
+          </p>
+          <p class="fw-semibold">
+            <i class="fa-solid fa-envelope fa-xs color pe-2"></i>info@mukti.com
+          </p>
+          <p class="fw-semibold">
+            <i class="fa-solid fa-globe fa-xs color pe-2"></i>info@mukti.com
+          </p>
         </div>
 
-        <div class="footer-content-2 col-xl-6 col-lg-12 d-flex flex-column justify-content-center align-items-center">
+        <div
+          class="footer-content-2 col-xl-6 col-lg-12 d-flex flex-column justify-content-center align-items-center"
+        >
           <div>
             <img src="assets/images/logo.png" alt="Logo" class="logo" />
           </div>
 
-          <p class="text-center pt-3">Proactive predominate empowered portals viaine robust infrastructurs Convenen simp scalable ntatves rather thanineri manetic action items Proactively predominate empowered portals robust</p>
+          <p class="text-center pt-3">
+            Proactive predominate empowered portals viaine robust infrastructurs
+            Convenen simp scalable ntatves rather thanineri manetic action items
+            Proactively predominate empowered portals robust
+          </p>
 
           <h4 class="pt-1 pb-3 fw-bold">Subscribe Our Newsletter</h4>
 
           <div class="input-group mb-3">
-            <span class="input-group-text"><i class="fa-solid fa-paper-plane fa-xs color"></i></span>
-            <input type="text" class="form-control border-opacity-10" placeholder="Enter Your Email" aria-label="Recipient's username" aria-describedby="button-addon2"/>
+            <span class="input-group-text"
+              ><i class="fa-solid fa-paper-plane fa-xs color"></i
+            ></span>
+            <input
+              type="text"
+              class="form-control border-opacity-10"
+              placeholder="Enter Your Email"
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+            />
 
-            <button class="btn btn-primary fw-bold px-4 py-3" type="button" id="button-addon2">Subscribe Now</button>
+            <button
+              class="btn btn-primary fw-bold px-4 py-3"
+              type="button"
+              id="button-addon2"
+            >
+              Subscribe Now
+            </button>
           </div>
         </div>
 
@@ -250,7 +330,10 @@
         <hr class="w-100 text-light-emphasis mt-5" />
       </div>
 
-      <p>Copyright &copy; 2021 <span class="color">Mukti</span> . All Rights Reserved. By <span class="fw-bold">LabArtisan</span></p>
+      <p>
+        Copyright &copy; 2021 <span class="color">Mukti</span> . All Rights
+        Reserved. By <span class="fw-bold">LabArtisan</span>
+      </p>
     </footer>
 
     <!-- --------------- Font Awesome script file --------------- -->
@@ -260,5 +343,4 @@
     <!-- -- General script file for all pages -- -->
     <script src="./assets/js/script.js"></script>
   </body>
-
 </html>

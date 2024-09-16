@@ -160,23 +160,11 @@
   border: 1px solid #ccc;
 }
 
-.footer-content-1 {
-  width: 300px;
-}
-
-.footer-content-2 {
-  width: 500px;
-}
-
-.footer-content-3 {
-  width: 250px;
-}
-
 .input-group button {
   font-size: 14px;
 }
 
-.input-group .input-group-text {
+input-group .input-group-text {
   background-color: transparent;
   border-right: 0;
 }
@@ -189,7 +177,6 @@ footer {
   background-image: url("../images/footer-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #ecf1f9;
 }
 
 h1,
@@ -206,40 +193,3 @@ h2 {
   opacity: 0.1;
 }
 
-/* .sidebar {
-  position: fixed;
-  left: -250px;
-  width: 250px;
-  height: 100%;
-  background-color: #0071ef;
-  transition: left 0.3s ease;
-  padding-top: 60px;
-  z-index: 1000;
-}
-
-.sidebar.active {
-  left: 0;
-}
-
-.sidebar ul {
-  padding: 0;
-}
-
-.sidebar ul li {
-  padding: 10px;
-}
-
-.sidebar ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.navbar-toggler {
-  border: none;
-}
-
-@media (max-width: 992px) {
-  .contact-nav-info {
-    display: none;
-  }
-} */
