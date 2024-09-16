@@ -32,6 +32,15 @@
   border-radius: 0;
   padding-bottom: 10px !important;
 }
+.card img{
+  height: 15rem;
+}
+.card-title{
+  font-size: 18px;
+}
+.card iframe{
+  height: 15rem;
+}
 
 .button {
   color: black !important;
