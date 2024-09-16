@@ -6,8 +6,8 @@
   background-color: #0071ef;
 }
 
-.hero-section {
-  background-image: url("../assets/images/background.jpg");
+.hero {
+  background-image: url("../images/background.jpg");
   background-size: cover;
   background-position: center;
   padding: 60px 0;
@@ -21,7 +21,7 @@
   flex-direction: column;
 }
 
-.hero-section p {
+.hero p {
   color: #000;
 }
 
@@ -39,27 +39,6 @@
   text-decoration: none;
 }
 
-input-group .input-group-text {
-  background-color: transparent;
-  border-right: 0;
-}
-
-.form-control {
-  border-left: 0;
-}
-
-.footer-content-1 {
-  width: 300px;
-}
-
-.footer-content-2 {
-  width: 500px;
-}
-
-.footer-content-3 {
-  width: 250px;
-}
-
 .input-group button {
   font-size: 14px;
 }
@@ -74,7 +53,7 @@ input-group .input-group-text {
 }
 
 footer {
-  background-image: url("../assets/images/bg1.png");
+  background-image: url("../images/footer-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
