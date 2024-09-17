@@ -38,6 +38,17 @@ a h6 {
   font-weight: 700;
 }
 
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+  z-index: -1;
+}
+
 /* ------------------- HEADER ------------------- */
 .bg-nav-color {
   background-color: #0071ef;
@@ -45,14 +56,14 @@ a h6 {
 
 /* ------------------- SECTION HERO ------------------- */
 .hero {
-  background-image: url(../images/home-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
+  overflow: hidden;
   padding: 170px 0;
 }
 
 .hero .hero-content {
   max-width: 550px;
+  z-index: 1;
 }
 
 .hero .hero-content h1 {
@@ -185,9 +196,8 @@ a h6 {
 /* ------------------- SECTION APPOINTMENT ------------------- */
 
 .appointment .appointment-left {
-  background-image: url(../images/appointment-left.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
+  overflow: hidden;
   height: 650px;
   padding: 100px 65px 100px 65px;
 }
@@ -205,11 +215,14 @@ a h6 {
 }
 
 .appointment .appointment-right {
-  background-image: url(../images/appointment-right.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
+  overflow: hidden;
   padding: 100px 65px 100px 65px;
   height: 650px;
+}
+
+.appointment .appointment-right .background-img {
+  object-position: right;
 }
 
 .appointment .appointment-right .ar-title h2 {
@@ -415,12 +428,14 @@ a h6 {
 
 /* ------------------- FOOTER ------------------- */
 .footer .footer-top {
-  background-image: url(../images/footer-bg.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  position: relative;
+  overflow: hidden;
   padding-top: 80px;
   padding-bottom: 70px;
+}
+
+.footer .footer-top .background-img {
+  object-position: center;
 }
 
 .footer .footer-top h3 {
