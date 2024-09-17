@@ -23,56 +23,74 @@
   </head>
   <body>
     <!-- ---------------------- Header Section ---------------------- -->
-    <header>
-      <nav class="navbar bg-white w-100 py-3 px-5">
-        <div
-          class="container d-flex justify-content-between align-items-center w-100"
-        >
-          <!-- Logo -->
-          <a href="./home.html">
-            <img class="logo" src="./assets/images/logo.png" alt="Logo" />
-          </a>
+    <!-- !!!!!!!!!!!!!
+      Couldnt wrapp the Navbars into Header element because the sticky-top navbar will stop working 
+          !!!!!!!!!!!!-->
 
-          <!-- Contact Info for large screens -->
-          <div class="contact-nav-info d-none d-lg-flex gap-4">
-            <div class="d-flex gap-3 align-items-center">
-              <img src="./assets/images/nav-icon1.png" alt="Phone Icon" />
-              <div>
-                <p class="m-0">Number:</p>
-                <p class="m-0 fw-bold">+880123456789</p>
-              </div>
-            </div>
-            <div class="d-flex gap-3 align-items-center">
-              <img src="./assets/images/nav-icon2.png" alt="Email Icon" />
-              <div>
-                <p class="m-0">Email:</p>
-                <p class="m-0 fw-bold">Mukti@gmail.com</p>
-              </div>
-            </div>
-            <div class="d-flex gap-3 align-items-center">
-              <img src="./assets/images/nav-icon3.png" alt="Address Icon" />
-              <div>
-                <p class="m-0">Address:</p>
-                <p class="m-0 fw-bold">12 North West New York 100</p>
-              </div>
+    <!-- First Navigation Bar -->
+    <nav class="navbar bg-white py-3 px-5 mobile">
+      <div class="container">
+        <!-- Logo -->
+        <a href="./home.html">
+          <img class="logo" src="./assets/images/logo.png" alt="Logo" />
+        </a>
+
+        <!-- Contact Info for large screens -->
+        <div class="contact-nav-info d-none d-lg-flex gap-4">
+          <div class="d-flex gap-3 align-items-center">
+            <img src="./assets/images/nav-icon1.png" alt="Phone Icon" />
+            <div>
+              <p class="m-0 text-dark">Number:</p>
+              <p class="m-0 text-dark fw-bold">+880123456789</p>
             </div>
           </div>
-
-          <!-- Mobile Toggle Button -->
-          <button
-            class="navbar-toggler d-lg-none"
-            type="button"
-            id="sidebarToggle"
-            title="Toggle Sidebar"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <div class="d-flex gap-3 align-items-center">
+            <img src="./assets/images/nav-icon2.png" alt="Email Icon" />
+            <div>
+              <p class="m-0 text-dark">Email:</p>
+              <p class="m-0 text-dark fw-bold">Mukti@gmail.com</p>
+            </div>
+          </div>
+          <div class="d-flex gap-3 align-items-center">
+            <img src="./assets/images/nav-icon3.png" alt="Address Icon" />
+            <div>
+              <p class="m-0 text-dark">Address:</p>
+              <p class="m-0 text-dark fw-bold">12 North West New York 100</p>
+            </div>
+          </div>
         </div>
-      </nav>
 
-      <!-- Sidebar for Mobile View -->
-      <div id="sidebar" class="sidebar d-lg-none">
-        <ul class="list-unstyled">
+        <!-- Mobile Toggle Button -->
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          id="sidebarToggle"
+          title="Toggle Sidebar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Sidebar for Mobile View -->
+    <div id="sidebar" class="sidebar d-lg-none">
+      <ul class="list-unstyled">
+        <li><a href="./home.html" class="link-light">Home</a></li>
+        <li>
+          <a href="./department.html" class="link-light">Departments</a>
+        </li>
+        <li><a href="./doctors.html" class="link-light">Doctors</a></li>
+        <li><a href="./services.html" class="link-light">Services</a></li>
+        <li><a href="./blog.html" class="link-light">Blog</a></li>
+        <li><a href="./about-us.html" class="link-light">About Us</a></li>
+        <li><a href="./contactUs.html" class="link-light">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Second Navigation Bar for large screens -->
+    <nav class="bg-nav-color bg-color py-4 px-5 d-none d-lg-flex sticky-top">
+      <div class="container">
+        <ul class="text-white list-unstyled d-flex gap-5 fw-bold m-0">
           <li><a href="./home.html" class="link-light">Home</a></li>
           <li>
             <a href="./department.html" class="link-light">Departments</a>
@@ -81,35 +99,15 @@
           <li><a href="./services.html" class="link-light">Services</a></li>
           <li><a href="./blog.html" class="link-light">Blog</a></li>
           <li><a href="./about-us.html" class="link-light">About Us</a></li>
-          <li><a href="./contactUs.html" class="link-light">Contact Us</a></li>
+          <li>
+            <a href="./contactUs.html" class="link-light">Contact Us</a>
+          </li>
         </ul>
       </div>
-
-      <!-- Main Navigation Bar for large screens -->
-      <nav class="bg-nav-color w-100 bg-color py-4 px-5 d-none d-lg-flex sticky-top">
-        <div class="container">
-          <ul class="text-white list-unstyled d-flex gap-5 fw-bold m-0">
-            <li><a href="./home.html" class="link-light">Home</a></li>
-            <li>
-              <a href="./department.html" class="link-light">Departments</a>
-            </li>
-            <li><a href="./doctors.html" class="link-light">Doctors</a></li>
-            <li><a href="./services.html" class="link-light">Services</a></li>
-            <li><a href="./blog.html" class="link-light">Blog</a></li>
-            <li><a href="./about-us.html" class="link-light">About Us</a></li>
-            <li>
-              <a href="./contactUs.html" class="link-light">Contact Us</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+    </nav>
 
     <!-- ---------------------- Hero Section ---------------------- -->
-    <section
-      class="hero"
-      style="background-image: url(./assets/images/home-bg.jpg)"
-    >
+    <section class="hero">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -573,7 +571,10 @@
               </div>
             </div>
             <div class="doctors-btn text-center">
-              <a href="./doctors.html" class="btn btn-primary rounded-0 mt-3 px-4 py-2">
+              <a
+                href="./doctors.html"
+                class="btn btn-primary rounded-0 mt-3 px-4 py-2"
+              >
                 View All Doctors <i class="fa-solid fa-angles-right fa-xs"></i>
               </a>
             </div>
@@ -587,12 +588,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-6 col-12 p-0">
-            <div
-              class="appointment-left"
-              style="
-                background-image: url(./assets/images/appointment-left.jpg);
-              "
-            >
+            <div class="appointment-left">
               <div class="time-info">
                 <div class="al-title mb-4">
                   <h2 class=""><span>24 Hours </span></h2>
@@ -630,12 +626,7 @@
             </div>
           </div>
           <div class="col-md-6 col-12 p-0">
-            <div
-              class="appointment-right"
-              style="
-                background-image: url(./assets/images/appointment-right.jpg);
-              "
-            >
+            <div class="appointment-right">
               <div class="ar-title mb-4">
                 <h2><span>Make An</span></h2>
                 <h2>Appointment Now</h2>
@@ -897,10 +888,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <div
-              class="footer-top py-lg-5 border-bottom"
-              style="background-image: url(./assets/images/footer-bg.png)"
-            >
+            <div class="footer-top py-lg-5 border-bottom">
               <div class="row g-3">
                 <div class="col-12 col-sm-6 col-xl-3">
                   <div class="contact-info">
@@ -1052,14 +1040,12 @@
               </div>
             </div>
             <div class="footer-bottom">
-              <div class="copyright text-center">
-                <p class="text-capitalize">
-                  Copyright © 2021
-                  <a class="text-primary fw-bold" href="home.html">Mukti</a>.
-                  Designed by
-                  <a href="" class="text-dark fw-bold">LabArtisan</a>
-                </p>
-              </div>
+              <p class="text-capitalize text-center">
+                Copyright © 2021
+                <a class="text-primary fw-bold" href="home.html">Mukti</a>.
+                Designed by
+                <a href="" class="text-dark fw-bold">LabArtisan</a>
+              </p>
             </div>
           </div>
         </div>
