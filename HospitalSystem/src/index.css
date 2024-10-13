@@ -76,3 +76,23 @@ img {
   }
 
 }
+
+/*Footer*/
+footer {
+  background-image: url("./assets/images/footer-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.input-group button {
+  font-size: 14px;
+}
+
+input-group .input-group-text {
+  background-color: transparent;
+  border-right: 0;
+}
+
+.form-control {
+  border-left: 0;
+}

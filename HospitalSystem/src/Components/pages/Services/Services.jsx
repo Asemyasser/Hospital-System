@@ -1,8 +1,9 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
-import ServicesCard from './ServicesCard';
+import ServiceCard from './ServiceCard';
 import './Services.css';
+import Footer from "./../../shared/Footer";
 
 const Services = () => {
 
@@ -11,7 +12,7 @@ const Services = () => {
         <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
             <div className="carousel-inner">
 
-                <ServicesCard/>
+                <ServiceCard/>
 
             </div>
             <button
@@ -33,6 +34,8 @@ const Services = () => {
                 <span className="visually-hidden">Next</span>
             </button>
         </div>
+
+        <Footer/>
     </>
   )
 }

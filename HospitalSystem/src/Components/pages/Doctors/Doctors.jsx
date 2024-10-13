@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DoctorCard from './DoctorCard';
+import Footer from "./../../shared/Footer";
 
 const Doctors = () => {
 
@@ -17,6 +18,8 @@ const Doctors = () => {
 
         </div>
       </div>
+      
+      <Footer/>
     </>
   )
 }

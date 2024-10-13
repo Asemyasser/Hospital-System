@@ -2,12 +2,17 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import './Services.css';
+import service1 from "./../../../assets/images/services-1.jpg";
+import service2 from "./../../../assets/images/services-2.jpg";
+import service3 from "./../../../assets/images/services-3.jpg";
+import service4 from "./../../../assets/images/services-4.jpg";
+import service5 from "./../../../assets/images/services-5.jpg";
 
 const ServiceCard = () => {
 
     const data = [
         {
-            img: "services-1.jpg",
+            img: service1,
             service: "24/7 Emergency Care",
             details: `Our hospital offers round-the-clock emergency services with a
                 team of experienced doctors, nurses, and paramedics ready to
@@ -17,7 +22,7 @@ const ServiceCard = () => {
                 and compassion.`
         },
         {
-            img: "services-2.jpg",
+            img: service2,
             service: "Comprehensive Cardiology Services",
             details: `Our cardiology department provides a full range of heart care
                 services, from preventative screenings and diagnostic tests to
@@ -26,7 +31,7 @@ const ServiceCard = () => {
                 manage heart conditions and lead healthier lives.`
         },
         {
-            img: "services-3.jpg",
+            img: service3,
             service: "Advanced Oncology Care",
             details: `Our oncology center provides comprehensive cancer care,
                 combining advanced technology with a compassionate approach.
@@ -35,7 +40,7 @@ const ServiceCard = () => {
                 their families every step of the way.`
         },
         {
-            img: "services-4.jpg",
+            img: service4,
             service: "Outpatient Surgery",
             details: `Our outpatient surgery center offers a convenient and efficient
                 option for a wide range of surgical procedures that do not
@@ -44,7 +49,7 @@ const ServiceCard = () => {
                 experience, allowing patients to return home the same day.`
         },
         {
-            img: "services-5.jpg",
+            img: service5,
             service: "Rehabiliation and Physical Therapy",
             details: `Our rehabilitation services are designed to help patients regain
                 strength, mobility, and independence after an injury, surgery,
