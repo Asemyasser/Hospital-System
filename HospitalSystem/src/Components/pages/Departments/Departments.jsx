@@ -2,12 +2,14 @@ import DepartmentsSection from "./DepartmentsSection/DepartmentsSection";
 import Hero from "./Hero/Hero";
 
 import "./Departments.css";
+import Footer from "../../shared/Footer";
 
 const Departments = () => {
   return (
     <>
       <Hero />
       <DepartmentsSection />
+      <Footer />
     </>
   );
 };
