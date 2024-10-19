@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import icon1 from "../../assets/images/nav-icon1.png";
 import icon2 from "../../assets/images/nav-icon2.png";
@@ -10,7 +11,6 @@ function Header() {
 
   useEffect(() => {
     const screenWidth = window.matchMedia("(min-width: 992px)");
-
     const handleScreenResize = () => {
       if (screenWidth.matches) {
         setIsSticky(false);
@@ -18,12 +18,9 @@ function Header() {
         setIsSticky(true);
       }
     };
-
     handleScreenResize(); // Call on initial render
-
     // Add event listener for screen width changes
     screenWidth.addEventListener("change", handleScreenResize);
-
     // Cleanup function to remove event listener
     return () => {
       screenWidth.removeEventListener("change", handleScreenResize);
@@ -34,15 +31,12 @@ function Header() {
     <>
       {/* Mobile Navbar */}
       <nav
-        className={`navbar bg-white py-3 px-5 mobile ${
-          isSticky ? "sticky-top" : ""
-        }`}
+        className={`navbar bg-white py-3 px-5 mobile ${isSticky ? "sticky-top" : ""}`}
       >
         <div className="container">
-          <a href="./home.html">
+          <Link to="/">
             <img className="logo" src={logo} alt="Logo" />
-          </a>
-
+          </Link>
           <div className="contact-nav-info d-none d-lg-flex gap-4">
             <div className="d-flex gap-3 align-items-center">
               <img src={icon1} alt="Phone Icon" />
@@ -68,7 +62,6 @@ function Header() {
               </div>
             </div>
           </div>
-
           <button
             className="navbar-toggler d-lg-none"
             type="button"
@@ -79,7 +72,6 @@ function Header() {
           </button>
         </div>
       </nav>
-
       {/* Sidebar */}
       <div
         id="sidebar"
@@ -87,81 +79,80 @@ function Header() {
       >
         <ul className="list-unstyled">
           <li>
-            <a href="./home.html" className="link-light">
+            <Link to="/" className="link-light">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="./department.html" className="link-light">
+            <Link to="/department" className="link-light">
               Departments
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="./doctors.html" className="link-light">
+            <Link to="/doctors" className="link-light">
               Doctors
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="./services.html" className="link-light">
+            <Link to="/services" className="link-light">
               Services
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="./blog.html" className="link-light">
+            <Link to="/blogs" className="link-light">
               Blog
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="./about-us.html" className="link-light">
+            <Link to="/about-us" className="link-light">
               About Us
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="./contactUs.html" className="link-light">
+            <Link to="/contactUs" className="link-light">
               Contact Us
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
-
       {/* Desktop Navbar */}
       <nav className="bg-nav-color bg-color py-4 px-5 d-none d-lg-flex sticky-top">
         <div className="container">
           <ul className="text-white list-unstyled d-flex gap-5 fw-bold m-0">
             <li>
-              <a href="./home.html" className="link-light">
+              <Link to="/" className="link-light">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="./department.html" className="link-light">
+              <Link to="/department" className="link-light">
                 Departments
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="./doctors.html" className="link-light">
+              <Link to="/doctors" className="link-light">
                 Doctors
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="./services.html" className="link-light">
+              <Link to="/services" className="link-light">
                 Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="./blog.html" className="link-light">
+              <Link to="/blogs" className="link-light">
                 Blog
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="./about-us.html" className="link-light">
+              <Link to="/about-us" className="link-light">
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="./contactUs.html" className="link-light">
+              <Link to="/contactUs" className="link-light">
                 Contact Us
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -171,3 +162,4 @@ function Header() {
 }
 
 export default Header;
+

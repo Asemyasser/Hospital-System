@@ -1,0 +1,130 @@
+.title-img {
+    height: 170px;
+    width: 100%;
+}
+
+.centered-blue {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #0071ef;
+    font-size: 20px;
+}
+
+.centered {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+   width:40% !important;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    margin-top: 70px;
+}
+
+.card-blue-text {
+    color: #0071ef;
+    font-style: bold;
+    margin-bottom: 0;
+}
+
+.footer-content-1{
+    width: 300px;
+}
+
+.footer-content-2{
+    width: 500px;
+}
+
+.footer-content-3{
+    width: 250px;
+}
+
+.input-group button{
+    font-size: 14px;
+}
+
+.input-group .input-group-text {
+    background-color: transparent;
+    border-right: 0;
+}
+
+.form-control {
+    border-left: 0;
+}
+
+footer{
+    background-image: url("/Hospital-DEPI-/assets/images/bg1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.input-group .input-group-text {
+    background-color: transparent;
+    border-right: 0;
+  }
+  .form-control {
+    border-left: 0;
+  }
+  
+  .sidebar {
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #0071ef;
+    transition: left 0.3s ease;
+    padding-top: 60px;
+    z-index: 1000;
+  }
+  .sidebar.active {
+    left: 0;
+  }
+  .sidebar ul {
+    padding: 0;
+  }
+  .sidebar ul li {
+    padding: 10px;
+  }
+  .sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .navbar-toggler {
+    border: none;
+  }
+  
+  @media (max-width: 992px) {
+    .contact-info {
+      display: none;
+    }
+  }
+  
+  .bg-color {
+    background-color: #0071ef;
+  }
+  .hero-section {
+    background-image: url("../assets/images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
+    color: #0071ef;
+    min-height: 40vh;
+    background-repeat: no-repeat;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .hero-section p {
+    color: #000;
+  }
+  
+  .hero-section .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
