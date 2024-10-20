@@ -1,19 +1,25 @@
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import styles from "../Home.module.css";
+
 function News() {
   return (
-    <section className="news">
+    <section className={styles.news}>
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <div className="news-content d-flex justify-content-xl-between align-items-center justify-content-center flex-wrap">
-              <div className="news-header">
-                <div className="news-title text-center text-md-left">
+            <div
+              className={`${styles["news-content"]} d-flex justify-content-xl-between align-items-center justify-content-center flex-wrap`}
+            >
+              <div className={styles["news-header"]}>
+                <div
+                  className={`${styles["news-title"]} text-center text-md-left`}
+                >
                   <h2>Join Our Newsletter</h2>
                 </div>
               </div>
-              <div className="news-input">
+              <div className={styles["news-input"]}>
                 <label htmlFor="text">
                   <FontAwesomeIcon icon={faPaperPlane} size="xs" />
                 </label>

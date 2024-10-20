@@ -4,26 +4,30 @@ import post1 from "../../../../assets/images/post1.jpg";
 import post2 from "../../../../assets/images/post2.jpg";
 import post3 from "../../../../assets/images/post3.jpg";
 
+import styles from "../Home.module.css";
+
 function Blogs() {
   const blogs = [post1, post2, post3];
   return (
-    <section className="blog padding-tb bg-color">
+    <section
+      className={`${styles.blog} ${styles["padding-tb"]} ${styles["home-bg-color"]}`}
+    >
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <div className="blog-header text-center mb-5">
+            <div className={`${styles["blog-header"]} text-center mb-5`}>
               <h2 className="fw-light">News Feed</h2>
               <h2 className="fw-bolder">Be The First To New Stories</h2>
             </div>
             <div className="row justify-content-center">
               {blogs.map((blog, index) => (
                 <div key={index} className="col-12 col-xl-4 col-md-6">
-                  <div className="post-item mb-xl-0">
-                    <div className="post-img overflow-hidden">
+                  <div className={`${styles["post-item"]} mb-xl-0`}>
+                    <div className={`4${styles["post-img"]} overflow-hidden`}>
                       <img src={blog} alt="post" className="w-100" />
                     </div>
-                    <div className="post-content">
-                      <span className="meta">
+                    <div className={styles["post-content"]}>
+                      <span className={styles.meta}>
                         By <a href="#">Admin</a> March 24, 2021
                       </span>
                       <h4>
@@ -37,8 +41,8 @@ function Blogs() {
                         Template.
                       </p>
                     </div>
-                    <div className="blog-footer">
-                      <a href="#" className="viewall">
+                    <div className={styles["blog-footer"]}>
+                      <a href="#" className={styles.viewall}>
                         Read More{" "}
                         <FontAwesomeIcon icon={faAnglesRight} size="xs" />
                       </a>
