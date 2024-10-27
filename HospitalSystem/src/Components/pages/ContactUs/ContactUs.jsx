@@ -1,12 +1,12 @@
-import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Col } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import HeroSection from './HeroSection/HeroSection';
-import ContactInfo from './ContactSection/ContactInfo';
-import ContactForm from './ContactSection/ContactForm';
-import MapSection from './MapSection/MapSection';
-import './ContactUs.css'; 
+import HeroSection from "./HeroSection/HeroSection";
+import ContactInfo from "./ContactSection/ContactInfo";
+import ContactForm from "./ContactSection/ContactForm";
+import MapSection from "./MapSection/MapSection";
+import Footer from "../../shared/Footer";
+import "./ContactUs.css";
 
 const ContactUs = () => {
   return (
@@ -27,6 +27,7 @@ const ContactUs = () => {
       <div className="full-width-map">
         <MapSection />
       </div>
+      <Footer />
     </>
   );
 };
