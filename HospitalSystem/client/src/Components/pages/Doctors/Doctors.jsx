@@ -1,10 +1,9 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import DoctorCard from './DoctorCard';
-import Footer from "./../../shared/Footer";
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import DoctorCard from "./DoctorCard";
+import Footer from "../../shared/Footer";
 
 const Doctors = () => {
-
   return (
     <>
       <h2 class="d-flex flex-column align-items-center fw-lighter mt-5 pt-5">
@@ -13,15 +12,13 @@ const Doctors = () => {
 
       <div className="container py-5">
         <div className="row gy-4">
-
-            <DoctorCard/>
-
+          <DoctorCard />
         </div>
       </div>
-      
-      <Footer/>
-    </>
-  )
-}
 
-export default Doctors
+      <Footer />
+    </>
+  );
+};
+
+export default Doctors;
