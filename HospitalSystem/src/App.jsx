@@ -1,16 +1,14 @@
-
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Components/pages/Home/Home";
 import Blogs from "./Components/pages/Blogs/Blogs";
-import BlogDetails from './Components/pages/BlogDetails/BlogDetails';
-import Department from './Components/pages/Departments/Departments';
-import Doctors from './Components/pages/Doctors/Doctors'; 
-import Services from './Components/pages/Services/Services'; 
-import AboutUs from './Components/pages/AboutUs/AboutUs'; 
-import ContactUs from './Components/pages/ContactUs/ContactUs'; 
-import Header from './Components/shared/Header';
-
+import BlogDetails from "./Components/pages/BlogDetails/BlogDetails";
+import Department from "./Components/pages/Departments/Departments";
+import Doctors from "./Components/pages/Doctors/Doctors";
+import Services from "./Components/pages/Services/Services";
+import AboutUs from "./Components/pages/AboutUs/AboutUs";
+import ContactUs from "./Components/pages/ContactUs/ContactUs";
+import Header from "./Components/shared/Header";
 
 function App() {
   return (
@@ -26,11 +24,8 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contactUs" element={<ContactUs />} />
       </Routes>
-     
     </Router>
   );
 }
 
 export default App;
-
-
