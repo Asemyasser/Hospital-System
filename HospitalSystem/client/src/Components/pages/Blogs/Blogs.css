@@ -27,25 +27,30 @@
 .button {
     color: black !important;
     text-align: left;
-   
 }
+
+.button:hover {
+  background-color: blue;
+}
+
 .card {
 
-  margin-bottom: 0 !important; /* Remove bottom margin */
-  margin-top: 70px !important; /* Adjust top margin as necessary */
+  margin-bottom: 0 !important; 
+  margin-top: 70px !important;
   border-radius: 0;
   padding-bottom: 0px !important;
-  box-sizing: border-box; /* Ensure padding and borders are included in the width */
+  box-sizing: border-box; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
 }
 
 .card .button-primary {
   background-color: rgba(0, 0, 0, 0) !important;
   border: 1px solid !important;
   border-radius: 0 !important;
-  width: 100% !important; /* Make button width 100% */
-  margin: 0 !important; /* Remove margins */
+  width: 100% !important; 
+  margin: 0 !important; 
   border-color: rgba(0, 0, 0, 0.175) !important;
-  box-sizing: border-box; /* Ensure padding and borders are included in the width */
+  box-sizing: border-box; 
 }
 
 

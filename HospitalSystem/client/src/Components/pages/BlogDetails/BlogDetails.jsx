@@ -3,11 +3,28 @@ import { useLocation } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './BlogDetails.css';
 import backgroundImg from "../../../assets/images/background.jpg";
+import axios from 'axios';
 import Footer from '../../shared/Footer';
-
 const BlogDetails = () => {
   const location = useLocation();
   const { imgSrc } = location.state || {};
+  const { id } = useParams();
+
+  const [blog, setBlog] = useState(null);
+
+  useEffect(() => {
+    const fetchBlog = async () => {
+      try {
+        const { data } = await axios.get(`http://localhost:7070/api/blogPosts/${id}`);
+        setBlog(data);
+      } catch (error) {
+        console.error("Error fetching blog details:", error);
+      }
+    };
+    fetchBlog();
+  }, [id]);
+
+  if (!blog) return <div>Loading...</div>;
 
   return (
     <>

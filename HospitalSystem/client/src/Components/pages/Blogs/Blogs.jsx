@@ -5,6 +5,7 @@ import './Blogs.css';
 import blog1 from "../../../assets/images/blog1.jpg";
 import blog2 from "../../../assets/images/blog2.jpg";
 import backgroundImg from "../../../assets/images/background.jpg";
+import axios from 'axios';
 import Footer from '../../shared/Footer';
 
 const blogs = [
@@ -15,6 +16,20 @@ const blogs = [
 
 const Blogs = () => {
   const navigate = useNavigate();
+  const [blogsData, setBlogsData] = useState([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const { data } = await axios.get('http://localhost:5000/api/blogPosts');
+        setBlogsData(data);
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+      }
+    };
+    fetchBlogs();
+  }, []);
+
 
   const handleReadMore = (blog) => {
     navigate(`/blog/${blog.id}`, { state: { imgSrc: blog.imgSrc } });
