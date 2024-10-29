@@ -34,14 +34,7 @@ app.use("/api/appointments", appointments);
 app.use("/api/workingHours", workingHours);
 app.use("/api/generalSettings", generalSettings);
 /**************************************************************************************************/
-// npm i multer // this for image uploads
 app.use("/uploads", express.static("uploads"));
-
-// npm i joi-objectid
-// npm i lodash    // this for dealing with arrays , objects
-// npm i jsonwebtoken // this for json web token to generate tokens for authenticated users
-
-//  $env:jwtPrivateKey:mySecretKey
 /**************************************************************************************************/
 // Environment Variables:
 const port = process.env.PORT || 5000;
