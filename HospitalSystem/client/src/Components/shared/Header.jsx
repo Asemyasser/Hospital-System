@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
 import icon1 from "../../assets/images/nav-icon1.png";
 import icon2 from "../../assets/images/nav-icon2.png";
 import icon3 from "../../assets/images/nav-icon3.png";
@@ -61,7 +60,11 @@ function Header() {
       >
         <div className="container">
           <Link to="/">
-            <img className="logo" src={`../../../`} alt="Logo" />
+            <img
+              className="logo"
+              src={`http://localhost:5000/${data.logo}`}
+              alt="Logo"
+            />
           </Link>
           <div className="contact-nav-info d-none d-lg-flex gap-4">
             <div className="d-flex gap-3 align-items-center">
