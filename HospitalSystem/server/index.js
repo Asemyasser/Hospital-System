@@ -6,16 +6,16 @@ const workingHours = require("./routes/home/workingHours");
 const generalSettings = require("./routes/generalSettings");
 const express = require("express");
 const app = express();
-const logger = require('./middleware/logger');
-const errorHandler = require('./middleware/errorHandler');
-const blogPosts = require('./routes/Blog/blogPosts');
+// const logger = require("./middleware/logger");
+// const errorHandler = require("./middleware/errorHandler");
+const blogPosts = require("./routes/blog/blogPosts");
 app.use(express.json());
 
 /*****************************************************/
 const mongoose = require("mongoose");
 mongoose
   .connect(
-    "mongodb+srv://asemyasser42:AySjWZpx9l8DZJ8t@hospitalsystem.aebye.mongodb.net/Home?retryWrites=true&w=majority&appName=HospitalSystem"
+    "mongodb+srv://asemyasser42:AySjWZpx9l8DZJ8t@hospitalsystem.aebye.mongodb.net/?retryWrites=true&w=majority&appName=HospitalSystem"
   )
   .then(() => {
     console.log("connecting to database");
@@ -29,8 +29,8 @@ mongoose
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(express.json());
-app.use(logger);
-app.use(errorHandler);
+// app.use(logger);
+// app.use(errorHandler);
 /**************************************************************************************************/
 // app.set("view engine", "pug");
 app.set("views", "./views");
