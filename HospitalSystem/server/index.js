@@ -7,13 +7,9 @@ const generalSettings = require("./routes/generalSettings");
 const blogPosts = require("./routes/blog/blogPosts");
 const doctors = require("./routes/doctors");
 const services = require("./routes/services");
-const doctors = require("./routes/doctors");
-const services = require("./routes/services");
 const express = require("express");
 const cors = require("cors");
 const app = express();
-app.use(cors());
-app.use(express.json());
 
 /*****************************************************/
 const mongoose = require("mongoose");
@@ -33,12 +29,12 @@ mongoose
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(express.json());
+app.use(cors());
 // app.use(logger);
 // app.use(errorHandler);
 /**************************************************************************************************/
 // app.set("view engine", "pug");
 app.set("views", "./views");
-app.set("view engine", "pug");
 /**************************************************************************************************/
 app.use("/api/hero", hero);
 app.use("/api/appointments", appointments);

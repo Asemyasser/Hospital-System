@@ -45,7 +45,10 @@ function Hero() {
               <h1>
                 <b className="text-primary">{data.coloredDesc}</b> {data.desc}
               </h1>
-              <a href="" className="btn btn-primary rounded-0 mt-3 px-3 py-2">
+              <a
+                href="#appointment"
+                className="btn btn-primary rounded-0 mt-3 px-3 py-2"
+              >
                 Get Appoinments{" "}
                 <FontAwesomeIcon icon={faAnglesRight} size="xs" />
               </a>

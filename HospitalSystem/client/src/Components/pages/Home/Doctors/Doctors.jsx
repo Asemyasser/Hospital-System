@@ -1,42 +1,34 @@
+import { useState, useEffect } from "react";
 import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import doctor1 from "../../../../assets/images/doctor1.jpg";
-import doctor2 from "../../../../assets/images/doctor2.jpg";
-import doctor3 from "../../../../assets/images/doctor3.jpg";
-import doctor4 from "../../../../assets/images/doctor4.jpg";
+import axios from "axios";
 import styles from "../Home.module.css";
 
 function Doctors() {
-  const doctors = [
-    {
-      name: "Dr. Jason Kovalsky",
-      title: "Cardiologist",
-      phone: "658 222 127",
-      email: "admin@gmail.com",
-      img: doctor1,
-    },
-    {
-      name: "Patricia Mcneel",
-      title: "Pediatrist",
-      phone: "658 222 127",
-      email: "admin@gmail.com",
-      img: doctor2,
-    },
-    {
-      name: "William Khanna",
-      title: "Throat Specialist",
-      phone: "658 222 127",
-      email: "admin@gmail.com",
-      img: doctor3,
-    },
-    {
-      name: "Eric Patterson",
-      title: "Therapy",
-      phone: "658 222 127",
-      email: "admin@gmail.com",
-      img: doctor4,
-    },
-  ];
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/api/doctors");
+        console.log(response.data);
+
+        setData(response.data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+  const phone = "658 222 127";
+  const email = "admin@gmail.com";
 
   return (
     <section className={styles.doctors + " " + styles["padding-tb"]}>
@@ -48,11 +40,15 @@ function Doctors() {
               <h2 className="fw-bolder">Mukti Professional Doctors</h2>
             </div>
             <div className="row justify-content-center">
-              {doctors.map((doctor, index) => (
+              {data.slice(0, 4).map((doctor, index) => (
                 <div key={index} className="col-xl-3 col-lg-4 col-md-6 col-12">
                   <div className={styles["doctor-item"]}>
                     <div className={styles["doctor-img"] + " overflow-hidden"}>
-                      <img src={doctor.img} alt="doctor" className="w-100" />
+                      <img
+                        src={`http://localhost:5000/${doctor.img}`}
+                        alt="doctor"
+                        className="w-100"
+                      />
                     </div>
                     <div className={styles["doctor-content"]}>
                       <div
@@ -61,7 +57,7 @@ function Doctors() {
                         } p-3 text-white`}
                       >
                         <h4 className="text-white">{doctor.name}</h4>
-                        <p className="digi">{doctor.title}</p>
+                        <p className="digi">{doctor.profession}</p>
                       </div>
                       <ul
                         className={
@@ -69,12 +65,10 @@ function Doctors() {
                         }
                       >
                         <li>
-                          <span className="text-dark">Phone :</span>{" "}
-                          {doctor.phone}
+                          <span className="text-dark">Phone :</span> {phone}
                         </li>
                         <li>
-                          <span className="text-dark">Email :</span>{" "}
-                          {doctor.email}
+                          <span className="text-dark">Email :</span> {email}
                         </li>
                       </ul>
                     </div>
@@ -84,7 +78,7 @@ function Doctors() {
             </div>
             <div className={styles["doctors-btn"] + " text-center"}>
               <a
-                href="./doctors.html"
+                href="../../doctors"
                 className="btn btn-primary rounded-0 mt-3 px-4 py-2"
               >
                 View All Doctors{" "}

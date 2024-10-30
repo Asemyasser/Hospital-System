@@ -32,7 +32,7 @@ function Appointments() {
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
   return (
-    <section className={styles.appointment}>
+    <section id="appointment" className={styles.appointment}>
       <div className="container-fluid p-0">
         <div className="row">
           <div className="col-md-6 col-12 p-0">
