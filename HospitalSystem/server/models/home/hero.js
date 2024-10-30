@@ -14,6 +14,9 @@ const heroSchema = new mongoose.Schema({
     required: true,
     minlength: 15,
   },
+  coloredDesc: {
+    type: String,
+  },
   heroCover: {
     type: String,
     required: true,
@@ -27,6 +30,7 @@ function handleHeroValidation(hero) {
   const schema = Joi.object({
     header: Joi.string().min(5).required(),
     desc: Joi.string().min(15).required(),
+    coloredDesc: Joi.string(),
   });
   return schema.validate(hero, { abortEarly: false });
 }

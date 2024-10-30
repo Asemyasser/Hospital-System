@@ -29,7 +29,7 @@ router.post("/", upload.single("logo"), async (req, res) => {
 
   let generalSettings = new GeneralSettings({
     logo: req.file.path,
-    PhoneNumber: req.body.PhoneNumber,
+    phoneNumber: req.body.phoneNumber,
     email: req.body.email,
     address: req.body.address,
   });
@@ -60,7 +60,7 @@ router.put("/:id", upload.single("logo"), async (req, res) => {
       .send("the generalSettings object with the given id is not found");
 
   const updatedData = {
-    PhoneNumber: req.body.PhoneNumber,
+    phoneNumber: req.body.PhoneNumber,
     email: req.body.email,
     address: req.body.address,
   };
