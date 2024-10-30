@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './BlogDetails.css';
 import backgroundImg from "../../../assets/images/background.jpg";
 import axios from 'axios';
-import Footer from '../../shared/Footer';
+import Footer from './../../shared/Footer/Footer';
 const BlogDetails = () => {
   const location = useLocation();
   const { imgSrc } = location.state || {};

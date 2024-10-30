@@ -4,7 +4,6 @@ const hero = require("./routes/home/hero");
 const appointments = require("./routes/home/appointment");
 const workingHours = require("./routes/home/workingHours");
 const generalSettings = require("./routes/generalSettings");
-const blogPosts = require("./routes/blog/blogPosts");
 const express = require("express");
 const cors = require("cors");
 const app = express();
@@ -41,6 +40,8 @@ app.use("/api/appointments", appointments);
 app.use("/api/workingHours", workingHours);
 app.use("/api/generalSettings", generalSettings);
 app.use("/api/blogPosts", blogPosts);
+app.use("/api/doctors", doctors);
+app.use("/api/services", services);
 /**************************************************************************************************/
 app.use("/uploads", express.static("uploads"));
 /**************************************************************************************************/
