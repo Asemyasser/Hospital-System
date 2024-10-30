@@ -1,5 +1,6 @@
 const Joi = require("joi");
 Joi.objectId = require("joi-objectId")(Joi);
+const cors = require('cors');
 const hero = require("./routes/home/hero");
 const appointments = require("./routes/home/appointment");
 const workingHours = require("./routes/home/workingHours");
@@ -8,6 +9,7 @@ const doctors = require('./routes/doctors');
 const services = require('./routes/services');
 const express = require("express");
 const app = express();
+app.use(cors({origin: '*'}));
 // const logger = require("./middleware/logger");
 // const errorHandler = require("./middleware/errorHandler");
 const blogPosts = require("./routes/blog/blogPosts");
@@ -43,8 +45,8 @@ app.use("/api/appointments", appointments);
 app.use("/api/workingHours", workingHours);
 app.use("/api/generalSettings", generalSettings);
 app.use("/api/blogPosts", blogPosts);
-app.use('/api/doctors', doctors);
-app.use('/api/services', services);
+app.use('/doctors', doctors);
+app.use('/services', services);
 /**************************************************************************************************/
 app.use("/uploads", express.static("uploads"));
 /**************************************************************************************************/
