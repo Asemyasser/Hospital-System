@@ -6,7 +6,7 @@ const generalSettingsSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  PhoneNumber: {
+  phoneNumber: {
     type: Number,
     required: true,
   },
@@ -29,7 +29,7 @@ const GeneralSettings = mongoose.model(
 /**************************************************************************************************/
 function handleGeneralSettingsValidation(data) {
   const schema = Joi.object({
-    PhoneNumber: Joi.string()
+    phoneNumber: Joi.string()
       .pattern(/^\+?[1-9]\d{1,14}$/)
       .message("Invalid phone number format")
       .required(),

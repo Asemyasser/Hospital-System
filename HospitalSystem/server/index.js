@@ -4,11 +4,11 @@ const hero = require("./routes/home/hero");
 const appointments = require("./routes/home/appointment");
 const workingHours = require("./routes/home/workingHours");
 const generalSettings = require("./routes/generalSettings");
-const express = require("express");
-const app = express();
-// const logger = require("./middleware/logger");
-// const errorHandler = require("./middleware/errorHandler");
 const blogPosts = require("./routes/blog/blogPosts");
+const express = require("express");
+const cors = require("cors");
+const app = express();
+app.use(cors());
 app.use(express.json());
 
 /*****************************************************/
