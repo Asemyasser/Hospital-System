@@ -150,12 +150,17 @@ a h6 {
   box-shadow: 0 25px 10px #8080801a;
 }
 
+.doctor-item .doctor-img {
+  height: 270px;
+}
+
 .doctor-item .doctor-img img {
   transition: 0.3s all linear;
   -webkit-transition: 0.3s all linear;
   -moz-transition: 0.3s all linear;
   -ms-transition: 0.3s all linear;
   -o-transition: 0.3s all linear;
+  height: 100%;
 }
 
 .doctor-item:hover .doctor-img img {
@@ -312,6 +317,7 @@ a h6 {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  height: 250px;
 }
 
 .blog .post-item:hover .post-img img {

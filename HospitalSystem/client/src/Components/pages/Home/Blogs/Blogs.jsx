@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "../Home.module.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Blogs() {
   const [data, setData] = useState(null);
@@ -42,11 +43,11 @@ function Blogs() {
               {data?.map((blog, index) => (
                 <div key={index} className="col-12 col-xl-4 col-md-6">
                   <div className={`${styles["post-item"]} mb-xl-0`}>
-                    <div className={`4${styles["post-img"]} overflow-hidden`}>
+                    <div className={`${styles["post-img"]} overflow-hidden`}>
                       <img
-                        src={`http:/localhost:5000/${blog?.imgSrc}`}
+                        src={`http://localhost:5000/${blog?.imgSrc}`}
                         alt="post"
-                        className="w-100"
+                        className="w-100 "
                       />
                     </div>
                     <div className={styles["post-content"]}>
@@ -60,10 +61,10 @@ function Blogs() {
                       <p>{blog?.content.slice(0, 40)}</p>
                     </div>
                     <div className={styles["blog-footer"]}>
-                      <a href="#" className={styles.viewall}>
+                      <Link to="/blogs" className={styles.viewall}>
                         Read More{" "}
                         <FontAwesomeIcon icon={faAnglesRight} size="xs" />
-                      </a>
+                      </Link>
                       <a href="#" className="blog-comment">
                         <FontAwesomeIcon icon={faMessage} className="me-2" /> 30
                       </a>
