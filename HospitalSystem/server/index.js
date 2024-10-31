@@ -4,13 +4,13 @@ const hero = require("./routes/home/hero");
 const appointments = require("./routes/home/appointment");
 const workingHours = require("./routes/home/workingHours");
 const generalSettings = require("./routes/generalSettings");
-const doctors = require('./routes/doctors');
-const services = require('./routes/services');
+const doctors = require("./routes/doctors");
+const services = require("./routes/services");
 const express = require("express");
 const app = express();
 // const logger = require("./middleware/logger");
 // const errorHandler = require("./middleware/errorHandler");
-const blogPosts = require("./routes/blog/blogPosts");
+const blogPosts = require("./routes/Blog/blogPosts");
 app.use(express.json());
 
 /*****************************************************/
@@ -43,11 +43,21 @@ app.use("/api/appointments", appointments);
 app.use("/api/workingHours", workingHours);
 app.use("/api/generalSettings", generalSettings);
 app.use("/api/blogPosts", blogPosts);
-app.use('/api/doctors', doctors);
-app.use('/api/services', services);
+app.use("/api/doctors", doctors);
+app.use("/api/services", services);
 /**************************************************************************************************/
 app.use("/uploads", express.static("uploads"));
 /**************************************************************************************************/
+
+// Serve AdminLTE files
+app.use(
+  "/adminlte",
+  express.static(path.join(__dirname, "node_modules", "admin-lte"))
+);
+
+// Set the view engine to EJS
+app.set("view engine", "ejs");
+
 // Environment Variables:
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
