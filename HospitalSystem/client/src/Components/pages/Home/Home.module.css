@@ -76,6 +76,7 @@ a h6 {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  height: 320px;
 }
 
 .feature-item:hover {

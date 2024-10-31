@@ -9,6 +9,7 @@ import Services from "./Components/pages/Services/Services";
 import AboutUs from "./Components/pages/AboutUs/AboutUs";
 import ContactUs from "./Components/pages/ContactUs/ContactUs";
 import Header from "./Components/shared/Header";
+import Notfound from "./Components/pages/NotFound/NotFound";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contactUs" element={<ContactUs />} />
+        <Route path="*" element={<Notfound />} />
       </Routes>
     </Router>
   );

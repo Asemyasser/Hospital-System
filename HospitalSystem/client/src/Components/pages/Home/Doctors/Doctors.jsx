@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import styles from "../Home.module.css";
 
@@ -75,13 +76,13 @@ function Doctors() {
               ))}
             </div>
             <div className={styles["doctors-btn"] + " text-center"}>
-              <a
-                href="../../doctors"
+              <Link
+                to="/doctors"
                 className="btn btn-primary rounded-0 mt-3 px-4 py-2"
               >
                 View All Doctors{" "}
                 <FontAwesomeIcon icon={faAnglesRight} size="xs" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

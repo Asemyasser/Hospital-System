@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import footerBg from "../../../../assets/images/footer-bg.png";
 import styles from "../Home.module.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function HomeFooter() {
   const [doctorsData, setDoctorsData] = useState(null);
@@ -130,10 +131,10 @@ function HomeFooter() {
                             className="me-2"
                             size="xs"
                           />
-                          <a href="../../doctors" className="text-dark">
+                          <Link to="/doctors" className="text-dark">
                             {" "}
                             {doctor.name}
-                          </a>
+                          </Link>
                         </li>
                       ))}
                     </ul>
@@ -152,10 +153,10 @@ function HomeFooter() {
                             className="me-2"
                             size="xs"
                           />
-                          <a href="#" className="text-dark">
+                          <Link to="/services" className="text-dark">
                             {" "}
                             {service.service}
-                          </a>
+                          </Link>
                         </li>
                       ))}
                     </ul>
