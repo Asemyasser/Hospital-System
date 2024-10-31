@@ -46,29 +46,6 @@
   transition: bottom 0.3s ease;
 }
 
-.doctorCard:hover .socialIcons {
-  bottom: 0;
-}
-
-.socialIcon {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #0071ef;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.socialIcon:hover {
-  background: #0071ef;
-  color: white;
-  transform: translateY(-3px);
-}
-
 .cardBody {
   padding: 1rem;
 }
