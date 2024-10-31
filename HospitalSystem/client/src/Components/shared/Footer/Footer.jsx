@@ -1,8 +1,14 @@
 import logo from "./../../../assets/images/logo.png";
-import { faHouseChimney, faPhone, faEnvelope, faGlobe, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHouseChimney,
+  faPhone,
+  faEnvelope,
+  faGlobe,
+  faPaperPlane,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "bootstrap/dist/css/bootstrap.min.css";
-import styles from './Footer.module.css';
+import styles from "./Footer.module.css";
 
 const Footer = () => {
   return (
@@ -11,10 +17,14 @@ const Footer = () => {
         <div className="col-xl-3 col-12 text-center text-xl-start">
           <h4 className="fw-bold pb-2">Contact Info</h4>
           <p>
-            Rapidiously seize wireless strategic theme areas and corporate testing procedures. Uniquely
+            Rapidiously seize wireless strategic theme areas and corporate
+            testing procedures. Uniquely
           </p>
           <p>
-            <FontAwesomeIcon icon={faHouseChimney} className="pe-2 text-primary" />
+            <FontAwesomeIcon
+              icon={faHouseChimney}
+              className="pe-2 text-primary"
+            />
             Suite 02 New Elephant Road USA
           </p>
           <p>
@@ -35,7 +45,9 @@ const Footer = () => {
             <img src={logo} alt="Logo" className="logo" />
           </div>
           <p className="text-center pt-3">
-            Proactive predominate empowered portals viaine robust infrastructurs Convenen simp scalable ntatves rather thanineri manetic action items Proactively predominate empowered portals robust
+            Proactive predominate empowered portals viaine robust infrastructurs
+            Convenen simp scalable ntatves rather thanineri manetic action items
+            Proactively predominate empowered portals robust
           </p>
           <h4 className="pt-1 pb-3 fw-bold">Subscribe Our Newsletter</h4>
           <div className="input-group mb-3">
@@ -59,7 +71,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="col-xl-3 col-12 text-center text-lg-start">
-          <h4 className="fw-bold pb-3 text-center text-xl-start">Opening Hours</h4>
+          <h4 className="fw-bold pb-3 text-center text-xl-start">
+            Opening Hours
+          </h4>
           <div className="d-flex justify-content-between">
             <div>
               <p>Saturday</p>
@@ -82,7 +96,8 @@ const Footer = () => {
         <hr className="w-100 text-light-emphasis mt-5" />
       </div>
       <p>
-        Copyright &copy; 2021 <span className="text-primary">Mukti</span>. All Rights Reserved. By{" "}
+        Copyright &copy; 2021 <span className="text-primary">Mukti</span>. All
+        Rights Reserved. By{" "}
         <span className="fw-bold text-black">LabArtisan</span>
       </p>
     </footer>
