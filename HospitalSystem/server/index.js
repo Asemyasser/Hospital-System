@@ -37,10 +37,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(express.json());
 app.use(cors());
-// app.use(logger);
-// app.use(errorHandler);
 /**************************************************************************************************/
-// app.set("view engine", "pug");
+// Set the view engine to EJS
+app.set("view engine", "ejs");
 app.set("views", "./views");
 /**************************************************************************************************/
 app.use("/api/hero", hero);
@@ -52,9 +51,9 @@ app.use("/api/doctors", doctors);
 app.use("/api/services", services);
 app.use("/api/login", auth);
 app.use("/api/register", users);
-app.use("/api/services", services);
 
 /**************************************************************************************************/
+// Serve uploaded files
 app.use("/uploads", express.static("uploads"));
 /**************************************************************************************************/
 
@@ -199,12 +198,6 @@ app.get("/services/:id/edit", async (req, res) => {
     res.status(500).send("Error fetching service data");
   }
 });
-
-// Serve uploaded files
-app.use("/uploads", express.static("uploads"));
-
-// Set the view engine to EJS
-app.set("view engine", "ejs");
 
 // Environment Variables:
 const port = process.env.PORT || 5000;

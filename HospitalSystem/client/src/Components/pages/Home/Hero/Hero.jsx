@@ -13,8 +13,6 @@ function Hero() {
     const fetchData = async () => {
       try {
         const response = await axios.get("http://localhost:5000/api/hero");
-        console.log(response.data[0].heroCover);
-
         setData(response.data[0]);
       } catch (err) {
         setError(err.message);

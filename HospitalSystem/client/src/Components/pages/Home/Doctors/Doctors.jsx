@@ -13,8 +13,6 @@ function Doctors() {
     const fetchData = async () => {
       try {
         const response = await axios.get("http://localhost:5000/api/doctors");
-        console.log(response.data);
-
         setData(response.data);
       } catch (err) {
         setError(err.message);

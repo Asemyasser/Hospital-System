@@ -37,7 +37,6 @@ function Header() {
         const response = await axios.get(
           "http://localhost:5000/api/generalSettings"
         );
-        console.log(response.data[0]);
         setData(response.data[0]);
       } catch (err) {
         setError(err.message);

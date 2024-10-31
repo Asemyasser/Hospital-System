@@ -18,7 +18,7 @@ router.post("/", async (req, res) => {
   let validPassword = await bcrypt.compare(req.body.password, user.password);
   if (!validPassword) return res.status(400).send("Invalid Credentials");
   const token = user.generateAuthToken();
-  res.header("x-auth-token", token).redirect("/doctors");
+  res.header("x-auth-token", token).redirect("/home");
 });
 
 function handleAuthValidation(user) {

@@ -8,8 +8,59 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import footerBg from "../../../../assets/images/footer-bg.png";
 import styles from "../Home.module.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function HomeFooter() {
+  const [doctorsData, setDoctorsData] = useState(null);
+  const [servicesData, setServicesData] = useState(null);
+  const [openingHoursData, setOpeningHoursData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchDoctorsData = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/api/doctors");
+        setDoctorsData(response.data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    const fetchOpeiningHoursData = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:5000/api/workingHours"
+        );
+        setOpeningHoursData(response.data[0].days);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    const fetchServicesData = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/api/services");
+        setServicesData(response.data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchDoctorsData();
+    fetchServicesData();
+    fetchOpeiningHoursData();
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
   return (
     <footer className={styles.footer}>
       <div className="container">
@@ -69,72 +120,19 @@ function HomeFooter() {
                   <div className={`${styles["doctor-info"]} mb-5 mb-sm-0`}>
                     <h3>Our Doctors</h3>
                     <ul className="lab-ul">
-                      <li>
-                        <FontAwesomeIcon
-                          icon={faAnglesRight}
-                          className="me-2"
-                          size="xs"
-                        />
-                        <a href="#" className="text-dark">
-                          {" "}
-                          Dr. Nick Sims
-                        </a>
-                      </li>
-                      <li>
-                        <FontAwesomeIcon
-                          icon={faAnglesRight}
-                          className="me-2"
-                          size="xs"
-                        />
-                        <a href="#" className="text-dark">
-                          {" "}
-                          Dr. Michael Linden
-                        </a>
-                      </li>
-                      <li>
-                        <FontAwesomeIcon
-                          icon={faAnglesRight}
-                          className="me-2"
-                          size="xs"
-                        />
-                        <a href="#" className="text-dark">
-                          {" "}
-                          Dr. Max Turner
-                        </a>
-                      </li>
-                      <li>
-                        <FontAwesomeIcon
-                          icon={faAnglesRight}
-                          className="me-2"
-                          size="xs"
-                        />
-                        <a href="#" className="text-dark">
-                          {" "}
-                          Dr. Amy Adams
-                        </a>
-                      </li>
-                      <li>
-                        <FontAwesomeIcon
-                          icon={faAnglesRight}
-                          className="me-2"
-                          size="xs"
-                        />
-                        <a href="#" className="text-dark">
-                          {" "}
-                          Dr. Julia Jameson
-                        </a>
-                      </li>
-                      <li>
-                        <FontAwesomeIcon
-                          icon={faAnglesRight}
-                          className="me-2"
-                          size="xs"
-                        />
-                        <a href="#" className="text-dark">
-                          {" "}
-                          Dr. Michael Linden
-                        </a>
-                      </li>
+                      {doctorsData.map((doctor) => (
+                        <li key={doctor._id}>
+                          <FontAwesomeIcon
+                            icon={faAnglesRight}
+                            className="me-2"
+                            size="xs"
+                          />
+                          <a href="../../doctors" className="text-dark">
+                            {" "}
+                            {doctor.name}
+                          </a>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>
@@ -144,70 +142,19 @@ function HomeFooter() {
                   >
                     <h3>Our Services</h3>
                     <ul className="lab-ul">
-                      <li>
-                        <FontAwesomeIcon
-                          icon={faAnglesRight}
-                          className="me-2"
-                          size="xs"
-                        />
-                        <a href="#" className="text-dark">
-                          {" "}
-                          Outpatient Surgery
-                        </a>
-                      </li>
-                      <li>
-                        <FontAwesomeIcon
-                          icon={faAnglesRight}
-                          className="me-2"
-                          size="xs"
-                        />
-                        <a href="#" className="text-dark">
-                          {" "}
-                          Cardiac Clinic
-                        </a>
-                      </li>
-                      <li>
-                        <FontAwesomeIcon
-                          icon={faAnglesRight}
-                          className="me-2"
-                          size="xs"
-                        />
-                        <a href="#" className="text-dark">
-                          {" "}
-                          Ophthalmology Clinic
-                        </a>
-                      </li>
-                      <li>
-                        <FontAwesomeIcon
-                          icon={faAnglesRight}
-                          className="me-2"
-                          size="xs"
-                        />
-                        <a href="#" className="text-dark">
-                          Gynaecological Clinic
-                        </a>
-                      </li>
-                      <li>
-                        <FontAwesomeIcon
-                          icon={faAnglesRight}
-                          className="me-2"
-                          size="xs"
-                        />
-                        <a href="#" className="text-dark">
-                          Outpatient Rehabilitation
-                        </a>
-                      </li>
-                      <li>
-                        <FontAwesomeIcon
-                          icon={faAnglesRight}
-                          className="me-2"
-                          size="xs"
-                        />
-                        <a href="#" className="text-dark">
-                          {" "}
-                          Ophthalmology Clinic
-                        </a>
-                      </li>
+                      {servicesData.slice(0, 8).map((service) => (
+                        <li key={service._id}>
+                          <FontAwesomeIcon
+                            icon={faAnglesRight}
+                            className="me-2"
+                            size="xs"
+                          />
+                          <a href="#" className="text-dark">
+                            {" "}
+                            {service.service}
+                          </a>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>
@@ -217,38 +164,58 @@ function HomeFooter() {
                     <h3>opening hours</h3>
                     <div className={styles["dep-item"]}>
                       <div className="dep-item-inner d-flex justify-content-between">
-                        <div className="day-name">Satarday</div>
-                        <div className="day-time">8:00 am-10:00 pm</div>
+                        <div className="day-name">Saturday</div>
+                        <div className="day-time">
+                          {openingHoursData.saturday}
+                        </div>
                       </div>
                     </div>
                     <div className={styles["dep-item"]}>
                       <div className="dep-item-inner d-flex justify-content-between">
                         <div className="day-name">Sunday</div>
-                        <div className="day-time">6:00 am-8:00 pm</div>
+                        <div className="day-time">
+                          {openingHoursData.sunday}
+                        </div>
                       </div>
                     </div>
                     <div className={styles["dep-item"]}>
                       <div className="dep-item-inner d-flex justify-content-between">
                         <div className="day-name">Monday</div>
-                        <div className="day-time">6:00 am-2:00 pm</div>
+                        <div className="day-time">
+                          {openingHoursData.monday}
+                        </div>
                       </div>
                     </div>
                     <div className={styles["dep-item"]}>
                       <div className="dep-item-inner d-flex justify-content-between">
                         <div className="day-name">Tuesday</div>
-                        <div className="day-time">7:00 am-9:00 pm</div>
+                        <div className="day-time">
+                          {openingHoursData.tuesday}
+                        </div>
                       </div>
                     </div>
                     <div className={styles["dep-item"]}>
                       <div className="dep-item-inner d-flex justify-content-between">
-                        <div className="day-name">Widnessday</div>
-                        <div className="day-time">10:00 am-12:00 pm</div>
+                        <div className="day-name">Wednesday</div>
+                        <div className="day-time">
+                          {openingHoursData.wednesday}
+                        </div>
                       </div>
                     </div>
                     <div className={styles["dep-item"]}>
                       <div className="dep-item-inner d-flex justify-content-between">
-                        <div className="day-name">Thirsday</div>
-                        <div className="day-time">2:00 am-6:00 pm</div>
+                        <div className="day-name">Thursday</div>
+                        <div className="day-time">
+                          {openingHoursData.thursday}
+                        </div>
+                      </div>
+                    </div>
+                    <div className={styles["dep-item"]}>
+                      <div className="dep-item-inner d-flex justify-content-between">
+                        <div className="day-name">Friday</div>
+                        <div className="day-time">
+                          {openingHoursData.friday}
+                        </div>
                       </div>
                     </div>
                   </div>
