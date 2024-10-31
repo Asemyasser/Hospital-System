@@ -1,19 +1,37 @@
-<!-- Create blogs.ejs -->
+<!-- views/contacts.ejs -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Blogs</title>
+    <title>Contact Messages</title>
     <link rel="stylesheet" href="/fontawesome/css/all.min.css" />
     <link rel="stylesheet" href="/adminlte/dist/css/adminlte.min.css" />
     <style>
-      .blog-thumbnail {
-        max-width: 100px;
-        height: 100px;
-        object-fit: cover;
+      table {
+        width: 100%;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 8px;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+      .btn-danger {
+        color: white;
+        background-color: #dc3545;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
         border-radius: 4px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .btn-danger:hover {
+        background-color: #c82333;
       }
     </style>
   </head>
@@ -24,7 +42,9 @@
         class="app-header navbar navbar-expand bg-body"
         style="min-height: 50px"
       >
-        <div class="container-fluid"></div>
+        <div class="container-fluid">
+          <h3>Hospital Admin Dashboard</h3>
+        </div>
       </nav>
 
       <!-- Sidebar -->
@@ -69,80 +89,53 @@
 
       <!-- Main Content -->
       <main class="app-main">
-        <div class="app-content-header">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-sm-6">
-                <h3 class="mb-0">All Blogs</h3>
-              </div>
-              <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-end">
-                  <li class="breadcrumb-item"><a href="/home">Home</a></li>
-                  <li class="breadcrumb-item active">All Blogs</li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div class="app-content">
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-12">
-                <div class="card">
+                <div class="card mt-4">
                   <div class="card-header">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <h3 class="card-title m-0">Blog Posts</h3>
-                      <a href="/blogs/new" class="btn btn-primary">
-                        <i class="fas fa-plus"></i> Add New Blog
-                      </a>
-                    </div>
+                    <h3 class="card-title">Contact Form Submissions</h3>
                   </div>
                   <div class="card-body">
-                    <table class="table table-striped">
+                    <table class="table table-bordered table-striped">
                       <thead>
                         <tr>
-                          <th>Title</th>
-                          <th>Image</th>
-                          <th>Content</th>
+                          <th>Email</th>
+                          <th>Phone</th>
+                          <th>Subject</th>
+                          <th>Message</th>
+                          <th>Date</th>
                           <th>Actions</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <% blogs.forEach(blog => { %>
+                        <% if (messages.length === 0) { %>
                         <tr>
-                          <td><%= blog.title %></td>
-                          <td>
-                            <img
-                              src="/<%= blog.imgSrc %>"
-                              alt="<%= blog.title %>'s thumbnail"
-                              class="blog-thumbnail"
-                              onerror="this.src='/placeholder-blog.jpg'"
-                            />
+                          <td colspan="6" class="text-center">
+                            No messages found.
                           </td>
-                          <td><%= blog.content.substring(0, 100) %>...</td>
+                        </tr>
+                        <% } else { %> <% messages.forEach(function(message) {
+                        %>
+                        <tr>
+                          <td><%= message.email %></td>
+                          <td><%= message.phone %></td>
+                          <td><%= message.subject %></td>
+                          <td><%= message.message %></td>
                           <td>
-                            <a
-                              href="/blogs/<%= blog._id %>"
-                              class="btn btn-info btn-sm"
-                              >View</a
-                            >
-                            <a
-                              href="/blogs/<%= blog._id %>/edit"
-                              class="btn btn-warning btn-sm"
-                              >Edit</a
-                            >
+                            <%= new Date(message.date).toLocaleString() %>
+                          </td>
+                          <td>
                             <button
-                              onclick="deleteBlog('<%= blog._id %>')"
                               class="btn btn-danger btn-sm"
+                              onclick="deleteMessage('<%= message._id %>')"
                             >
                               Delete
                             </button>
                           </td>
                         </tr>
-                        <% }); %>
+                        <% }); %> <% } %>
                       </tbody>
                     </table>
                   </div>
@@ -152,37 +145,25 @@
           </div>
         </div>
       </main>
-
-      <!-- Footer -->
-      <footer class="app-footer">
-        <div class="float-end d-none d-sm-inline">Anything you want</div>
-        <strong
-          >Copyright &copy; 2014-2024
-          <a href="https://adminlte.io" class="text-decoration-none"
-            >AdminLTE.io</a
-          >.
-        </strong>
-        All rights reserved.
-      </footer>
     </div>
 
     <script src="/adminlte/dist/js/adminlte.min.js"></script>
     <script>
-      function deleteBlog(blogId) {
-        if (confirm("Are you sure you want to delete this blog post?")) {
-          fetch(`/api/blogPosts/${blogId}`, {
+      function deleteMessage(messageId) {
+        if (confirm("Are you sure you want to delete this message?")) {
+          fetch(`/api/contact/${messageId}`, {
             method: "DELETE",
           })
             .then((response) => {
               if (response.ok) {
-                window.location.reload();
+                window.location.reload(); // Reload the page to see updated list
               } else {
-                alert("Failed to delete blog post");
+                alert("Failed to delete the message");
               }
             })
             .catch((error) => {
               console.error("Error:", error);
-              alert("Failed to delete blog post");
+              alert("Failed to delete the message");
             });
         }
       }
