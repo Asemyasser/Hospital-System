@@ -36,46 +36,42 @@
       <!--end::Header-->
       <!--begin::Sidebar-->
       <aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
-        <!--begin::Sidebar Brand-->
         <div class="sidebar-brand">
-          <!--begin::Brand Link-->
-          <a href="/doctors" class="brand-link">
-            <span class="brand-text fw-light">AdminLTE 4</span>
-            <!--end::Brand Text-->
+          <a href="/home" class="brand-link">
+            <span class="brand-text fw-light">Admin Dashboard</span>
           </a>
-          <!--end::Brand Link-->
         </div>
-        <!--end::Sidebar Brand-->
-        <!--begin::Sidebar Wrapper-->
         <div class="sidebar-wrapper">
           <nav class="mt-2">
-            <!--begin::Sidebar Menu-->
-            <ul
-              class="nav sidebar-menu flex-column"
-              data-lte-toggle="treeview"
-              role="menu"
-              data-accordion="false"
-            >
+            <ul class="nav sidebar-menu flex-column">
               <li class="nav-item">
                 <a href="/doctors" class="nav-link">
-                  <i class="nav-icon bi bi-speedometer"></i>
-                  <p>
-                    All doctors
-                    <i class="nav-arrow bi bi-chevron-right"></i>
-                  </p>
+                  <i class="nav-icon fas fa-user-md"></i>
+                  <p>Doctors</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/doctors/new" class="nav-link">
-                  <i class="nav-icon bi bi-palette"></i>
-                  <p>Add doctor</p>
+                <a href="/blogs" class="nav-link">
+                  <i class="nav-icon fas fa-blog"></i>
+                  <p>Blog Posts</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="/services" class="nav-link">
+                  <i class="nav-icon fas fa-cogs"></i>
+                  <p>Services</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/contacts" class="nav-link">
+                  <i class="nav-icon fas fa-envelope"></i>
+                  <p>Contact Messages</p>
+                </a>
+              </li>
+              <!-- Add other navigation items as needed -->
             </ul>
-            <!--end::Sidebar Menu-->
           </nav>
         </div>
-        <!--end::Sidebar Wrapper-->
       </aside>
 
       <!--end::Sidebar-->

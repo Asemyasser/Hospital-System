@@ -13,8 +13,12 @@ const doctors = require("./routes/doctors");
 const { Doctor } = require("./models/doctors");
 const services = require("./routes/services");
 const { Service } = require("./models/services");
+const contactRoute = require("./routes/contact");
+const { Contact } = require("./models/contact");
 const users = require("./routes/users");
 const auth = require("./routes/auth");
+const authMiddleware = require("./middlewares/auth");
+const cookieParser = require("cookie-parser");
 const express = require("express");
 const cors = require("cors");
 const app = express();
@@ -35,8 +39,13 @@ mongoose
 //built-in middleware function:
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
-app.use(cors());
+app.use(
+  cors({
+    credentials: true,
+  })
+);
 app.use(express.json());
+app.use(cookieParser());
 /**************************************************************************************************/
 // Set the view engine to EJS
 app.set("view engine", "ejs");
@@ -50,6 +59,7 @@ app.use("/api/blogPosts", blogPosts);
 app.use("/api/doctors", doctors);
 app.use("/api/departments", departments);
 app.use("/api/services", services);
+app.use("/api/contact", contactRoute);
 app.use("/api/login", auth);
 app.use("/api/register", users);
 
@@ -83,7 +93,7 @@ app.get("/home", (req, res) => {
 });
 
 // Serve the doctors page
-app.get("/doctors", async (req, res) => {
+app.get("/doctors", authMiddleware, async (req, res) => {
   try {
     const doctors = await Doctor.find(); // Fetch doctors from the database
     res.render("doctors", { doctors });
@@ -120,7 +130,7 @@ app.get("/doctors/:id/edit", async (req, res) => {
 });
 
 // Serve the blogs page
-app.get("/blogs", async (req, res) => {
+app.get("/blogs", authMiddleware, async (req, res) => {
   try {
     // Add debug logging
     console.log("Fetching blogs...");
@@ -167,7 +177,7 @@ app.get("/blogs/:id/edit", async (req, res) => {
 });
 
 // Services routes
-app.get("/services", async (req, res) => {
+app.get("/services", authMiddleware, async (req, res) => {
   try {
     const services = await Service.find();
     res.render("services", { services });
@@ -197,6 +207,17 @@ app.get("/services/:id/edit", async (req, res) => {
     res.render("edit_service", { service });
   } catch (error) {
     res.status(500).send("Error fetching service data");
+  }
+});
+
+// Serve the contacts page
+app.get("/contacts", authMiddleware, async (req, res) => {
+  try {
+    const messages = await Contact.find().sort({ date: -1 });
+    res.render("contacts", { messages });
+  } catch (error) {
+    console.error("Error fetching contact messages:", error); // Log the error
+    res.status(500).send("Error fetching contact messages");
   }
 });
 

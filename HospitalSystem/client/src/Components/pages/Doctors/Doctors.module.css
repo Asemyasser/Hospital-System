@@ -33,6 +33,7 @@
   transform: scale(1.05);
 }
 
+<<<<<<< HEAD
 .socialIcons {
   position: absolute;
   bottom: -50px;
@@ -46,6 +47,8 @@
   transition: bottom 0.3s ease;
 }
 
+=======
+>>>>>>> 698090be44efe71c92dae3d3e9b834e306389733
 .cardBody {
   padding: 1rem;
 }

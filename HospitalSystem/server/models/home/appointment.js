@@ -19,7 +19,7 @@ const appointmentSchema = new mongoose.Schema({
     match: [/^\+?[1-9]\d{1,14}$/, "Invalid phone number format"],
   },
   datePicker: {
-    type: String,
+    type: Date,
     required: [true, "Date is required"],
   },
   date: { type: Date, default: Date.now },
@@ -48,13 +48,9 @@ function handleAppointmentValidation(appointment) {
         "string.empty": "Phone number is required",
         "string.pattern.base": "Invalid phone number format",
       }),
-    datePicker: Joi.string()
-      .pattern(/^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/\d{4}$/)
-      .required()
-      .messages({
-        "string.pattern.base": "Date must be in MM/DD/YYYY format",
-        "any.required": "Date is required",
-      }),
+    datePicker: Joi.string().required().messages({
+      "any.required": "Date is required",
+    }),
   });
 
   return schema.validate(appointment);

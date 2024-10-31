@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "bootstrap/dist/css/bootstrap.min.css";
-import styles from './Footer.module.css';
+import styles from "./Footer.module.css";
 
 const Footer = () => {
   return (
@@ -21,7 +21,10 @@ const Footer = () => {
             testing procedures. Uniquely
           </p>
           <p>
-            <FontAwesomeIcon icon={faHouseChimney} className="pe-2 text-primary" />
+            <FontAwesomeIcon
+              icon={faHouseChimney}
+              className="pe-2 text-primary"
+            />
             Suite 02 New Elephant Road USA
           </p>
           <p>
@@ -68,7 +71,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="col-xl-3 col-12 text-center text-lg-start">
-          <h4 className="fw-bold pb-3 text-center text-xl-start">Opening Hours</h4>
+          <h4 className="fw-bold pb-3 text-center text-xl-start">
+            Opening Hours
+          </h4>
           <div className="d-flex justify-content-between">
             <div>
               <p>Saturday</p>
@@ -91,9 +96,7 @@ const Footer = () => {
         <hr className="w-100 text-light-emphasis mt-5" />
       </div>
       <p>
-        
-        Copyright &copy; 2021 <span className="text-primary">Mukti</span>. All
-        Rights Reserved. By{" "}
+        Copyright &copy; 2021 <span className="text-primary">Mukti</span>. All Rights Reserved. By{" "}
         <span className="fw-bold text-black">LabArtisan</span>
       </p>
     </footer>

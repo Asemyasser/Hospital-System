@@ -1,19 +1,18 @@
 footer {
-    background-image: url("../../../assets/images/footer-bg.png"); 
+    background-image: url("./../../../assets//images//footer-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-  }
-  
-  .subscribe {
+}
+
+.subscribe {
     font-size: 14px;
-  }
+}
   
-  .inputText {
+.inputText {
     background-color: transparent;
     border-right: 0;
-  }
+}
   
-  .border {
+.border {
     border-left: 0;
-  }
-  
+}

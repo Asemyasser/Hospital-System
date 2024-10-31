@@ -18,7 +18,7 @@ const DepartmentsSection = () => {
               alt="Plastic Surgery"
               className="img-fluid"
             />
-            <h5>Plastic Surgery</h5>
+            <h5>medication</h5>
             <a href="#">Read More &raquo;</a>
           </div>
         </div>
@@ -29,7 +29,7 @@ const DepartmentsSection = () => {
               alt="Plastic Surgery"
               className="img-fluid"
             />
-            <h5>Plastic Surgery</h5>
+            <h5>genatics</h5>
             <a href="#">Read More &raquo;</a>
           </div>
         </div>
@@ -40,7 +40,7 @@ const DepartmentsSection = () => {
               alt="Plastic Surgery"
               className="img-fluid"
             />
-            <h5>Plastic Surgery</h5>
+            <h5>Brain Surgery</h5>
             <a href="#">Read More &raquo;</a>
           </div>
         </div>
@@ -51,7 +51,7 @@ const DepartmentsSection = () => {
               alt="Plastic Surgery"
               className="img-fluid"
             />
-            <h5>Plastic Surgery</h5>
+            <h5>heart Surgery</h5>
             <a href="#">Read More &raquo;</a>
           </div>
         </div>
@@ -62,7 +62,7 @@ const DepartmentsSection = () => {
               alt="Plastic Surgery"
               className="img-fluid"
             />
-            <h5>Plastic Surgery</h5>
+            <h5>chemistry</h5>
             <a href="#">Read More &raquo;</a>
           </div>
         </div>
@@ -73,7 +73,7 @@ const DepartmentsSection = () => {
               alt="Plastic Surgery"
               className="img-fluid"
             />
-            <h5>Plastic Surgery</h5>
+            <h5>Analysis</h5>
             <a href="#">Read More &raquo;</a>
           </div>
         </div>
@@ -84,7 +84,7 @@ const DepartmentsSection = () => {
               alt="Plastic Surgery"
               className="img-fluid"
             />
-            <h5>Plastic Surgery</h5>
+            <h5>denistry</h5>
             <a href="#">Read More &raquo;</a>
           </div>
         </div>

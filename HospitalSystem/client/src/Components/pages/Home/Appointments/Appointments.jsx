@@ -2,49 +2,51 @@ import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import appointmentLeft from "../../../../assets/images/appointment-left.jpg";
 import appointmentright from "../../../../assets/images/appointment-right.jpg";
-
 import styles from "../Home.module.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Appointments() {
   const [workingHours, setWorkingHours] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
   const [formData, setFormData] = useState({
     name: "",
     department: "",
     phoneNumber: "",
     datePicker: "",
   });
-  const [formSuccessMessage, setFormSuccessMessage] = useState("");
-  const [formErrorMessage, setFormErrorMessage] = useState("");
 
-  // Handle form field changes
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    setFormData({ ...formData, [name]: value });
   };
-
-  // Handle form submission
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent the default form submission
+    e.preventDefault(); //
 
     try {
       const response = await axios.post(
         "http://localhost:5000/api/appointments",
-        formData
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
       );
-      setFormSuccessMessage("Appointment booked successfully!");
-      setFormErrorMessage(""); // Clear any previous error messages
-      console.log(response.data); // Log the response or do something with it
+      toast.success("Appointment booked successfully!");
+      console.log(response.data);
     } catch (error) {
-      setFormErrorMessage("Error booking appointment. Please try again.");
-      setFormSuccessMessage(""); // Clear success message if there's an error
-      console.error("There was an error!", error.message); // Log error details
+      if (error.response && error.response.data) {
+        console.log(error);
+        toast.error(error.response.data[0] || "Error booking appointment.");
+      } else {
+        toast.error("Error booking appointment. Please try again.");
+      }
+      console.error("There was an error!", error.message);
     }
   };
 
@@ -158,13 +160,6 @@ function Appointments() {
                 <h2>Appointment Now</h2>
               </div>
 
-              {formSuccessMessage && (
-                <p style={{ color: "green" }}>{formSuccessMessage}</p>
-              )}
-              {formErrorMessage && (
-                <p style={{ color: "red" }}>{formErrorMessage}</p>
-              )}
-
               <form onSubmit={handleSubmit}>
                 <input
                   type="text"
@@ -182,9 +177,9 @@ function Appointments() {
                   value={formData.department}
                   onChange={handleChange}
                 >
-                  <option value="1">Select Departments</option>
-                  <option value="2">Dental</option>
-                  <option value="3">U.C</option>
+                  <option value="">Select Departments</option>
+                  <option value="Dental">Dental</option>
+                  <option value="U.C">U.C</option>
                 </select>
                 <input
                   type="text"
@@ -211,6 +206,7 @@ function Appointments() {
                   </span>
                 </button>
               </form>
+              <ToastContainer />
             </div>
           </div>
         </div>
