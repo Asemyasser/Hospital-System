@@ -17,7 +17,6 @@ const auth = require("./routes/auth");
 const express = require("express");
 const cors = require("cors");
 const app = express();
-
 /*****************************************************/
 const mongoose = require("mongoose");
 mongoose
@@ -35,8 +34,8 @@ mongoose
 //built-in middleware function:
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 /**************************************************************************************************/
 // Set the view engine to EJS
 app.set("view engine", "ejs");

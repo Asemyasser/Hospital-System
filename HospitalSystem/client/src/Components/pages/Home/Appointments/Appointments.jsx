@@ -8,9 +8,45 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 function Appointments() {
-  const [data, setData] = useState(null);
+  const [workingHours, setWorkingHours] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    department: "",
+    phoneNumber: "",
+    datePicker: "",
+  });
+  const [formSuccessMessage, setFormSuccessMessage] = useState("");
+  const [formErrorMessage, setFormErrorMessage] = useState("");
+
+  // Handle form field changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent the default form submission
+
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/appointments",
+        formData
+      );
+      setFormSuccessMessage("Appointment booked successfully!");
+      setFormErrorMessage(""); // Clear any previous error messages
+      console.log(response.data); // Log the response or do something with it
+    } catch (error) {
+      setFormErrorMessage("Error booking appointment. Please try again.");
+      setFormSuccessMessage(""); // Clear success message if there's an error
+      console.error("There was an error!", error.message); // Log error details
+    }
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,7 +55,7 @@ function Appointments() {
           "http://localhost:5000/api/workingHours"
         );
         console.log(response.data[0]);
-        setData(response.data[0]);
+        setWorkingHours(response.data[0]);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -53,45 +89,57 @@ function Appointments() {
                   className={`${styles["dep-item"]} d-flex justify-content-between flex-wrap`}
                 >
                   <div className={styles["day-name"]}>Saturday</div>
-                  <div className={styles["day-time"]}>{data.days.saturday}</div>
+                  <div className={styles["day-time"]}>
+                    {workingHours.days.saturday}
+                  </div>
                 </div>
                 <div
                   className={`${styles["dep-item"]} d-flex justify-content-between flex-wrap`}
                 >
                   <div className={styles["day-name"]}>Sunday</div>
-                  <div className={styles["day-time"]}>{data.days.sunday}</div>
+                  <div className={styles["day-time"]}>
+                    {workingHours.days.sunday}
+                  </div>
                 </div>
                 <div
                   className={`${styles["dep-item"]} d-flex justify-content-between flex-wrap`}
                 >
                   <div className={styles["day-name"]}>Monday</div>
-                  <div className={styles["day-time"]}>{data.days.monday}</div>
+                  <div className={styles["day-time"]}>
+                    {workingHours.days.monday}
+                  </div>
                 </div>
                 <div
                   className={`${styles["dep-item"]} d-flex justify-content-between flex-wrap`}
                 >
                   <div className={styles["day-name"]}>Tuesday</div>
-                  <div className={styles["day-time"]}>{data.days.tuesday}</div>
+                  <div className={styles["day-time"]}>
+                    {workingHours.days.tuesday}
+                  </div>
                 </div>
                 <div
                   className={`${styles["dep-item"]} d-flex justify-content-between flex-wrap`}
                 >
                   <div className={styles["day-name"]}>Wednesday</div>
                   <div className={styles["day-time"]}>
-                    {data.days.wednesday}
+                    {workingHours.days.wednesday}
                   </div>
                 </div>
                 <div
                   className={`${styles["dep-item"]} d-flex justify-content-between flex-wrap`}
                 >
                   <div className={styles["day-name"]}>Thursday</div>
-                  <div className={styles["day-time"]}>{data.days.thursday}</div>
+                  <div className={styles["day-time"]}>
+                    {workingHours.days.thursday}
+                  </div>
                 </div>
                 <div
                   className={`${styles["dep-item"]} d-flex justify-content-between flex-wrap`}
                 >
                   <div className={styles["day-name"]}>Friday</div>
-                  <div className={styles["day-time"]}>{data.days.friday}</div>
+                  <div className={styles["day-time"]}>
+                    {workingHours.days.friday}
+                  </div>
                 </div>
               </div>
             </div>
@@ -109,18 +157,30 @@ function Appointments() {
                 </h2>
                 <h2>Appointment Now</h2>
               </div>
-              <form action="" method="post">
+
+              {formSuccessMessage && (
+                <p style={{ color: "green" }}>{formSuccessMessage}</p>
+              )}
+              {formErrorMessage && (
+                <p style={{ color: "red" }}>{formErrorMessage}</p>
+              )}
+
+              <form onSubmit={handleSubmit}>
                 <input
                   type="text"
-                  id="fname"
-                  name="firstName"
+                  id="name"
+                  name="name"
                   placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
                 />
                 <select
-                  id="country"
-                  name="country"
+                  id="department"
+                  name="department"
                   className="w-100"
-                  title="country"
+                  title="department"
+                  value={formData.department}
+                  onChange={handleChange}
                 >
                   <option value="1">Select Departments</option>
                   <option value="2">Dental</option>
@@ -128,23 +188,25 @@ function Appointments() {
                 </select>
                 <input
                   type="text"
-                  id="lname"
-                  name="lastname"
+                  id="phoneNumber"
+                  name="phoneNumber"
                   placeholder="Phone Number"
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
                 />
                 <input
-                  placeholder="Email Address"
                   type="date"
-                  id="start"
-                  name="trip-start"
-                  value="2021-02-21"
+                  id="datePicker"
+                  name="datePicker"
+                  value={formData.datePicker}
+                  onChange={handleChange}
                 />
                 <button
                   className={`${styles["lab-btn"]} bg-white`}
                   type="submit"
                 >
                   <span>
-                    Appointment Now{" "}
+                    Book Appointment{" "}
                     <FontAwesomeIcon icon={faAnglesRight} size="xs" />
                   </span>
                 </button>

@@ -2,7 +2,6 @@ const {
   Appointment,
   handleAppointmentValidation,
 } = require("../../models/home/appointment");
-const upload = require("../../routes/image_uploader");
 const express = require("express");
 const router = express.Router();
 
@@ -14,7 +13,7 @@ router.get("/", async (req, res) => {
 });
 /**************************************************************************************************/
 //adding appointment:
-router.post("/", upload.single("backgroundImg"), async (req, res) => {
+router.post("/", async (req, res) => {
   const { error } = handleAppointmentValidation(req.body);
   if (error) {
     // Map through all error details and extract messages
@@ -22,17 +21,11 @@ router.post("/", upload.single("backgroundImg"), async (req, res) => {
     return res.status(400).send(errorMessages); // Send all error messages
   }
 
-  // check if the file was uploaded
-  if (!req.file) {
-    res.status(400).send("Background img is required..");
-  }
-
   let appointment = new Appointment({
     name: req.body.name,
     department: req.body.department,
     phoneNumber: req.body.phoneNumber,
     datePicker: req.body.datePicker,
-    backgroundImg: req.file.path,
   });
 
   try {
@@ -45,7 +38,7 @@ router.post("/", upload.single("backgroundImg"), async (req, res) => {
 
 /**************************************************************************************************/
 //updating appointment:
-router.put("/:id", upload.single("backgroundImg"), async (req, res) => {
+router.put("/:id", async (req, res) => {
   // validate appointment
   const { error } = handleAppointmentValidation(req.body);
   if (error) {
@@ -64,9 +57,6 @@ router.put("/:id", upload.single("backgroundImg"), async (req, res) => {
     phoneNumber: req.body.phoneNumber,
     datePicker: req.body.datePicker,
   };
-  if (req.file) {
-    updatedData.backgroundImg = req.file.path;
-  }
 
   appointment = await Appointment.findByIdAndUpdate(
     req.params.id,

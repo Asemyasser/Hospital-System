@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   faAnglesRight,
   faEnvelope,
@@ -8,7 +9,6 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import footerBg from "../../../../assets/images/footer-bg.png";
 import styles from "../Home.module.css";
-import { useEffect, useState } from "react";
 import axios from "axios";
 
 function HomeFooter() {
@@ -22,6 +22,7 @@ function HomeFooter() {
     const fetchDoctorsData = async () => {
       try {
         const response = await axios.get("http://localhost:5000/api/doctors");
+        console.log(response.data);
         setDoctorsData(response.data);
       } catch (err) {
         setError(err.message);
@@ -38,6 +39,7 @@ function HomeFooter() {
         setOpeningHoursData(response.data[0].days);
       } catch (err) {
         setError(err.message);
+        console.log(err.message);
       } finally {
         setLoading(false);
       }
@@ -49,14 +51,15 @@ function HomeFooter() {
         setServicesData(response.data);
       } catch (err) {
         setError(err.message);
+        console.log(err.message);
       } finally {
         setLoading(false);
       }
     };
 
+    fetchOpeiningHoursData();
     fetchDoctorsData();
     fetchServicesData();
-    fetchOpeiningHoursData();
   }, []);
 
   if (loading) return <div>Loading...</div>;
@@ -120,7 +123,7 @@ function HomeFooter() {
                   <div className={`${styles["doctor-info"]} mb-5 mb-sm-0`}>
                     <h3>Our Doctors</h3>
                     <ul className="lab-ul">
-                      {doctorsData.map((doctor) => (
+                      {doctorsData?.map((doctor) => (
                         <li key={doctor._id}>
                           <FontAwesomeIcon
                             icon={faAnglesRight}
@@ -142,7 +145,7 @@ function HomeFooter() {
                   >
                     <h3>Our Services</h3>
                     <ul className="lab-ul">
-                      {servicesData.slice(0, 8).map((service) => (
+                      {servicesData?.slice(0, 8).map((service) => (
                         <li key={service._id}>
                           <FontAwesomeIcon
                             icon={faAnglesRight}
@@ -166,7 +169,7 @@ function HomeFooter() {
                       <div className="dep-item-inner d-flex justify-content-between">
                         <div className="day-name">Saturday</div>
                         <div className="day-time">
-                          {openingHoursData.saturday}
+                          {openingHoursData?.saturday}
                         </div>
                       </div>
                     </div>
@@ -174,7 +177,7 @@ function HomeFooter() {
                       <div className="dep-item-inner d-flex justify-content-between">
                         <div className="day-name">Sunday</div>
                         <div className="day-time">
-                          {openingHoursData.sunday}
+                          {openingHoursData?.sunday}
                         </div>
                       </div>
                     </div>
@@ -182,7 +185,7 @@ function HomeFooter() {
                       <div className="dep-item-inner d-flex justify-content-between">
                         <div className="day-name">Monday</div>
                         <div className="day-time">
-                          {openingHoursData.monday}
+                          {openingHoursData?.monday}
                         </div>
                       </div>
                     </div>
@@ -190,7 +193,7 @@ function HomeFooter() {
                       <div className="dep-item-inner d-flex justify-content-between">
                         <div className="day-name">Tuesday</div>
                         <div className="day-time">
-                          {openingHoursData.tuesday}
+                          {openingHoursData?.tuesday}
                         </div>
                       </div>
                     </div>
@@ -198,7 +201,7 @@ function HomeFooter() {
                       <div className="dep-item-inner d-flex justify-content-between">
                         <div className="day-name">Wednesday</div>
                         <div className="day-time">
-                          {openingHoursData.wednesday}
+                          {openingHoursData?.wednesday}
                         </div>
                       </div>
                     </div>
@@ -206,7 +209,7 @@ function HomeFooter() {
                       <div className="dep-item-inner d-flex justify-content-between">
                         <div className="day-name">Thursday</div>
                         <div className="day-time">
-                          {openingHoursData.thursday}
+                          {openingHoursData?.thursday}
                         </div>
                       </div>
                     </div>
@@ -214,7 +217,7 @@ function HomeFooter() {
                       <div className="dep-item-inner d-flex justify-content-between">
                         <div className="day-name">Friday</div>
                         <div className="day-time">
-                          {openingHoursData.friday}
+                          {openingHoursData?.friday}
                         </div>
                       </div>
                     </div>

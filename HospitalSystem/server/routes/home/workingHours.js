@@ -2,7 +2,6 @@ const {
   WorkingHours,
   handleWorkingHoursValidation,
 } = require("../../models/home/workingHours");
-const upload = require("../image_uploader");
 const express = require("express");
 const router = express.Router();
 
