@@ -1,30 +1,38 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './BlogDetails.css';
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./BlogDetails.css";
 import backgroundImg from "../../../assets/images/background.jpg";
-import axios from 'axios';
-import Footer from './../../shared/Footer/Footer';
-const BlogDetails = () => {
-  const location = useLocation();
-  const { imgSrc } = location.state || {};
-  const { id } = useParams();
+import axios from "axios";
+import Footer from "./../../shared/Footer/Footer";
 
+const BlogDetails = () => {
+  const { id } = useParams();
   const [blog, setBlog] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:7070/api/blogPosts/${id}`);
+        setLoading(true);
+        const { data } = await axios.get(
+          `http://localhost:5000/api/blogPosts/${id}`
+        );
         setBlog(data);
       } catch (error) {
         console.error("Error fetching blog details:", error);
+        setError("Failed to fetch blog details");
+      } finally {
+        setLoading(false);
       }
     };
     fetchBlog();
   }, [id]);
 
-  if (!blog) return <div>Loading...</div>;
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+  if (!blog) return <div>Blog not found</div>;
 
   return (
     <>
@@ -33,73 +41,47 @@ const BlogDetails = () => {
           className="hero-section text-center py-5"
           style={{
             backgroundImage: `url(${backgroundImg})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
           }}
         >
-          <h1>Blog Single Page</h1>
-          <p><strong>Home-Blog-</strong>  Blog Single</p>
+          <h1>Blog Details</h1>
+          <p>
+            <strong>Home - Blog - </strong> {blog.title}
+          </p>
         </section>
       </header>
-      <div className="col-12 d-flex justify-content-center">
-        <div className="card w-50">
-          {imgSrc.includes("youtube") ? (
-            <iframe
-              src={imgSrc}
-              frameBorder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              style={{ height: '15rem', width: '100%' }}
-            ></iframe>
-          ) : (
-            <img
-              src={imgSrc}
-              className="card-img-top"
-              alt="blog details"
-            />
-          )}
-          <div className="card-body">
-            <p className="card-blue-text">By Admin March 3, 2022</p>
-            <p style={{ fontSize: '20px' }}>
-              <strong>
-                A wonderful serenity has taken possession of my entire soul
-                like these sweet mornings spring which I enjoy.
-              </strong>
-            </p>
-            <p className="card-text">
-              As we age, the discs in our spine can degenerate, causing chronic
-              pain and discomfort in the back and neck that can significantly
-              impact daily life. Understanding what degenerative disc disease
-              (DDD) is, its symptoms, causes, and the available treatment
-              options can help you manage this common condition and improve your
-              quality of life.Degenerative disc disease is a condition that
-              affects the discs between the vertebrae in your spine. Each disc
-              has a gelatinous center and a tougher outer covering. These discs
-              act like cushions, absorbing shock and allowing flexibility and
-              movement in your back. Over time, the discs can degenerate. This
-              can lead to pain and discomfort in your back and neck from the
-              loss of protective cushioning. DDD is a natural part of aging. It
-              is not actually a "disease," but rather a condition that can cause
-              symptoms if the discs deteriorate significantly. When discs are
-              damaged, the inner part can push out and press on the spinal cord
-              or nerve. This is known as a herniated or "slipped" disc, and it
-              may cause weakness. The disc can also become so worn out that the
-              vertebrae start to rub together. <br /><br />Degenerative disc
-              disease is a condition that affects the discs between the
-              vertebrae in your spine. Each disc has a gelatinous center and a
-              tougher outer covering. These discs act like cushions, absorbing
-              shock and allowing flexibility and movement in your back. Over
-              time, the discs can degenerate. This can lead to pain and
-              discomfort in your back and neck from the loss of protective
-              cushioning. DDD is a natural part of aging. It is not actually a
-              "disease," but rather a condition that can cause symptoms if the
-              discs deteriorate significantly. When discs are damaged, the inner
-              part can push out and press on the spinal cord or nerve. This is
-              known as a herniated or "slipped" disc, and it may cause weakness.
-              The disc can also become so worn out that the vertebrae start to
-              rub together.
-            </p>
+      <div className="container my-5">
+        <div className="row justify-content-center">
+          <div className="col-lg-8">
+            <div className="card">
+              <img
+                src={`http://localhost:5000/${blog.imgSrc}`} // Full URL path
+                className="card-img-top"
+                alt={blog.title}
+                style={{
+                  height: "auto",
+                  maxHeight: "400px",
+                  objectFit: "cover",
+                }}
+                onError={(e) => {
+                  e.target.src = "/placeholder-blog.jpg"; // Fallback image
+                  e.target.onerror = null; // Prevent infinite loop
+                }}
+              />
+              <div className="card-body">
+                <p className="card-blue-text">
+                  By Admin {new Date(blog.date).toLocaleDateString()}
+                </p>
+                <h2 className="card-title mb-4">{blog.title}</h2>
+                <div className="card-text">
+                  {blog.content.split("\n").map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -109,7 +91,3 @@ const BlogDetails = () => {
 };
 
 export default BlogDetails;
-
-
-
-

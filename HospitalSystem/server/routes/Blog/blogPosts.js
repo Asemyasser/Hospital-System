@@ -1,15 +1,18 @@
 const express = require("express");
 const upload = require("../image_uploader.js");
 const router = express.Router();
-const BlogPost = require("../../models/blogs/blogPosts.js");
+const { BlogPost } = require("../../models/blogs/blogPosts.js");
 const validateBlogPost = require("../../models/blogs/blogPostValidation.js");
 
 // Read All Blog Posts
 router.get("/", async (req, res) => {
   try {
+    console.log("API: Fetching blog posts");
     const posts = await BlogPost.find().sort("date");
+    console.log("API: Found posts:", posts);
     res.send(posts);
   } catch (err) {
+    console.error("API Error:", err);
     res.status(500).send("Server error");
   }
 });

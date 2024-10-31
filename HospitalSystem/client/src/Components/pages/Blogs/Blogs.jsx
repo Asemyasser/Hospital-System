@@ -1,38 +1,39 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Blogs.css";
-import blog1 from "../../../assets/images/blog1.jpg";
-import blog2 from "../../../assets/images/blog2.jpg";
 import backgroundImg from "../../../assets/images/background.jpg";
 import axios from "axios";
 import Footer from "./../../shared/Footer/Footer";
 
-const blogs = [
-  { id: 1, imgSrc: blog1 },
-  { id: 2, imgSrc: blog2 },
-  { id: 3, imgSrc: "https://www.youtube.com/embed/pWahNIMRxR0" },
-];
-
 const Blogs = () => {
   const navigate = useNavigate();
   const [blogsData, setBlogsData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
+        setLoading(true);
         const { data } = await axios.get("http://localhost:5000/api/blogPosts");
         setBlogsData(data);
       } catch (error) {
         console.error("Error fetching blogs:", error);
+        setError("Failed to fetch blogs");
+      } finally {
+        setLoading(false);
       }
     };
     fetchBlogs();
   }, []);
 
   const handleReadMore = (blog) => {
-    navigate(`/blog/${blog.id}`, { state: { imgSrc: blog.imgSrc } });
+    navigate(`/blog/${blog._id}`);
   };
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
 
   return (
     <>
@@ -53,46 +54,43 @@ const Blogs = () => {
         </section>
       </header>
       <div className="container">
-        {blogs.map((blog, index) => (
-          <div key={index} className="col-12 d-flex justify-content-center">
-            <div className="card" style={{ width: "18rem" }}>
-              {blog.imgSrc.includes("youtube") ? (
-                <iframe
-                  src={blog.imgSrc}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  style={{ height: "15rem" }}
-                ></iframe>
-              ) : (
+        <div className="row">
+          {blogsData.map((blog) => (
+            <div key={blog._id} className="col-md-4 mb-4">
+              <div className="card h-100">
                 <img
-                  src={blog.imgSrc}
-                  style={{ height: "15rem" }}
+                  src={`http://localhost:5000/${blog.imgSrc}`} // Full URL path
                   className="card-img-top"
-                  alt="blog details"
+                  alt={blog.title}
+                  style={{ height: "15rem", objectFit: "cover" }}
+                  onError={(e) => {
+                    e.target.src = "/placeholder-blog.jpg"; // Fallback image
+                    e.target.onerror = null; // Prevent infinite loop
+                  }}
                 />
-              )}
-              <div className="card-body">
-                <p className="card-blue-text">By Admin March 3, 2022</p>
-                <h5 className="card-title" style={{ fontSize: "18px" }}>
-                  Uompe Qrear High Ecent Nche Without Some Prinle Uomp Without
-                  Some Qrearl High Ecent
-                </h5>
-                <p className="card-text">
-                  As we age, the discs in our spine can degenerate, causing
-                  chronic pain and discomfort in the back and neck that can
-                  significantly impact
-                </p>
+                <div className="card-body">
+                  <p className="card-blue-text">
+                    By Admin {new Date(blog.date).toLocaleDateString()}
+                  </p>
+                  <h5 className="card-title" style={{ fontSize: "18px" }}>
+                    {blog.title}
+                  </h5>
+                  <p className="card-text">
+                    {blog.content.substring(0, 150)}...
+                  </p>
+                </div>
+                <div className="card-footer bg-transparent border-0">
+                  <button
+                    onClick={() => handleReadMore(blog)}
+                    className="btn btn-primary button button-primary w-100"
+                  >
+                    Read more
+                  </button>
+                </div>
               </div>
-              <button
-                onClick={() => handleReadMore(blog)}
-                className="btn btn-primary button button-primary"
-              >
-                Read more
-              </button>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
       <Footer />
     </>

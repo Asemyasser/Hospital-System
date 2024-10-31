@@ -5,7 +5,6 @@ const Joi = require("joi");
 const bcrypt = require("bcrypt");
 const _ = require("lodash");
 
-
 router.post("/", async (req, res) => {
   const { error } = handleAuthValidation(req.body);
   if (error) {
@@ -19,9 +18,7 @@ router.post("/", async (req, res) => {
   let validPassword = await bcrypt.compare(req.body.password, user.password);
   if (!validPassword) return res.status(400).send("Invalid Credentials");
   const token = user.generateAuthToken();
-  res
-    .header("x-auth-token", token)
-    .redirect("/courses");
+  res.header("x-auth-token", token).redirect("/doctors");
 });
 
 function handleAuthValidation(user) {
