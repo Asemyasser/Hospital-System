@@ -53,7 +53,7 @@ app.use("/api/register", users);
 
 /**************************************************************************************************/
 // Serve uploaded files
-app.use("/uploads", express.static("uploads"));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 /**************************************************************************************************/
 
 // Serve AdminLTE files
