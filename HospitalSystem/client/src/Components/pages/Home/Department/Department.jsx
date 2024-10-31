@@ -1,11 +1,3 @@
-import department1 from "../../../../assets/images/department1.png";
-import department3 from "../../../../assets/images/department3.png";
-import department4 from "../../../../assets/images/department4.png";
-import department5 from "../../../../assets/images/department5.png";
-import department6 from "../../../../assets/images/department6.png";
-import department7 from "../../../../assets/images/department7.png";
-import department8 from "../../../../assets/images/department8.png";
-import department9 from "../../../../assets/images/department9.png";
 import departmentMain from "../../../../assets/images/department-main.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesRight, faCheck } from "@fortawesome/free-solid-svg-icons";
