@@ -6,6 +6,7 @@ const hero = require("./routes/home/hero");
 const appointments = require("./routes/home/appointment");
 const workingHours = require("./routes/home/workingHours");
 const generalSettings = require("./routes/generalSettings");
+const departments = require("./routes/departments");
 const blogPosts = require("./routes/blog/blogPosts");
 const { BlogPost } = require("./models/blogs/blogPosts");
 const doctors = require("./routes/doctors");
@@ -19,6 +20,7 @@ const cors = require("cors");
 const app = express();
 /*****************************************************/
 const mongoose = require("mongoose");
+const { Department } = require("./models/departments");
 mongoose
   .connect(
     "mongodb+srv://asemyasser42:AySjWZpx9l8DZJ8t@hospitalsystem.aebye.mongodb.net/?retryWrites=true&w=majority&appName=HospitalSystem"
@@ -47,6 +49,7 @@ app.use("/api/workingHours", workingHours);
 app.use("/api/generalSettings", generalSettings);
 app.use("/api/blogPosts", blogPosts);
 app.use("/api/doctors", doctors);
+app.use("/api/departments", departments);
 app.use("/api/services", services);
 app.use("/api/login", auth);
 app.use("/api/register", users);
