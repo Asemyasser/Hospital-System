@@ -57,8 +57,8 @@ function HomeFooter() {
       }
     };
 
-    fetchOpeiningHoursData();
     fetchDoctorsData();
+    fetchOpeiningHoursData();
     fetchServicesData();
   }, []);
 
