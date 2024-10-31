@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import './ContactSection.css';
+import { useState } from "react";
+import "./ContactSection.css";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
   });
 
   const handleInputChange = (e) => {
@@ -16,7 +16,7 @@ const ContactForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
@@ -41,55 +41,77 @@ const ContactForm = () => {
       alert("Please enter a message.");
       return;
     }
+
+    try {
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert("Your message has been sent successfully!");
+        setFormData({
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        alert("Failed to send your message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred. Please try again later.");
+    }
   };
 
   return (
     <div className="contact-form col-12 col-md-6">
       <h2>We Love To Hear From You</h2>
       <form id="contactForm" onSubmit={handleSubmit}>
-        <div className="mb-3">
+        <div className="form-group">
           <input
             type="email"
             id="email"
-            className="form-control"
-            placeholder="Your Email"
             value={formData.email}
             onChange={handleInputChange}
+            placeholder="Your Email"
+            required
           />
         </div>
-        <div className="mb-3">
+        <div className="form-group">
           <input
-            type="tel"
+            type="text"
             id="phone"
-            className="form-control"
-            placeholder="Phone Number"
             value={formData.phone}
             onChange={handleInputChange}
+            placeholder="Your Phone"
+            required
           />
         </div>
-        <div className="mb-3">
+        <div className="form-group">
           <input
             type="text"
             id="subject"
-            className="form-control"
-            placeholder="Subject"
             value={formData.subject}
             onChange={handleInputChange}
+            placeholder="Subject"
+            required
           />
         </div>
-        <div className="mb-3">
+        <div className="form-group">
           <textarea
             id="message"
-            className="form-control"
-            placeholder="Write a message..."
-            rows="5"
             value={formData.message}
             onChange={handleInputChange}
-          ></textarea>
+            placeholder="Message"
+            required
+          />
         </div>
-        <button type="submit" className="btn btn-primary w-100">
-          Send Message »
-        </button>
+        <button type="submit">Send Message</button>
       </form>
     </div>
   );
