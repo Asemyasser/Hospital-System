@@ -11,6 +11,7 @@ function Appointments() {
   const [workingHours, setWorkingHours] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
   const [formData, setFormData] = useState({
     name: "",
     department: "",
@@ -182,9 +183,9 @@ function Appointments() {
                   value={formData.department}
                   onChange={handleChange}
                 >
-                  <option value="1">Select Departments</option>
-                  <option value="2">Dental</option>
-                  <option value="3">U.C</option>
+                  <option value="">Select Departments</option>
+                  <option value="Dental">Dental</option>
+                  <option value="U.C">U.C</option>
                 </select>
                 <input
                   type="text"
