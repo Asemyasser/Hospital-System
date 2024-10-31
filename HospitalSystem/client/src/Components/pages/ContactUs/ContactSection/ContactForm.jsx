@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./ContactSection.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -23,22 +25,22 @@ const ContactForm = () => {
     const phonePattern = /^[0-9]{11}$/;
 
     if (!formData.email.match(emailPattern)) {
-      alert("Please enter a valid email address.");
+      toast.error("Please enter a valid email address.");
       return;
     }
 
     if (!formData.phone.match(phonePattern)) {
-      alert("Please enter a valid 11-digit phone number.");
+      toast.error("Please enter a valid 11-digit phone number.");
       return;
     }
 
     if (formData.subject.trim() === "") {
-      alert("Please enter a subject.");
+      toast.error("Please enter a subject.");
       return;
     }
 
     if (formData.message.trim() === "") {
-      alert("Please enter a message.");
+      toast.error("Please enter a message.");
       return;
     }
 
@@ -52,7 +54,7 @@ const ContactForm = () => {
       });
 
       if (response.ok) {
-        alert("Your message has been sent successfully!");
+        toast.success("Your message has been sent successfully!");
         setFormData({
           email: "",
           phone: "",
@@ -60,11 +62,11 @@ const ContactForm = () => {
           message: "",
         });
       } else {
-        alert("Failed to send your message. Please try again.");
+        toast.error("Failed to send your message. Please try again.");
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("An error occurred. Please try again later.");
+      toast.error("An error occurred. Please try again later.");
     }
   };
 
@@ -113,6 +115,7 @@ const ContactForm = () => {
         </div>
         <button type="submit">Send Message</button>
       </form>
+      <ToastContainer />
     </div>
   );
 };
