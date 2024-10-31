@@ -13,6 +13,8 @@ const doctors = require("./routes/doctors");
 const { Doctor } = require("./models/doctors");
 const services = require("./routes/services");
 const { Service } = require("./models/services");
+const methodOverride = require("method-override");
+const { Department } = require("./models/departments");
 const users = require("./routes/users");
 const auth = require("./routes/auth");
 const express = require("express");
@@ -20,7 +22,6 @@ const cors = require("cors");
 const app = express();
 /*****************************************************/
 const mongoose = require("mongoose");
-const { Department } = require("./models/departments");
 mongoose
   .connect(
     "mongodb+srv://asemyasser42:AySjWZpx9l8DZJ8t@hospitalsystem.aebye.mongodb.net/?retryWrites=true&w=majority&appName=HospitalSystem"
