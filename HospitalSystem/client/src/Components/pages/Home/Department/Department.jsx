@@ -10,8 +10,34 @@ import departmentMain from "../../../../assets/images/department-main.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesRight, faCheck } from "@fortawesome/free-solid-svg-icons";
 import styles from "../Home.module.css"; // Importing CSS module
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Department() {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:5000/api/departments"
+        );
+        console.log(response.data);
+        setData(response.data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
   return (
     <section className={`${styles.departments} ${styles["padding-tb"]} pb-0`}>
       <div className="container">
@@ -27,51 +53,16 @@ function Department() {
                   <ul
                     className={`${styles["department-imgs"]} mb-2 d-flex justify-content-center flex-wrap`}
                   >
-                    <li>
-                      <a href="">
-                        <img src={department1} alt="department" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="">
-                        <img src={department7} alt="department" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="">
-                        <img src={department3} alt="department" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="">
-                        <img src={department4} alt="department" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="">
-                        <img src={department5} alt="department" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="">
-                        <img src={department6} alt="department" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="">
-                        <img src={department7} alt="department" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="">
-                        <img src={department8} alt="department" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="">
-                        <img src={department9} alt="department" />
-                      </a>
-                    </li>
+                    {data?.map((department, index) => (
+                      <li key={index}>
+                        <Link to="/doctors">
+                          <img
+                            src={`http://localhost:5000/${department.img}`}
+                            alt="department"
+                          />
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                   <div className={styles["department-main"]}>
                     <div className="row flex-row-reverse align-items-center">
@@ -86,15 +77,8 @@ function Department() {
                       </div>
                       <div className="col-12 col-lg-6">
                         <div className={styles["post-content"]}>
-                          <h3>Speciality Rhinology 1</h3>
-                          <p className="mb-2">
-                            Procedur arrain manu producs rather convenet cuvate
-                            mantna this man Manucur produc rather conven cuvatie
-                            mantan this conven cuvate bad Credibly envisioneer
-                            ubiquitous niche markets transparent relations
-                            Dramatically enable worldwide action items whereas
-                            magnetic source motin was procedur arramin
-                          </p>
+                          <h3>{data[0].header}</h3>
+                          <p className="mb-2">{data[0].desc}</p>
                           <ul className="d-flex flex-wrap p-0">
                             <li className="w-50 py-1">
                               <FontAwesomeIcon
