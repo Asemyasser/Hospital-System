@@ -1,5 +1,5 @@
 const { Hero, handleHeroValidation } = require("../../models/home/hero");
-const upload = require("../../routes/image_uploader");
+const upload = require("../image_uploader");
 const express = require("express");
 const router = express.Router();
 
