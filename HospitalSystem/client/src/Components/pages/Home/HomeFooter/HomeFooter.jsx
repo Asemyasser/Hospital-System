@@ -124,8 +124,8 @@ function HomeFooter() {
                   <div className={`${styles["doctor-info"]} mb-5 mb-sm-0`}>
                     <h3>Our Doctors</h3>
                     <ul className="lab-ul">
-                      {doctorsData?.map((doctor) => (
-                        <li key={doctor._id}>
+                      {doctorsData?.map((doctor, index) => (
+                        <li key={index}>
                           <FontAwesomeIcon
                             icon={faAnglesRight}
                             className="me-2"
@@ -146,8 +146,8 @@ function HomeFooter() {
                   >
                     <h3>Our Services</h3>
                     <ul className="lab-ul">
-                      {servicesData?.slice(0, 8).map((service) => (
-                        <li key={service._id}>
+                      {servicesData?.slice(0, 8).map((service, index) => (
+                        <li key={index}>
                           <FontAwesomeIcon
                             icon={faAnglesRight}
                             className="me-2"

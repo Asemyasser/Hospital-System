@@ -1,13 +1,32 @@
 import { faAnglesRight, faMessage } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import post1 from "../../../../assets/images/post1.jpg";
-import post2 from "../../../../assets/images/post2.jpg";
-import post3 from "../../../../assets/images/post3.jpg";
 
 import styles from "../Home.module.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function Blogs() {
-  const blogs = [post1, post2, post3];
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/api/blogPosts");
+        console.log(response.data);
+        setData(response.data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
   return (
     <section
       className={`${styles.blog} ${styles["padding-tb"]} ${styles["home-bg-color"]}`}
@@ -20,26 +39,25 @@ function Blogs() {
               <h2 className="fw-bolder">Be The First To New Stories</h2>
             </div>
             <div className="row justify-content-center">
-              {blogs.map((blog, index) => (
+              {data?.map((blog, index) => (
                 <div key={index} className="col-12 col-xl-4 col-md-6">
                   <div className={`${styles["post-item"]} mb-xl-0`}>
                     <div className={`4${styles["post-img"]} overflow-hidden`}>
-                      <img src={blog} alt="post" className="w-100" />
+                      <img
+                        src={`http:/localhost:5000/${blog?.imgSrc}`}
+                        alt="post"
+                        className="w-100"
+                      />
                     </div>
                     <div className={styles["post-content"]}>
                       <span className={styles.meta}>
-                        By <a href="#">Admin</a> March 24, 2021
+                        By <a href="#">Admin</a>{" "}
+                        {new Date(blog.date).toLocaleDateString()}
                       </span>
                       <h4>
-                        <a href="#">
-                          Globa Empoer Extenve Chanels Extensve Creat Method
-                        </a>
+                        <a href="#">{blog?.title}</a>
                       </h4>
-                      <p>
-                        Complete actuaze centi centrcing colora and sharin
-                        without anstaled anding bases aweme medicalplus
-                        Template.
-                      </p>
+                      <p>{blog?.content.slice(0, 40)}</p>
                     </div>
                     <div className={styles["blog-footer"]}>
                       <a href="#" className={styles.viewall}>
