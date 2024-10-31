@@ -28,6 +28,7 @@ router.post("/", upload.single("heroCover"), async (req, res) => {
   let hero = new Hero({
     header: req.body.header,
     desc: req.body.desc,
+    coloredDesc: req.body.coloredDesc,
     heroCover: req.file.path,
   });
 
@@ -57,6 +58,7 @@ router.put("/:id", upload.single("heroCover"), async (req, res) => {
   const updatedData = {
     header: req.body.header,
     desc: req.body.desc,
+    coloredDesc: req.body.coloredDesc,
   };
   if (req.file) {
     updatedData.heroCover = req.file.path;

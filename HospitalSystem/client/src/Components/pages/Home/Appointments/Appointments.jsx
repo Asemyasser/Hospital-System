@@ -4,10 +4,35 @@ import appointmentLeft from "../../../../assets/images/appointment-left.jpg";
 import appointmentright from "../../../../assets/images/appointment-right.jpg";
 
 import styles from "../Home.module.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function Appointments() {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:5000/api/workingHours"
+        );
+        console.log(response.data[0]);
+        setData(response.data[0]);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
   return (
-    <section className={styles.appointment}>
+    <section id="appointment" className={styles.appointment}>
       <div className="container-fluid p-0">
         <div className="row">
           <div className="col-md-6 col-12 p-0">
@@ -27,44 +52,46 @@ function Appointments() {
                 <div
                   className={`${styles["dep-item"]} d-flex justify-content-between flex-wrap`}
                 >
-                  <div className={styles["day-name"]}>Satarday</div>
-                  <div className={styles["day-time"]}>8:00 am-10:00 pm</div>
+                  <div className={styles["day-name"]}>Saturday</div>
+                  <div className={styles["day-time"]}>{data.days.saturday}</div>
                 </div>
                 <div
                   className={`${styles["dep-item"]} d-flex justify-content-between flex-wrap`}
                 >
                   <div className={styles["day-name"]}>Sunday</div>
-                  <div className={styles["day-time"]}>6:00 am-8:00 pm</div>
+                  <div className={styles["day-time"]}>{data.days.sunday}</div>
                 </div>
                 <div
                   className={`${styles["dep-item"]} d-flex justify-content-between flex-wrap`}
                 >
                   <div className={styles["day-name"]}>Monday</div>
-                  <div className={styles["day-time"]}>6:00 am-2:00 pm</div>
+                  <div className={styles["day-time"]}>{data.days.monday}</div>
                 </div>
                 <div
                   className={`${styles["dep-item"]} d-flex justify-content-between flex-wrap`}
                 >
                   <div className={styles["day-name"]}>Tuesday</div>
-                  <div className={styles["day-time"]}>7:00 am-9:00 pm</div>
+                  <div className={styles["day-time"]}>{data.days.tuesday}</div>
                 </div>
                 <div
                   className={`${styles["dep-item"]} d-flex justify-content-between flex-wrap`}
                 >
-                  <div className={styles["day-name"]}>Widnessday</div>
-                  <div className={styles["day-time"]}>10:00 am-12:00 pm</div>
+                  <div className={styles["day-name"]}>Wednesday</div>
+                  <div className={styles["day-time"]}>
+                    {data.days.wednesday}
+                  </div>
                 </div>
                 <div
                   className={`${styles["dep-item"]} d-flex justify-content-between flex-wrap`}
                 >
-                  <div className={styles["day-name"]}>Thirsday</div>
-                  <div className={styles["day-time"]}>2:00 am-6:00 pm</div>
+                  <div className={styles["day-name"]}>Thursday</div>
+                  <div className={styles["day-time"]}>{data.days.thursday}</div>
                 </div>
                 <div
                   className={`${styles["dep-item"]} d-flex justify-content-between flex-wrap`}
                 >
                   <div className={styles["day-name"]}>Friday</div>
-                  <div className={styles["day-time"]}>Closed</div>
+                  <div className={styles["day-time"]}>{data.days.friday}</div>
                 </div>
               </div>
             </div>
@@ -82,7 +109,7 @@ function Appointments() {
                 </h2>
                 <h2>Appointment Now</h2>
               </div>
-              <form action="/">
+              <form action="" method="post">
                 <input
                   type="text"
                   id="fname"

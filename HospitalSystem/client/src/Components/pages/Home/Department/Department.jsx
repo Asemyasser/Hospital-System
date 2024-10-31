@@ -140,7 +140,7 @@ function Department() {
                             </li>
                           </ul>
                           <a
-                            href=""
+                            href="#appointment"
                             className="btn btn-primary rounded-0 mt-3 px-3 py-2"
                           >
                             Appoinment Now{" "}

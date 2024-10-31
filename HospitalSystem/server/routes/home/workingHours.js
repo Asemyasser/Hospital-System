@@ -19,22 +19,15 @@ router.get("/", async (req, res) => {
 /**************************************************************************************************/
 
 // ADD new working hours
-router.post("/", upload.single("backgroundImg"), async (req, res) => {
+router.post("/", async (req, res) => {
   const { error } = handleWorkingHoursValidation(req.body);
   if (error) {
     const errorMessages = error.details.map((err) => err.message);
     return res.status(400).send(errorMessages);
   }
 
-  // check if the file was uploaded
-  if (!req.file) {
-    res.status(400).send("Background img is required..");
-  }
-
   let workingHours = new WorkingHours({
-    day: req.body.day,
-    hours: req.body.hours,
-    backgroundImg: req.file.path,
+    days: req.body.days,
   });
 
   try {
@@ -48,7 +41,7 @@ router.post("/", upload.single("backgroundImg"), async (req, res) => {
 /**************************************************************************************************/
 
 // UPDATE working hours
-router.put("/:id", upload.single("backgroundImg"), async (req, res) => {
+router.put("/:id", async (req, res) => {
   const { error } = handleWorkingHoursValidation(req.body);
   if (error) {
     const errorMessages = error.details.map((err) => err.message);
@@ -62,12 +55,8 @@ router.put("/:id", upload.single("backgroundImg"), async (req, res) => {
       .send("The selected working hours entry is not found");
 
   const updatedData = {
-    day: req.body.day,
-    hours: req.body.hours,
+    days: req.body.days,
   };
-  if (req.file) {
-    updatedData.backgroundImg = req.file.path;
-  }
 
   workingHours = await WorkingHours.findByIdAndUpdate(
     req.params.id,
