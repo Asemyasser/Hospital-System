@@ -13,7 +13,7 @@ import Notfound from "./Components/pages/NotFound/NotFound";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Hospital-System/">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
