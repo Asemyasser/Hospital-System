@@ -26,17 +26,17 @@ const cors = require("cors");
 const app = express();
 /*****************************************************/
 const mongoose = require("mongoose");
+require("dotenv").config();
+
 mongoose
-  .connect(
-    "mongodb+srv://asemyasser42:AySjWZpx9l8DZJ8t@hospitalsystem.aebye.mongodb.net/?retryWrites=true&w=majority&appName=HospitalSystem"
-  )
+  .connect(process.env.MONGO_URI)
   .then(() => {
-    console.log("connecting to database");
+    console.log("Connecting to database");
   })
   .catch((err) => {
-    console.error("could not connect to database", err);
+    console.error("Could not connect to database", err);
   });
-
+  
 /*****************************************************/
 //built-in middleware function:
 app.use(express.urlencoded({ extended: true }));
