@@ -1,5 +1,5 @@
-const Joi = require("joi");
-Joi.objectId = require("joi-objectId")(Joi);
+// const Joi = require("joi");
+// Joi.objectId = require("joi-objectId")(Joi);
 const path = require("path");
 
 const hero = require("./routes/home/hero");
