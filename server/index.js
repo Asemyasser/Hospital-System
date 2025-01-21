@@ -36,7 +36,7 @@ mongoose
   .catch((err) => {
     console.error("Could not connect to database", err);
   });
-  
+
 /*****************************************************/
 //built-in middleware function:
 app.use(express.urlencoded({ extended: true }));
@@ -91,7 +91,7 @@ app.get("/login", (req, res) => {
 });
 
 //home route
-app.get("/home",authMiddleware, (req, res) => {
+app.get("/home", authMiddleware, (req, res) => {
   res.render("home");
 });
 
@@ -298,7 +298,7 @@ app.post("/logout", authMiddleware, (req, res) => {
 });
 
 // Environment Variables:
-const port = process.env.PORT || 5000;
-app.listen(port, () => {
-  console.log(`your server listening on port ${port}`);
-});
+// const port = process.env.PORT || 5000;
+// app.listen(port, () => {
+//   console.log(`your server listening on port ${port}`);
+// });
