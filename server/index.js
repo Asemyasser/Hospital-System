@@ -24,6 +24,10 @@ const cookieParser = require("cookie-parser");
 const express = require("express");
 const cors = require("cors");
 const app = express();
+
+app.get("/favicon.ico", (req, res) => {
+  res.status(204).send();
+});
 /*****************************************************/
 const mongoose = require("mongoose");
 require("dotenv").config();
