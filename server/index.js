@@ -1,5 +1,5 @@
-// const Joi = require("joi");
-// Joi.objectId = require("joi-objectId")(Joi);
+const Joi = require("joi");
+Joi.objectId = require("joi-objectId")(Joi);
 const path = require("path");
 
 const hero = require("./routes/home/hero");
@@ -25,9 +25,9 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
-app.get("/favicon.ico", (req, res) => {
-  res.status(204).send();
-});
+// app.get("/favicon.ico", (req, res) => {
+//   res.status(204).send();
+// });
 /*****************************************************/
 const mongoose = require("mongoose");
 require("dotenv").config();
