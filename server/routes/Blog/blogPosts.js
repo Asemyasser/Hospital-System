@@ -1,7 +1,7 @@
 const express = require("express");
 const upload = require("../image_uploader.js");
 const router = express.Router();
-const BlogPost = require("../../models/blogs/blogPosts");
+const BlogPost = require("../../models/blogs/blogPosts.js");
 const validateBlogPost = require("../../models/blogs/blogPostValidation.js");
 
 // Read All Blog Posts
