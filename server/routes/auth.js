@@ -26,6 +26,11 @@ router.post("/", async (req, res) => {
   if (!validPassword) return res.status(400).send("Invalid Credentials");
 
   // Generate JWT
+  const jwtPrivateKey = process.env.JWT_PRIVATE_KEY;
+  if (!jwtPrivateKey) {
+    console.error("Fatal error: JWT_PRIVATE_KEY is not defined.");
+    return res.status(500).send("Internal Server Error: Missing JWT key.");
+  }
   const token = jwt.sign(
     { _id: user._id, name: user.name, email: user.email },
     config.get("jwtPrivateKey"),
