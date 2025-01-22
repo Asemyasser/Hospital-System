@@ -305,10 +305,9 @@ app.post("/logout", authMiddleware, (req, res) => {
 });
 
 // Environment Variables:
-// const port = process.env.PORT || 5000;
-// app.listen(port, () => {
-//   console.log(`your server listening on port ${port}`);
-// });
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
+  console.log(`your server listening on port ${port}`);
+});
 
-// console.log("NODE_ENV is:", process.env.NODE_ENV);
 module.exports = app;

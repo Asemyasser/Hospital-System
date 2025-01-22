@@ -12,7 +12,9 @@ function Hero() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/hero");
+        const response = await axios.get(
+          `${import.meta.env.VITE_API_URL}/api/hero`
+        );
         console.log(response.data[0]);
 
         setData(response.data[0]);
@@ -31,7 +33,7 @@ function Hero() {
   return (
     <section className={styles.hero}>
       <img
-        src={`http://localhost:5000/${data.heroCover}`}
+        src={`${import.meta.env.VITE_API_URL}/${data.heroCover}`}
         alt="Background Image"
         className={styles["background-img"]}
       />

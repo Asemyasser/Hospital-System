@@ -22,7 +22,9 @@ function HomeFooter() {
   useEffect(() => {
     const fetchDoctorsData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/doctors");
+        const response = await axios.get(
+          `${import.meta.env.VITE_API_URL}/api/doctors`
+        );
         console.log(response.data);
         setDoctorsData(response.data);
       } catch (err) {
@@ -35,7 +37,7 @@ function HomeFooter() {
     const fetchOpeiningHoursData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/workingHours"
+          `${import.meta.env.VITE_API_URL}/api/workingHours`
         );
         setOpeningHoursData(response.data[0].days);
       } catch (err) {
@@ -48,7 +50,9 @@ function HomeFooter() {
 
     const fetchServicesData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/services");
+        const response = await axios.get(
+          `${import.meta.env.VITE_API_URL}/api/services`
+        );
         setServicesData(response.data);
       } catch (err) {
         setError(err.message);

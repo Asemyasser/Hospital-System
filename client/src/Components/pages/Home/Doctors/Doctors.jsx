@@ -13,7 +13,9 @@ function Doctors() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/doctors");
+        const response = await axios.get(
+          `${import.meta.env.VITE_API_URL}/api/doctors`
+        );
         setData(response.data);
       } catch (err) {
         setError(err.message);
@@ -44,7 +46,7 @@ function Doctors() {
                   <div className={styles["doctor-item"]}>
                     <div className={styles["doctor-img"] + " overflow-hidden"}>
                       <img
-                        src={`http://localhost:5000/${doctor.img}`}
+                        src={`${import.meta.env.VITE_API_URL}/${doctor.img}`}
                         alt="doctor"
                         className="w-100"
                       />

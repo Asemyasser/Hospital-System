@@ -14,7 +14,9 @@ function Blogs() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/blogPosts");
+        const response = await axios.get(
+          `${import.meta.env.VITE_API_URL}/api/blogPosts`
+        );
         console.log(response.data);
         setData(response.data);
       } catch (err) {
@@ -45,7 +47,7 @@ function Blogs() {
                   <div className={`${styles["post-item"]} mb-xl-0`}>
                     <div className={`${styles["post-img"]} overflow-hidden`}>
                       <img
-                        src={`http://localhost:5000/${blog?.imgSrc}`}
+                        src={`${import.meta.env.VITE_API_URL}/${blog?.imgSrc}`}
                         alt="post"
                         className="w-100 "
                       />

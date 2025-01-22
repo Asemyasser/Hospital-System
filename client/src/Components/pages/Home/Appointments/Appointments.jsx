@@ -29,7 +29,7 @@ function Appointments() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/appointments",
+        `${import.meta.env.VITE_API_URL}/api/appointments`,
         formData,
         {
           headers: {
@@ -54,7 +54,7 @@ function Appointments() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/workingHours"
+          `${import.meta.env.VITE_API_URL}/api/workingHours`
         );
         console.log(response.data[0]);
         setWorkingHours(response.data[0]);

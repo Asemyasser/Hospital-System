@@ -15,7 +15,7 @@ function Department() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/departments"
+          `${import.meta.env.VITE_API_URL}/api/departments`
         );
         console.log(response.data);
         setData(response.data);
@@ -49,7 +49,9 @@ function Department() {
                       <li key={index}>
                         <Link to="/doctors">
                           <img
-                            src={`http://localhost:5000/${department.img}`}
+                            src={`${import.meta.env.VITE_API_URL}/${
+                              department.img
+                            }`}
                             alt="department"
                           />
                         </Link>

@@ -35,7 +35,7 @@ function Header() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/generalSettings"
+          `${import.meta.env.VITE_API_URL}/api/generalSettings`
         );
         setData(response.data[0]);
       } catch (err) {
@@ -61,7 +61,7 @@ function Header() {
           <Link to="/">
             <img
               className="logo"
-              src={`http://localhost:5000/${data.logo}`}
+              src={`${import.meta.env.VITE_API_URL}/${data.logo}`}
               alt="Logo"
             />
           </Link>
