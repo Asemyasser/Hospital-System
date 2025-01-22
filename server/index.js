@@ -2,10 +2,6 @@
 // Joi.objectId = require("joi-objectId")(Joi);
 const path = require("path");
 require("dotenv").config();
-const config = require("config");
-console.log("NODE_ENV:", process.env.NODE_ENV);
-console.log("Config Directory:", process.env.NODE_CONFIG_DIR || "default");
-console.log("Loaded Config:", config);
 
 const hero = require("./routes/home/hero");
 const appointments = require("./routes/home/appointment");
