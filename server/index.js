@@ -53,6 +53,7 @@ app.use(cookieParser());
 // Set the view engine to EJS
 app.set("view engine", "ejs");
 app.set("views", "./views");
+app.set("views", path.join(__dirname, "views"));
 /**************************************************************************************************/
 app.use("/api/hero", hero);
 app.use("/api/appointments", appointments);
