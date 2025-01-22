@@ -1,5 +1,5 @@
-// const Joi = require("joi");
-// Joi.objectId = require("joi-objectId")(Joi);
+const Joi = require("joi");
+Joi.objectId = require("joi-objectId")(Joi);
 const path = require("path");
 require("dotenv").config();
 
@@ -25,8 +25,6 @@ const cookieParser = require("cookie-parser");
 const express = require("express");
 const cors = require("cors");
 const app = express();
-
-// process.env.NODE_CONFIG_DIR = path.join(__dirname, "config");
 
 /*****************************************************/
 const mongoose = require("mongoose");
