@@ -7,8 +7,8 @@ const appointments = require("./routes/home/appointment");
 const workingHours = require("./routes/home/workingHours");
 const generalSettings = require("./routes/generalSettings");
 const departments = require("./routes/departments");
-const blogPosts = require("./routes/blogs/blogPosts");
-const { BlogPost } = require("./models/blogs/blogPosts");
+// const blogPosts = require("./routes/blogs/blogPosts");
+// const { BlogPost } = require("./models/blogs/blogPosts");
 const doctors = require("./routes/doctors");
 const { Doctor } = require("./models/doctors");
 const services = require("./routes/services");
@@ -61,7 +61,7 @@ app.use("/api/hero", hero);
 app.use("/api/appointments", appointments);
 app.use("/api/workingHours", workingHours);
 app.use("/api/generalSettings", generalSettings);
-app.use("/api/blogPosts", blogPosts);
+// app.use("/api/blogPosts", blogPosts);
 app.use("/api/doctors", doctors);
 app.use("/api/departments", departments);
 app.use("/api/services", services);
@@ -137,24 +137,24 @@ app.get("/doctors/:id/edit", async (req, res) => {
 });
 
 // Serve the blogs page
-app.get("/blogs", authMiddleware, async (req, res) => {
-  try {
-    // Add debug logging
-    console.log("Fetching blogs...");
+// app.get("/blogs", authMiddleware, async (req, res) => {
+//   try {
+//     // Add debug logging
+//     console.log("Fetching blogs...");
 
-    const blogs = await BlogPost.find().sort("-date");
-    console.log("Found blogs:", blogs);
+//     const blogs = await BlogPost.find().sort("-date");
+//     console.log("Found blogs:", blogs);
 
-    if (!blogs) {
-      blogs = [];
-    }
+//     if (!blogs) {
+//       blogs = [];
+//     }
 
-    res.render("blogs", { blogs });
-  } catch (error) {
-    console.error("Error details:", error);
-    res.status(500).send("Error fetching blog posts data");
-  }
-});
+//     res.render("blogs", { blogs });
+//   } catch (error) {
+//     console.error("Error details:", error);
+//     res.status(500).send("Error fetching blog posts data");
+//   }
+// });
 
 // Serve the form to add a new blog
 app.get("/blogs/new", (req, res) => {
@@ -162,26 +162,26 @@ app.get("/blogs/new", (req, res) => {
 });
 
 // Route to view a specific blog
-app.get("/blogs/:id", async (req, res) => {
-  try {
-    const blog = await BlogPost.findById(req.params.id);
-    if (!blog) return res.status(404).send("Blog post not found");
-    res.render("blog", { blog });
-  } catch (error) {
-    res.status(500).send("Error fetching blog post data");
-  }
-});
+// app.get("/blogs/:id", async (req, res) => {
+//   try {
+//     const blog = await BlogPost.findById(req.params.id);
+//     if (!blog) return res.status(404).send("Blog post not found");
+//     res.render("blog", { blog });
+//   } catch (error) {
+//     res.status(500).send("Error fetching blog post data");
+//   }
+// });
 
 // Route to serve the edit blog form
-app.get("/blogs/:id/edit", async (req, res) => {
-  try {
-    const blog = await BlogPost.findById(req.params.id);
-    if (!blog) return res.status(404).send("Blog post not found");
-    res.render("edit_blog", { blog });
-  } catch (error) {
-    res.status(500).send("Error fetching blog post data");
-  }
-});
+// app.get("/blogs/:id/edit", async (req, res) => {
+//   try {
+//     const blog = await BlogPost.findById(req.params.id);
+//     if (!blog) return res.status(404).send("Blog post not found");
+//     res.render("edit_blog", { blog });
+//   } catch (error) {
+//     res.status(500).send("Error fetching blog post data");
+//   }
+// });
 
 // Services routes
 app.get("/services", authMiddleware, async (req, res) => {
