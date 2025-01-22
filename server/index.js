@@ -1,6 +1,7 @@
 // const Joi = require("joi");
 // Joi.objectId = require("joi-objectId")(Joi);
 const path = require("path");
+require("dotenv").config();
 
 const hero = require("./routes/home/hero");
 const appointments = require("./routes/home/appointment");
@@ -27,7 +28,6 @@ const app = express();
 
 /*****************************************************/
 const mongoose = require("mongoose");
-require("dotenv").config();
 
 mongoose
   .connect(process.env.MONGO_URI)
@@ -303,4 +303,6 @@ app.post("/logout", authMiddleware, (req, res) => {
 // app.listen(port, () => {
 //   console.log(`your server listening on port ${port}`);
 // });
+
+// console.log("NODE_ENV is:", process.env.NODE_ENV);
 // module.exports = app;
