@@ -26,7 +26,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
-process.env.NODE_CONFIG_DIR = path.join(__dirname, "config");
+// process.env.NODE_CONFIG_DIR = path.join(__dirname, "config");
 
 /*****************************************************/
 const mongoose = require("mongoose");
