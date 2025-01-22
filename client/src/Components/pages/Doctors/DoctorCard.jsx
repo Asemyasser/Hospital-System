@@ -10,7 +10,9 @@ const DoctorCard = () => {
   useEffect(() => {
     const fetchDoctors = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/doctors");
+        const response = await axios.get(
+          `${import.meta.env.VITE_API_URL}/api/doctors`
+        );
         setDoctors(response.data);
       } catch (error) {
         console.error("Error fetching doctor data: ", error);

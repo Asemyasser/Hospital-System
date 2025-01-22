@@ -17,7 +17,7 @@ const BlogDetails = () => {
       try {
         setLoading(true);
         const { data } = await axios.get(
-          `http://localhost:5000/api/blogPosts/${id}`
+          `${import.meta.env.VITE_API_URL}/api/blogPosts/${id}`
         );
         setBlog(data);
       } catch (error) {
@@ -58,7 +58,7 @@ const BlogDetails = () => {
           <div className="col-lg-8">
             <div className={`card ${styles.blogDetailCard}`}>
               <img
-                src={`http://localhost:5000/${blog.imgSrc}`} // Full URL path
+                src={`${import.meta.env.VITE_API_URL}/${blog.imgSrc}`} // Full URL path
                 className={`card-img-top ${styles.blogImage}`} // Ensure image width matches card
                 alt={blog.title}
                 onError={(e) => {
