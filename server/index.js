@@ -311,4 +311,4 @@ app.post("/logout", authMiddleware, (req, res) => {
 // });
 
 // console.log("NODE_ENV is:", process.env.NODE_ENV);
-// module.exports = app;
+module.exports = app;
