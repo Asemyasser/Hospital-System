@@ -16,7 +16,7 @@ module.exports = function (req, res, next) {
   }
 
   try {
-    const decoded = jwt.verify(token, config.get("jwtPrivateKey"));
+    const decoded = jwt.verify(token, process.env.JWT_PRIVATE_KEY);
     req.user = decoded; // Attach user info to the request object
     console.log("Auth Middleware: Token verified");
     next();

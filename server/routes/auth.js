@@ -33,7 +33,8 @@ router.post("/", async (req, res) => {
   }
   const token = jwt.sign(
     { _id: user._id, name: user.name, email: user.email },
-    config.get("jwtPrivateKey"),
+    jwtPrivateKey,
+    // config.get("jwtPrivateKey"),
     { expiresIn: "1h" } // Token expires in 1 hour
   );
 
