@@ -89,7 +89,7 @@ function Header() {
             </div>
           </div>
           <button
-            className="navbar-toggler d-lg-none"
+            className="navbar-toggler d-lg-none mx-auto mx-sm-0 mt-sm-0 mt-3"
             type="button"
             onClick={() => setSidebarActive(!sidebarActive)}
             title="Toggle Sidebar"
