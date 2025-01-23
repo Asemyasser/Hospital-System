@@ -29,7 +29,10 @@ const DoctorCard = () => {
           <div className={`card h-100 ${styles.doctorCard}`}>
             <div className={styles.imageWrapper}>
               <img
-                src={`http://localhost:5000/${doctor.img.replace(/\\/g, "/")}`}
+                src={`${import.meta.env.VITE_API_URL}/${doctor.img.replace(
+                  /\\/g,
+                  "/"
+                )}`}
                 className={`${styles.image} card-img-top`}
                 alt={doctor.name}
                 onError={(e) => {
