@@ -3,7 +3,7 @@ import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import styles from "../Home.module.css";
+import styles from "./Doctors.module.css"; // Importing CSS module
 
 function Doctors() {
   const [data, setData] = useState(null);
@@ -32,7 +32,7 @@ function Doctors() {
   const email = "admin@gmail.com";
 
   return (
-    <section className={styles.doctors + " " + styles["padding-tb"]}>
+    <section className={styles.doctors + " padding-tb"}>
       <div className="container">
         <div className="row">
           <div className="col-12">

@@ -1,7 +1,7 @@
 import { faAnglesRight, faMessage } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import styles from "../Home.module.css";
+import styles from "./Blogs.module.css"; // Importing CSS module
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -31,9 +31,7 @@ function Blogs() {
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
   return (
-    <section
-      className={`${styles.blog} ${styles["padding-tb"]} ${styles["home-bg-color"]}`}
-    >
+    <section className={`${styles.blog} padding-tb home-bg-color`}>
       <div className="container">
         <div className="row">
           <div className="col-12">

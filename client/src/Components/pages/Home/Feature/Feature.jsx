@@ -5,12 +5,12 @@ import featureItem1 from "../../../../assets/images/feature-item1.png";
 import featureItem2 from "../../../../assets/images/feature-item2.png";
 import featureItem3 from "../../../../assets/images/feature-item3.png";
 import featureItem4 from "../../../../assets/images/feature-item4.png";
-import styles from "../Home.module.css";
+import styles from "./Feature.module.css";
 
 function Feature() {
   return (
     <section
-      className={`${styles.feature} padding-tb ${styles["home-bg-color"]}`}
+      className={`${styles.feature} padding-tb home-bg-color`}
     >
       <div className="container">
         <div className="row">

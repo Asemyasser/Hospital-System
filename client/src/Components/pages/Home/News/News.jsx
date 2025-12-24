@@ -1,7 +1,7 @@
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import styles from "../Home.module.css";
+import styles from "./News.module.css"; // Importing CSS module
 
 function News() {
   return (

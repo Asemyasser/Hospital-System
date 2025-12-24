@@ -1,0 +1,16 @@
+.feature-item {
+  padding: 40px 24px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.feature-item:hover {
+  filter: drop-shadow(-1.395px 19.951px 5px rgba(136, 136, 136, 0.1));
+  transform: translateY(-5px);
+}
+
+.feature-item .text-box a:hover {
+  color: #0071ef !important;
+}

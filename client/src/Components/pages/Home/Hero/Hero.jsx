@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
-import styles from "../Home.module.css";
+import styles from "./Hero.module.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -15,7 +15,6 @@ function Hero() {
         const response = await axios.get(
           `${import.meta.env.VITE_API_URL}/api/hero`
         );
-        console.log(response.data[0]);
 
         setData(response.data[0]);
       } catch (err) {
@@ -35,9 +34,9 @@ function Hero() {
       <img
         src={`${import.meta.env.VITE_API_URL}/${data.heroCover}`}
         alt="Background Image"
-        className={styles["background-img"]}
+        className="background-img"
       />
-      <div className={"container"}>
+      <div className="container">
         <div className="row">
           <div className="col-12">
             <div

@@ -1,7 +1,7 @@
 import departmentMain from "../../../../assets/images/department-main.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesRight, faCheck } from "@fortawesome/free-solid-svg-icons";
-import styles from "../Home.module.css"; // Importing CSS module
+import styles from "./Department.module.css"; // Importing CSS module
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -31,7 +31,7 @@ function Department() {
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
   return (
-    <section className={`${styles.departments} ${styles["padding-tb"]} pb-0`}>
+    <section className={`${styles.departments} padding-tb pb-0`}>
       <div className="container">
         <div className="row">
           <div className="col-12">

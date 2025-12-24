@@ -4,7 +4,7 @@ import counter1 from "../../../../assets/images/counter1.png";
 import counter2 from "../../../../assets/images/counter2.png";
 import counter3 from "../../../../assets/images/counter3.png";
 import counter4 from "../../../../assets/images/counter4.png";
-import styles from "../Home.module.css";
+import styles from "./Counter.module.css"; // Importing CSS module
 
 function Counter() {
   return (

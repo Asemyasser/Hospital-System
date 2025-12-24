@@ -1,0 +1,62 @@
+.doctor-item {
+  transition: 0.3s all cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  -webkit-transition: 0.3s all cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  -moz-transition: 0.3s all cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  -ms-transition: 0.3s all cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  -o-transition: 0.3s all cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  height: 100%
+}
+
+.doctor-item:hover {
+  box-shadow: 0 25px 10px #8080801a;
+}
+
+.doctor-item .doctor-img {
+  height: 270px;
+}
+
+.doctor-item .doctor-img img {
+  transition: 0.3s all linear;
+  -webkit-transition: 0.3s all linear;
+  -moz-transition: 0.3s all linear;
+  -ms-transition: 0.3s all linear;
+  -o-transition: 0.3s all linear;
+  height: 100%;
+}
+
+.doctor-item:hover .doctor-img img {
+  transform: scale(1.1);
+}
+
+.cl-1 {
+  background-color: #37c9dd;
+}
+
+.cl-2 {
+  background-color: #3fa5eb;
+}
+
+.cl-3 {
+  background-color: #0383cd;
+}
+
+.cl-4 {
+  background-color: #3156a3;
+}
+
+.doctor-item .doctor-content .doctor-name p {
+  color: #fff;
+  font-size: 15px;
+}
+
+.doctor-item .doctor-content .doctor-contact:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 24px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 15px 15px 15px;
+  border-color: transparent transparent #fff transparent;
+}

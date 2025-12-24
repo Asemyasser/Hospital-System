@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import footerBg from "../../../../assets/images/footer-bg.png";
-import styles from "../Home.module.css";
+import styles from "./HomeFooter.module.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
@@ -78,7 +78,7 @@ function HomeFooter() {
               <img
                 src={footerBg}
                 alt="Background Image"
-                className={styles["background-img"]}
+                className="background-img"
               />
               <div className="row g-3">
                 <div className="col-12 col-sm-6 col-xl-3">

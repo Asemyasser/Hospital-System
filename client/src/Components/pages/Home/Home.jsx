@@ -10,6 +10,7 @@ import Blogs from "./Blogs/Blogs";
 import Sponsors from "./Sponsors/Sponsors";
 import News from "./News/News";
 import HomeFooter from "./HomeFooter/HomeFooter";
+import "./General.css";
 
 function Home() {
   return (

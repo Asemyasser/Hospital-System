@@ -1,0 +1,69 @@
+.footer .footer-top {
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+  padding-bottom: 70px;
+}
+
+.footer .footer-top .background-img {
+  object-position: center;
+}
+
+.footer .footer-top h3 {
+  color: #000000;
+  text-transform: capitalize;
+}
+
+.footer .footer-top li {
+  padding: 5px 0;
+  margin: 2px 0;
+}
+
+.footer .footer-top .contact-info ul li a:hover {
+  color: #0071ef !important;
+  text-decoration: underline;
+}
+
+.footer .footer-top .doctor-info ul li,
+.footer .footer-top .services-info ul li {
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  padding: 7px 0;
+}
+
+.footer .footer-top .doctor-info ul li:hover,
+.footer .footer-top .services-info ul li:hover {
+  margin-left: 10px;
+  color: #0071ef !important;
+}
+
+.footer .footer-top .doctor-info ul li:hover a,
+.footer .footer-top .services-info ul li:hover a {
+  color: #0071ef !important;
+}
+
+.footer .footer-top .time-info .dep-item {
+  padding: 8px 0;
+}
+
+.footer .footer-bottom {
+  padding: 32px 0;
+  border-top: 1px solid #ecf0f3;
+}
+
+.footer .footer-bottom span a {
+  font-weight: 500;
+  margin: 0 5px;
+}
+
+@media (min-width: 992px) {
+
+  .footer .footer-top .doctor-info,
+  .footer .footer-top .time-info {
+    margin-left: 45px;
+  }
+
+}

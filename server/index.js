@@ -45,6 +45,7 @@ app.use(express.static("public"));
 app.use(
   cors({
     credentials: true,
+    origin: ["http://localhost:5173", "https://asemyasser.github.io"],
   })
 );
 app.use(express.json());

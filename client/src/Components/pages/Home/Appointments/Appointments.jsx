@@ -2,7 +2,7 @@ import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import appointmentLeft from "../../../../assets/images/appointment-left.jpg";
 import appointmentright from "../../../../assets/images/appointment-right.jpg";
-import styles from "../Home.module.css";
+import styles from "./Appointments.module.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
@@ -78,7 +78,7 @@ function Appointments() {
               <img
                 src={appointmentLeft}
                 alt="Background Image"
-                className={styles["background-img"]}
+                className="background-img"
               />
               <div className={styles["time-info"]}>
                 <div className={`${styles["al-title"]} mb-4`}>
@@ -151,7 +151,7 @@ function Appointments() {
               <img
                 src={appointmentright}
                 alt="Background Image"
-                className={styles["background-img"]}
+                className="background-img"
               />
               <div className={`${styles["ar-title"]} mb-4`}>
                 <h2>

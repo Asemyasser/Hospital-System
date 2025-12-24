@@ -1,0 +1,13 @@
+.counter {
+  background: #0071ef;
+  padding: 65px 0;
+}
+
+.counter-content .number {
+  display: inline-block;
+  position: relative;
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
