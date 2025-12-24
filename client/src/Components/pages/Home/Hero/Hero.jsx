@@ -1,30 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Hero.module.css";
-import axios from "axios";
-import { useEffect, useState } from "react";
+import useFetch from "../hooks/useFetch";
 
 function Hero() {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/api/hero`
-        );
-
-        setData(response.data[0]);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
+  const { data, loading, error } = useFetch(`/api/hero`);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
@@ -32,7 +12,7 @@ function Hero() {
   return (
     <section className={styles.hero}>
       <img
-        src={`${import.meta.env.VITE_API_URL}/${data.heroCover}`}
+        src={`${import.meta.env.VITE_API_URL}/${data[0].heroCover}`}
         alt="Background Image"
         className="background-img"
       />
@@ -42,9 +22,10 @@ function Hero() {
             <div
               className={`${styles["hero-content"]} text-center text-md-start`}
             >
-              <h2 className="">{data.header}</h2>
+              <h2 className="">{data[0].header}</h2>
               <h1>
-                <b className="text-primary">{data.coloredDesc}</b> {data.desc}
+                <b className="text-primary">{data[0].coloredDesc}</b>{" "}
+                {data[0].desc}
               </h1>
               <a
                 href="#appointment"

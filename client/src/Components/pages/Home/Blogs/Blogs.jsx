@@ -2,31 +2,11 @@ import { faAnglesRight, faMessage } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import styles from "./Blogs.module.css"; // Importing CSS module
-import { useEffect, useState } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
+import useFetch from "../hooks/useFetch";
 
 function Blogs() {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/api/blogPosts`
-        );
-        console.log(response.data);
-        setData(response.data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
+  const { data, error, loading } = useFetch(`/api/blogPosts`);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;

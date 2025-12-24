@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import {
   faAnglesRight,
   faEnvelope,
@@ -9,66 +8,32 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import footerBg from "../../../../assets/images/footer-bg.png";
 import styles from "./HomeFooter.module.css";
-import axios from "axios";
 import { Link } from "react-router-dom";
+import useFetch from "../hooks/useFetch";
 
 function HomeFooter() {
-  const [doctorsData, setDoctorsData] = useState(null);
-  const [servicesData, setServicesData] = useState(null);
-  const [openingHoursData, setOpeningHoursData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const {
+    data: doctorsData,
+    loading: doctorsLoading,
+    error: doctorsError,
+  } = useFetch(`/api/doctors`);
+  const {
+    data: servicesData,
+    loading: servicesLoading,
+    error: servicesError,
+  } = useFetch(`/api/services`);
+  const {
+    data: openingHoursData,
+    loading: openingHoursLoading,
+    error: openingHoursError,
+  } = useFetch(`/api/workingHours`);
 
-  useEffect(() => {
-    const fetchDoctorsData = async () => {
-      try {
-        const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/api/doctors`
-        );
-        console.log(response.data);
-        setDoctorsData(response.data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    const fetchOpeiningHoursData = async () => {
-      try {
-        const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/api/workingHours`
-        );
-        setOpeningHoursData(response.data[0].days);
-      } catch (err) {
-        setError(err.message);
-        console.log(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    const fetchServicesData = async () => {
-      try {
-        const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/api/services`
-        );
-        setServicesData(response.data);
-      } catch (err) {
-        setError(err.message);
-        console.log(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchDoctorsData();
-    fetchOpeiningHoursData();
-    fetchServicesData();
-  }, []);
-
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
+  if (doctorsLoading || servicesLoading || openingHoursLoading)
+    return <div>Loading...</div>;
+  if (doctorsError || servicesError || openingHoursError)
+    return (
+      <div>Error: {doctorsError || servicesError || openingHoursError}</div>
+    );
   return (
     <footer className={styles.footer}>
       <div className="container">

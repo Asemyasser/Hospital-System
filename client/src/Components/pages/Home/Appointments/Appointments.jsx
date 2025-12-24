@@ -3,15 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import appointmentLeft from "../../../../assets/images/appointment-left.jpg";
 import appointmentright from "../../../../assets/images/appointment-right.jpg";
 import styles from "./Appointments.module.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import useFetch from "../hooks/useFetch";
 
 function Appointments() {
-  const [workingHours, setWorkingHours] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const { data, loading, error } = useFetch(`/api/workingHours`);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -50,23 +49,6 @@ function Appointments() {
     }
   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/api/workingHours`
-        );
-        console.log(response.data[0]);
-        setWorkingHours(response.data[0]);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
-
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
   return (
@@ -92,7 +74,7 @@ function Appointments() {
                 >
                   <div className={styles["day-name"]}>Saturday</div>
                   <div className={styles["day-time"]}>
-                    {workingHours.days.saturday}
+                    {data[0].days.saturday}
                   </div>
                 </div>
                 <div
@@ -100,7 +82,7 @@ function Appointments() {
                 >
                   <div className={styles["day-name"]}>Sunday</div>
                   <div className={styles["day-time"]}>
-                    {workingHours.days.sunday}
+                    {data[0].days.sunday}
                   </div>
                 </div>
                 <div
@@ -108,7 +90,7 @@ function Appointments() {
                 >
                   <div className={styles["day-name"]}>Monday</div>
                   <div className={styles["day-time"]}>
-                    {workingHours.days.monday}
+                    {data[0].days.monday}
                   </div>
                 </div>
                 <div
@@ -116,7 +98,7 @@ function Appointments() {
                 >
                   <div className={styles["day-name"]}>Tuesday</div>
                   <div className={styles["day-time"]}>
-                    {workingHours.days.tuesday}
+                    {data[0].days.tuesday}
                   </div>
                 </div>
                 <div
@@ -124,7 +106,7 @@ function Appointments() {
                 >
                   <div className={styles["day-name"]}>Wednesday</div>
                   <div className={styles["day-time"]}>
-                    {workingHours.days.wednesday}
+                    {data[0].days.wednesday}
                   </div>
                 </div>
                 <div
@@ -132,7 +114,7 @@ function Appointments() {
                 >
                   <div className={styles["day-name"]}>Thursday</div>
                   <div className={styles["day-time"]}>
-                    {workingHours.days.thursday}
+                    {data[0].days.thursday}
                   </div>
                 </div>
                 <div
@@ -140,7 +122,7 @@ function Appointments() {
                 >
                   <div className={styles["day-name"]}>Friday</div>
                   <div className={styles["day-time"]}>
-                    {workingHours.days.friday}
+                    {data[0].days.friday}
                   </div>
                 </div>
               </div>

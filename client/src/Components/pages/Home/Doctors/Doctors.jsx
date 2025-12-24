@@ -1,30 +1,11 @@
-import { useState, useEffect } from "react";
 import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import styles from "./Doctors.module.css"; // Importing CSS module
+import useFetch from "../hooks/useFetch";
 
 function Doctors() {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/api/doctors`
-        );
-        setData(response.data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
+  const { data, loading, error } = useFetch(`/api/doctors`);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;

@@ -2,31 +2,11 @@ import departmentMain from "../../../../assets/images/department-main.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesRight, faCheck } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Department.module.css"; // Importing CSS module
-import { useEffect, useState } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
+import useFetch from "../hooks/useFetch";
 
 function Department() {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/api/departments`
-        );
-        console.log(response.data);
-        setData(response.data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
+  const { data, loading, error } = useFetch(`/api/departments`);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
